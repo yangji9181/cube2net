@@ -1,5 +1,4 @@
 import numpy as np
-from copy import deepcopy
 
 
 class Environment(object):
@@ -18,6 +17,7 @@ class Environment(object):
 				id, venue, year = int(splits[0]), splits[1].split('|')[0], int(splits[1].split('|')[1])
 				self.cell_to_id[(venue, year)] = id
 				self.id_to_cell[id] = (venue, year)
+		self.action_size = len(self.id_to_cell)
 
 	def load_embed(self):
 		v_embed, y_embed = {}, {}
@@ -50,17 +50,6 @@ class Environment(object):
 
 	def sample(self):
 		return self.replay_buffer[np.random.choice(len(self.replay_buffer), self.params.batch_size)]
-
-	# state is an array of cell ids
-	def next_states(self, state):
-		state = set(state)
-		actions = self.id_to_cell.keys()
-		states = []
-		for action in actions:
-			next = deepcopy(state)
-			next.add(action)
-			states.append(np.array(list(next)))
-		return np.array(states)
 
 	def state_embed(self, state):
 		return np.mean(self.cell_embed[state], axis=0)
