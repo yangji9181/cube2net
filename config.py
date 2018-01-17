@@ -9,6 +9,8 @@ def parse_args():
 	parser.add_argument('--batch_size', type=int, default=100, help=None)
 	parser.add_argument('--epoch', type=int, default=10, help=None)
 	parser.add_argument('--k_step', type=int, default=10, help=None)
+	parser.add_argument('--initial_state_size', type=int, default=100, help=None)
+	parser.add_argument('--max_state_size', type=int, default=200, help=None)
 	return parser.parse_args()
 
 

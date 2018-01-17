@@ -36,13 +36,13 @@ class Agent(object):
 
 		self.assign = [tf.assign(weights_t[name], weights[name]) for name in weights]
 
-		self.decision = tf.argmax(Q, axis=1)
+		self.Q = Q
 		action_one_hot = tf.one_hot(self.action, self.environment.action_size, 1.0, 0.0)
 		self.loss = tf.reduce_mean(tf.squared_difference(tf.reduce_sum(Q * action_one_hot, axis=1),
 		                                            self.reward +  tf.reduce_max(Q_t, axis=1)))
 		optimizer = tf.train.AdamOptimizer(learning_rate=self.params.learning_rate)
-		self.step = optimizer.minimize(self.loss,
-		                               var_list=tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope='prediction'))
+		self.step = optimizer.minimize(
+			self.loss, var_list=tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope='prediction'))
 
 		# self.print_variable()
 
@@ -54,24 +54,34 @@ class Agent(object):
 		for var in tf.trainable_variables():
 			print(var.name, var.get_shape())
 
-	def train(self):
-		with tf.Session() as sess:
-			sess.run(tf.global_variables_initializer())
-			for _ in tqdm(range(self.params.epoch), ncols=100):
-				self.update_target(sess)
-				# completely off policy
-				for _ in tqdm(range(self.params.k_step), ncols=100):
-					feed_state, feed_action, feed_next, feed_reward = [], [], [], []
-					for sample in self.environment.sample():
-						s, a, n, r = sample
-						feed_state.append(self.environment.state_embed(s))
-						feed_action.append(a)
-						feed_next.append(self.environment.state_embed(n))
-						feed_reward.append(r)
-					sess.run(self.step, feed_dict={self.state_embed: np.array(feed_state),
-					                               self.action: np.array(feed_action),
-					                               self.next_embed: np.array(feed_next),
-					                               self.reward: np.array(feed_reward)})
+	def train(self, sess):
+		sess.run(tf.global_variables_initializer())
+		for _ in tqdm(range(self.params.epoch), ncols=100):
+			self.update_target(sess)
+			# completely off policy
+			for _ in tqdm(range(self.params.k_step), ncols=100):
+				feed_state, feed_action, feed_next, feed_reward = [], [], [], []
+				for sample in self.environment.sample():
+					s, a, n, r = sample
+					feed_state.append(self.environment.state_embed(s))
+					feed_action.append(a)
+					feed_next.append(self.environment.state_embed(n))
+					feed_reward.append(r)
+				sess.run(self.step, feed_dict={self.state_embed: np.array(feed_state),
+				                               self.action: np.array(feed_action),
+				                               self.next_embed: np.array(feed_next),
+				                               self.reward: np.array(feed_reward)})
 
-	def play(self):
-		pass
+	def plan(self, sess):
+		state = self.environment.initial_state()
+		while True:
+			feed_state = np.expand_dims(self.environment.state_embed(state), axis=0)
+			actions = np.argsort(-sess.run(self.Q, feed_dict={self.state_embed: feed_state})[0])
+			for a in actions:
+				if a not in state:
+					action = int(a)
+					break
+			if self.environment.terminal_action(action) or self.environment.terminal_state(state):
+				print('total reward: %f' % self.environment.total_reward(state))
+				break
+			state = self.environment.next_state(state, action)
