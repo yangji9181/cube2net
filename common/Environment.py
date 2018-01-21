@@ -1,14 +1,14 @@
 import numpy as np
 
-from common.Cube import Cube
+from Cube import Cube
 
 
 class Base(object):
 	def __init__(self, params):
 		self.params = params
-		self.cube = None
 		self.load_cell()
 		self.load_embed()
+		self.cube = Cube.load_cube(self.params.cube_file)
 
 	def load_cell(self):
 		self.cell_to_id = {}
@@ -34,10 +34,11 @@ class Base(object):
 			                            / float(self.params.end_year - self.params.start_year)))
 		self.cell_embed = np.array(cell_embed)
 
+	def initial_state(self):
+		return set(list(np.random.choice(len(self.id_to_cell), self.params.initial_state_size, replace=False)))
+
 	def state_embed(self, state):
 		return np.mean(self.cell_embed[state], axis=0)
 
 	def total_reward(self, state):
-		if self.cube is None:
-			self.cube = Cube.load_cube(self.params.cube_file)
 		return self.cube.total_reward([self.id_to_cell[id] for id in state])

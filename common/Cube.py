@@ -14,9 +14,12 @@ class Cube(object):
 		return nx.average_clustering(G2) - nx.average_clustering(G1)
 
 	# compute reward to go
-	def trajectory_reward(self, actions):
-		rewards = [0]
+	def trajectory_reward(self, state, actions):
 		G = nx.Graph()
+		for cell in state:
+			self.add_cell(G, cell)
+		rewards = [nx.average_clustering(G)]
+
 		for cell in actions:
 			self.add_cell(G, cell)
 			rewards.append(nx.average_clustering(G))

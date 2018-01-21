@@ -65,18 +65,18 @@ class PPO(object):
 	# the number of trajectories sampled is equal to batch size
 	def collect_trajectory(self, sess):
 		ret_states, ret_actions = [], []
-		batch_states = [set() for _ in range(self.params.batch_size)]
-		feed_state = np.zeros((self.params.batch_size, self.params.embed_dim))
-		actions = []
+		batch_states = [self.environment.initial_state() for _ in range(self.params.batch_size)]
+		feed_state = np.array([self.environment.state_embed(list(s)) for s in batch_states])
+		batch_actions = []
 		for i in range(self.params.trajectory_length):
 			ret_states.append(feed_state)
 			action = sess.run(self.decision, feed_dict={self.state: feed_state})
 			ret_actions.append(action)
-			actions.append(list(action))
+			batch_actions.append(list(action))
 			for i, state in enumerate(batch_states):
 				state.add(action[i])
 				feed_state[i] = self.environment.state_embed(list(state))
-		ret_rewards = [self.environment.trajectory_reward(action) for action in actions]
+		ret_rewards = [self.environment.trajectory_reward(s, a) for s, a in zip(batch_states, batch_actions)]
 		return zip(ret_states, ret_actions, ret_rewards)
 
 	def train(self, sess):
@@ -92,4 +92,11 @@ class PPO(object):
 			sess.run(self.assign_ops)
 
 	def plan(self, sess):
-		pass
+		batch_states = [self.environment.initial_state() for _ in range(self.params.batch_size)]
+		feed_state = np.array([self.environment.state_embed(list(s)) for s in batch_states])
+		for _ in range(self.params.trajectory_length):
+			action = sess.run(self.decision, feed_dict={self.state: feed_state})
+			for i, state in enumerate(batch_states):
+				state.add(action[i])
+				feed_state[i] = self.environment.state_embed(list(state))
+		return np.average(np.array([self.environment.total_reward(s) for s in batch_states]))
