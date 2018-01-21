@@ -2,7 +2,7 @@ import numpy as np
 from NN import *
 from tqdm import tqdm
 
-class Agent(object):
+class DQN(object):
 	def __init__(self, params, environment):
 		self.params = params
 		self.environment = environment

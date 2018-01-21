@@ -1,8 +1,7 @@
-import numpy as np
-from Cube import Cube
+from common.Environment import *
 
 
-class Environment(object):
+class Environment(Base):
 	def __init__(self, params):
 		self.params = params
 		self.cube = None
@@ -80,3 +79,6 @@ class Environment(object):
 		if self.cube is None:
 			self.cube = Cube.load_cube(self.params.cube_file)
 		return self.cube.total_reward([self.id_to_cell[id] for id in state])
+
+	def trajectory_reward(self, actions):
+		return self.cube.trajectory_reward(actions)
