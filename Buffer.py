@@ -1,7 +1,7 @@
 import numpy as np
 from copy import deepcopy
-from config import *
-from Cube import Cube
+from common.config import *
+from common.Cube import Cube
 
 
 class Buffer(object):
@@ -28,7 +28,7 @@ class Buffer(object):
 
 	# state is a set of cells, action is a single cell
 	def reward(self, state, action):
-		return self.cube.reward(state, action)
+		return self.cube.reward(state, action, args.measure)
 
 if __name__ == '__main__':
 	cube = Cube.load_cube(args.cube_file)

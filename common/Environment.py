@@ -41,4 +41,4 @@ class Base(object):
 		return np.mean(self.cell_embed[state], axis=0)
 
 	def total_reward(self, state):
-		return self.cube.total_reward([self.id_to_cell[id] for id in state])
+		return self.cube.total_reward([self.id_to_cell[id] for id in state], self.params.measure)

@@ -92,11 +92,9 @@ class PPO(object):
 			sess.run(self.assign_ops)
 
 	def plan(self, sess):
-		batch_states = [self.environment.initial_state() for _ in range(self.params.batch_size)]
-		feed_state = np.array([self.environment.state_embed(list(s)) for s in batch_states])
+		state = self.environment.initial_state()
 		for _ in range(self.params.trajectory_length):
+			feed_state = np.expand_dims(self.environment.state_embed(list(state)), axis=0)
 			action = sess.run(self.decision, feed_dict={self.state: feed_state})
-			for i, state in enumerate(batch_states):
-				state.add(action[i])
-				feed_state[i] = self.environment.state_embed(list(state))
-		return np.average(np.array([self.environment.total_reward(s) for s in batch_states]))
+			state.add(action[0])
+		return self.environment.total_reward(state)
