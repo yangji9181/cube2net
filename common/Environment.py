@@ -35,7 +35,7 @@ class Base(object):
 		self.cell_embed = np.array(cell_embed)
 
 	def initial_state(self):
-		return set(list(np.random.choice(len(self.id_to_cell), self.params.initial_state_size, replace=False)))
+		return self.cube.initial_state(self.params.test_file, self.params.intersect_threshold)
 
 	def state_embed(self, state):
 		return np.mean(self.cell_embed[state], axis=0)

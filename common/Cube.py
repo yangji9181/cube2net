@@ -4,6 +4,17 @@ import networkx as nx
 
 
 class Cube(object):
+	def initial_state(self, path, threshold):
+		authors = set()
+		with open(path) as f:
+			for line in f:
+				authors.add(line.rstrip().split('\t')[0])
+		ids = []
+		for id, cell_authors in self.id_to_author.items():
+			if len(cell_authors & authors) > threshold:
+				ids.append(id)
+		return set(ids)
+
 	# state is a set of cells, action is a single cell
 	def reward(self, state, action, func):
 		G1, G2 = nx.Graph(), nx.Graph()

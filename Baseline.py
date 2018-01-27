@@ -11,7 +11,7 @@ class Baseline(object):
 		self.cube = Cube.load_cube(args.cube_file)
 
 	def initial_state(self):
-		return set(list(np.random.choice(len(self.cube.id_to_cell), self.params.initial_state_size, replace=False)))
+		return self.cube.initial_state(self.params.test_file, self.params.intersect_threshold)
 
 	def random_baseline(self, state):
 		actions = set(list(np.random.choice(len(self.cube.id_to_cell), self.params.trajectory_length, replace=False)))
@@ -28,7 +28,7 @@ class Baseline(object):
 		queue.put(max(local_queue, key=lambda e: e[1]))
 
 	def greedy_baseline(self, state):
-		num_worker = 4
+		num_worker = self.params.num_process
 		next = deepcopy(state)
 		for _ in range(self.params.trajectory_length):
 			queue = Queue()
@@ -50,5 +50,5 @@ class Baseline(object):
 if __name__ == '__main__':
 	baseline = Baseline(args)
 	state = baseline.initial_state()
-	# print('random baseline: %f' % baseline.random_baseline(state))
+	print('random baseline: %f' % baseline.random_baseline(state))
 	print('greedy baseline: %f' % baseline.greedy_baseline(state))
