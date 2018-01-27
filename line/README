@@ -1,0 +1,15 @@
+A package for network embedding:
+
+To learn node embedding for an HIN:
+
+1. Construct a set of nodes with the following codes:
+line_node node;
+node.init(<node file>, <vector dim>);
+
+2. Construct HINs between nodes with the following codes:
+line_hin hin;
+hin.init(<hin file>, <node left>, <node right>, 0);
+
+3. Add a learner with the following codes:
+line_trainer_line learner;
+learner.init(&hin, 0);
