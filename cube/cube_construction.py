@@ -12,11 +12,14 @@ class DblpCube(object):
 	def __init__(self, params):
 		self.params = params
 		self.year_name = []
+		self.year_author = []
+		self.year_link = []
 		self.venue_name = []
+		self.venue_author = []
+		self.venue_link = []
 		self.topic_name = [[] for x in range(self.params['num_topics'])]
-		self.cell_year = []
-		self.cell_venue = []
-		self.cell_topic = [set() for x in range(self.params['num_topics'])]
+		self.topic_author = [set() for x in range(self.params['num_topics'])]
+		self.topic_link = [set() for x in range(self.params['num_topics'])]
 		self.paper_author = []
 
 		self.author0 = set()
@@ -113,12 +116,22 @@ class DblpCube(object):
 					# construct venue and year cells
 					if p['venue'].lower() not in self.venue_name:
 						self.venue_name.append(p['venue'].lower())
-						self.cell_venue.append(set())
-					self.cell_venue[self.venue_name.index(p['venue'].lower())] |= self.paper_author[p_id]
+						self.venue_author.append(set())
+						self.venue_link.append(defaultdict(int))
+					self.venue_author[self.venue_name.index(p['venue'].lower())] |= self.paper_author[p_id]
+					for a1 in self.paper_author[p_id]:
+						for a2 in self.paper_author[p_id]:
+							if a1 != a2:
+								self.venue_link[self.venue_name.index(p['venue'].lower())][a1+','+a2] += 1
 					if p['year'] not in self.year_name:
 						self.year_name.append(p['year'])
-						self.cell_year.append(set())
-					self.cell_year[self.year_name.index(p['year'])] |= self.paper_author[p_id]
+						self.year_author.append(set())
+						self.year_link.append(defaultdict(int))
+					self.year_author[self.year_name.index(p['year'])] |= self.paper_author[p_id]
+					for a1 in self.paper_author[p_id]:
+						for a2 in self.paper_author[p_id]:
+							if a1 != a2:
+								self.year_link[self.year_name.index(p['year'])][a1+','+a2] += 1
 
 					#if valid % 10000 == 0:
 						#print("step1: "+strftime("%Y-%m-%d %H:%M:%S", gmtime())+': processing paper '+str(valid))
@@ -172,7 +185,11 @@ class DblpCube(object):
 			topics = ldamodel.get_document_topics(paper, minimum_probability=1e-4)
 			topics.sort(key=lambda tup: tup[1], reverse=True)
 			if len(topics) >= 1:
-				self.cell_topic[topics[0][0]] |= self.paper_author[counter]
+				self.topic_author[topics[0][0]] |= self.paper_author[counter]
+				for a1 in self.paper_author[counter]:
+						for a2 in self.paper_author[counter]:
+							if a1 != a2:
+								self.topic_link[topics[0][0]][a1+','+a2] += 1
 			#if len(topics) >= 2:
 				#self.cell_content_two[topics[1][0]].append(counter)
 			#if len(topics) >= 3:
@@ -230,9 +247,9 @@ class DblpCube(object):
 							num_edge += 1
 		print('step3: finished topic network files with '+str(num_node)+' nodes and '+str(num_edge)+' edges.')
 
-		del self.venue_name
-		del self.year_name
-		del self.topic_name
+		#del self.venue_name
+		#del self.year_name
+		#del self.topic_name
 		with open('models/step3.pkl', 'wb') as f:
 			pickle.dump(self, f)
 
