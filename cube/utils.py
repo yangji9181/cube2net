@@ -4,6 +4,8 @@ from collections import defaultdict
 import evaluate
 from cube_construction import DblpCube
 from subprocess import call
+from sklearn.cluster import KMeans
+import numpy as np
 
 class DblpCell(object):
 	def __init__(self, year=-1, venue=-1, topic=-1, authors=set()):
@@ -64,9 +66,9 @@ class DblpEval(object):
 				self.names.append(name)
 				labels.append(label)				
 
-		k_true = len(set(labels))
+		self.k_true = len(set(labels))
 		labelmap = list(set(labels))
-		self.true = [[0]*len(self.names) for i in range(k_true)]
+		self.true = [[0]*len(self.names) for i in range(self.k_true)]
 		for i in range(len(self.names)):
 			self.true[labelmap.index(labels[i])][i] = 1
 
@@ -116,8 +118,17 @@ class DblpEval(object):
 
 		call('./embed -size 64 -iter 20', shell=True, cwd='../line')
 
-		
+		embed = np.ndarray(shape=(len(self.names), 64), dtype=np.float64)
+		with open('../line/output-a-0.txt', 'r') as embf:
+			for line in embf:
+				tokens = line.split('\t')
+				embed[self.names.index(self.nodes[int(tokens[0])]), :] = np.array(tokens[1].strip().split(' '), dtype=np.float64)
 
+		kmeans = KMeans(n_clusters=self.k_true).fit(embed)
+		pred = [[0]*len(self.names) for i in range(self.k_true)]
+		for i in range(len(self.names)):
+			pred[kmeans.labels_[i]][i] = 1
+		
 
 		print('f1: '+str(evaluate.f1_community(pred, self.true)))
 		print('jc: '+str(evaluate.jc_community(pred, self.true)))

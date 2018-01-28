@@ -74,10 +74,10 @@ void *training_thread(void *id)
 
 void TrainModel() {
     strcat(job_id,".txt");
-    char node_file_a[MAX_STRING]="line/node-a-";  
-    char link_file_aa[MAX_STRING]="line/edge-aa-";
-    char output_file_a[MAX_STRING]="line/output-a-";  
-    char context_file_a[MAX_STRING]="line/context-a-";
+    char node_file_a[MAX_STRING]="node-a-";  
+    char link_file_aa[MAX_STRING]="edge-aa-";
+    char output_file_a[MAX_STRING]="output-a-";  
+    char context_file_a[MAX_STRING]="context-a-";
 
     long a;
     pthread_t *pt = (pthread_t *)malloc(num_threads * sizeof(pthread_t));
