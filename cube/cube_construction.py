@@ -19,7 +19,7 @@ class DblpCube(object):
 		self.venue_link = []
 		self.topic_name = [[] for x in range(self.params['num_topics'])]
 		self.topic_author = [set() for x in range(self.params['num_topics'])]
-		self.topic_link = [set() for x in range(self.params['num_topics'])]
+		self.topic_link = [defaultdict(int) for x in range(self.params['num_topics'])]
 		self.paper_author = []
 
 		self.author0 = set()
@@ -172,7 +172,13 @@ class DblpCube(object):
 		print("lda: constructing doc-phrase matrix")
 		corpus = [dictionary.doc2bow(text) for text in texts]
 		print("lda: computing model")
-		ldamodel = models.ldamodel.LdaModel(corpus, num_topics=self.params['num_topics'], id2word = dictionary, passes=20)
+		if not os.path.exists('models/ldamodel.pkl'):
+			ldamodel = models.ldamodel.LdaModel(corpus, num_topics=self.params['num_topics'], id2word = dictionary, passes=20)
+			with open('models/ldamodel.pkl', 'w') as f:
+				pickle.dump(ldamodel, f)
+		else:
+			with open('models/ldamodel.pkl', 'r') as f:
+				ldamodel = pickle.load(f)
 		print("lda: saving topical phrases")
 		for i in range(self.params['num_topics']):
 			self.topic_name[i] = ldamodel.show_topic(i, topn=100)
