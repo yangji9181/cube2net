@@ -89,10 +89,11 @@ class PPO(object):
 			indices = range(self.params.trajectory_length * self.params.batch_size)
 			shuffle(indices)
 			batch_size = self.params.trajectory_length * self.params.batch_size / self.params.step
-			for i in tqdm(range(self.params.step), ncols=100):
-				batch_indices = indices[i * batch_size : (i + 1) * batch_size]
-				sess.run(self.step,
-				         feed_dict={self.state: states[batch_indices], self.action: actions[batch_indices], self.reward_to_go: rewards[batch_indices]})
+			for _ in tqdm(range(self.params.outer_step), ncols=100):
+				for i in range(self.params.step):
+					batch_indices = indices[i * batch_size : (i + 1) * batch_size]
+					sess.run(self.step,
+					         feed_dict={self.state: states[batch_indices], self.action: actions[batch_indices], self.reward_to_go: rewards[batch_indices]})
 			sess.run(self.assign_ops)
 
 	def plan(self, sess):
