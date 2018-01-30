@@ -1,5 +1,4 @@
 import pickle
-# import snap
 from collections import defaultdict
 import evaluate
 from cube_construction import DblpCube
@@ -55,7 +54,7 @@ class DblpEval(object):
 						if i != j:
 							self.edges[i+','+j] += 1
 		
-		label_file = '../clus_dblp/name-'+self.cube.params['label_type']+'.txt'
+		label_file = 'clus_dblp/name-'+self.cube.params['label_type']+'.txt'
 		self.names = []
 		labels = []
 		with open(label_file, 'r') as f:
@@ -72,32 +71,6 @@ class DblpEval(object):
 		for i in range(len(self.names)):
 			self.true[labelmap.index(labels[i])][i] = 1
 
-
-	def clusteringCNM(self):
-		G = snap.TUNGraph.New()
-		for i in range(len(self.nodes)):
-			G.AddNode(i)
-		for key in self.edges.keys():
-			tokens = key.split(',')
-			G.AddEdge(self.nodes.index(tokens[0]), self.nodes.index(tokens[1]))
-		CmtyV = snap.TCnComV()
-		modularity = snap.CommunityCNM(G, CmtyV)
-		detected = []
-		for cmty in CmtyV:
-			detected.append(list(cmty))
-
-		k_pred = len(detected)
-		pred = [[0]*len(self.names) for i in range(k_pred)]
-		i = 0
-		for cmty in detected:
-			for member in cmty:
-				if self.nodes[member] in self.names:
-					pred[i][self.names.index(self.nodes[member])] = 1
-			i += 1
-
-		print('f1: '+str(evaluate.f1_community(pred, self.true)))
-		print('jc: '+str(evaluate.jc_community(pred, self.true)))
-		print('nmi: '+str(evaluate.nmi_community(pred, self.true)))
 
 
 	#mengxiong
