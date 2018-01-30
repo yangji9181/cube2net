@@ -9,8 +9,14 @@ from Cube import Cube
 if __name__ == '__main__':
 	environment = Environment(args)
 	tf.reset_default_graph()
-	agent = PPO(args, environment)
-	with tf.Session() as sess:
+	os.environ['CUDA_VISIBLE_DEVICES'] = '7'
+	with tf.device('/gpu:0'):
+		agent = PPO(args, environment)
+	with tf.Session(config=tf.ConfigProto(
+			allow_soft_placement=True,
+			gpu_options=tf.GPUOptions(
+				per_process_gpu_memory_fraction=0.5,
+				allow_growth=True))) as sess:
 		agent.train(sess)
 		authors, reward = agent.plan(sess)
 		print('total reward: %f' % reward)
