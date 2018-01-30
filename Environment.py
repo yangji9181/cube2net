@@ -53,14 +53,16 @@ class Environment(object):
 			process = Process(target=worker, args=(id,))
 			process.start()
 			processes.append(process)
-		for process in processes:
-			process.join()
+
 		ret_states, ret_actions, ret_rewards = [], [], []
-		while not queue.empty():
+		for i in range(self.params.batch_size):
 			state, action, reward = queue.get()
 			ret_states.append(state)
 			ret_actions.append(action)
 			ret_rewards.append(reward)
+
+		for process in processes:
+			process.join()
 
 		return np.concatenate(ret_states, axis=0), np.concatenate(ret_actions, axis=0), np.concatenate(ret_rewards, axis=0)
 
