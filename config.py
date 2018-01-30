@@ -25,10 +25,7 @@ def parse_args():
 
 
 def init_dir(args):
-	if sys.platform == 'darwin':
-		args.data_dir = os.getcwd() + '/data/'
-	else:
-		args.data_dir = '/shared/data/mliu60/Cube2Net/data/'
+	args.data_dir = os.getcwd() + '/data/'
 	args.venue_file = args.data_dir + 'venue.txt'
 	args.topic_file = args.data_dir + 'topic.txt'
 	args.content_file = args.data_dir + 'content.txt'
