@@ -62,7 +62,7 @@ class DblpEval(object):
 		embed = np.ndarray(shape=(len(self.names), embed_size), dtype=np.float64)
 		with open('line/output-a-0.txt', 'r') as embf:
 			for line in embf:
-				tokens = line.split('\t')
+				tokens = line.rstrip().split('\t')
 				if self.nodes[int(tokens[0])] in self.names:
 					embed[self.names.index(self.nodes[int(tokens[0])]), :] = np.array(list(map(float, tokens[1].strip().split(' '))))
 
