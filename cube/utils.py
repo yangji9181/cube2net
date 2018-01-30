@@ -59,13 +59,12 @@ class DblpEval(object):
 		embed_size = 128
 		call('./embed -size %d -iter 100' % embed_size, shell=True, cwd='line/')
 
-		embed = [None for _ in range(len(self.names))]
+		embed = np.zeros((len(self.names), embed_size))
 		with open('line/output-a-0.txt', 'r') as embf:
 			for line in embf:
 				tokens = line.split('\t')
 				if self.nodes[int(tokens[0])] in self.names:
 					embed[self.names.index(self.nodes[int(tokens[0])])] = np.array(list(map(float, tokens[1].strip().split(' '))))
-		embed =np.array(embed)
 		print(embed)
 
 		kmeans = KMeans(n_clusters=self.k_true).fit(embed)
