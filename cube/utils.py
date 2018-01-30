@@ -49,7 +49,7 @@ class DblpEval(object):
 		after termination, output embeddings are available in line/output-a-0.txt
 		'''
 
-		with open('../line/node-a-0.txt', 'w') as nodef, open('../line/edge-aa-0.txt', 'w') as edgef:
+		with open('line/node-a-0.txt', 'w') as nodef, open('line/edge-aa-0.txt', 'w') as edgef:
 			for i in range(len(self.nodes)):
 				nodef.write(str(i)+'\n')
 			for key in self.edges.keys():
@@ -57,10 +57,10 @@ class DblpEval(object):
 				edgef.write(str(self.nodes.index(tokens[0]))+'\t'+str(self.nodes.index(tokens[1]))+'\t'+str(self.edges[key])+'\n')
 
 		embed_size = 128
-		call('./embed -size %d -iter 100' % embed_size, shell=True, cwd='../line')
+		call('./embed -size %d -iter 100' % embed_size, shell=True, cwd='line/')
 
 		embed = np.ndarray(shape=(len(self.names), embed_size), dtype=np.float64)
-		with open('../line/output-a-0.txt', 'r') as embf:
+		with open('line/output-a-0.txt', 'r') as embf:
 			for line in embf:
 				tokens = line.split('\t')
 				if self.nodes[int(tokens[0])] in self.names:
