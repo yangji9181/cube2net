@@ -6,39 +6,6 @@ from subprocess import call
 from sklearn.cluster import KMeans
 import numpy as np
 
-class DblpCell(object):
-	def __init__(self, year=-1, venue=-1, topic=-1, authors=set()):
-		self.year = year
-		self.venue = venue
-		self.topic = topic
-		self.authors = authors
-
-	def getAuthors(self, cube):
-		if len(self.authors) == 0:
-			self.authors = cube.cell_year[self.year] & cube.cell_venue[self.venue] & cube.cell_topic[self.topic]
-		return self.authors
-
-	def getCells(self, author, cube):
-		years = []
-		venues = []
-		topics = []
-		for year in range(len(cube.year_name)):
-			if author in cube.cell_year:
-				years.append(year)
-		for venue in range(lan(cube.venue_name)):
-			if author in cube.cell_venue:
-				venues.append(venue)
-		for topic in range(len(cube.topic_name)):
-			if author in cube.cell_topic:
-				topics.append(topic)
-
-		cells = []
-		for year in years:
-			for venue in venues:
-				for topic in topics:
-					cells.append(DblpCell(year=year, venue=venue, topic=topic))
-		return cells
-
 
 class DblpEval(object):
 	def __init__(self, cube, authors):

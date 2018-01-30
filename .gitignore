@@ -1,2 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 /data/cube.pkl
+/line/embed
+/line/linelib.o
+/line/main.o
+/cube/models/step3.pkl
