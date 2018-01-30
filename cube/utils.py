@@ -64,9 +64,8 @@ class DblpEval(object):
 			for line in embf:
 				tokens = line.split('\t')
 				if self.nodes[int(tokens[0])] in self.names:
-					embed[self.names.index(self.nodes[int(tokens[0])]), :] = np.array(tokens[1].strip().split(' '), dtype=np.float64)
+					embed[self.names.index(self.nodes[int(tokens[0])]), :] = np.array(list(map(float, tokens[1].strip().split(' '))))
 
-		print(str(self.k_true) + ' clusters')
 		kmeans = KMeans(n_clusters=self.k_true).fit(embed)
 		pred = [[0]*len(self.names) for i in range(self.k_true)]
 		for i in range(len(self.names)):
