@@ -97,7 +97,7 @@ class PPO(object):
 			sess.run(self.assign_ops)
 
 	def plan(self, sess):
-		state = self.environment.initial_state()
+		state = self.environment.init_state
 		for _ in range(self.params.trajectory_length):
 			feed_state = np.expand_dims(self.environment.state_embed(list(state)), axis=0)
 			action = sess.run(self.decision, feed_dict={self.state: feed_state})
