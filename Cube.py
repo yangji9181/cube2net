@@ -1,7 +1,7 @@
-import itertools
 import pickle
 import networkx as nx
 import numpy as np
+from copy import deepcopy
 
 
 class Cube(object):
@@ -12,6 +12,7 @@ class Cube(object):
 		with open(path) as f:
 			for line in f:
 				authors.add(line.rstrip().split('\t')[0].replace('_', ' '))
+		self.init_authors = authors
 		ids = []
 		for id, _ in enumerate(self.id_to_cell):
 			if len(self.id_to_author[id] & authors) > threshold:
@@ -19,7 +20,7 @@ class Cube(object):
 		return set(ids)
 
 	def all_authors(self, state):
-		authors = set()
+		authors = deepcopy(self.init_authors)
 		for id in state:
 			authors |= self.id_to_author[id]
 		return authors
