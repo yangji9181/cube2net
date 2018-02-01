@@ -66,7 +66,8 @@ class Baseline(object):
 	def greedy_baseline(self, state, num_candidate, embedding=False):
 		num_worker = self.params.num_process
 		next = deepcopy(state)
-		for _ in range(self.params.trajectory_length):
+		for i in range(self.params.trajectory_length):
+			print('step %d' % i)
 			candidates = list(np.random.choice(len(self.cube.id_to_cell), num_candidate, replace=False))
 			queue = Queue()
 			processes = []
