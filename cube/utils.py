@@ -7,7 +7,10 @@ from sklearn.cluster import KMeans
 import numpy as np
 
 
-class DblpEval(object):
+class DblpEval(object, label_type='label'):
+	#label_type:
+		#group: small set of 116 authors
+		#label: large set of 4236 authors
 	def __init__(self, cube, authors):
 		self.cube = cube
 		self.edges = defaultdict(int)
@@ -21,7 +24,7 @@ class DblpEval(object):
 						if i != j:
 							self.edges[i+','+j] += 1
 		
-		label_file = 'clus_dblp/name-'+self.cube.params['label_type']+'.txt'
+		label_file = 'clus_dblp/name-'+label_type+'.txt'
 		self.names = []
 		labels = []
 		with open(label_file, 'r') as f:
