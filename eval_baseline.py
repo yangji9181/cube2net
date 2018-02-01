@@ -12,6 +12,7 @@ if __name__ == '__main__':
 
 	baseline = Baseline(args)
 	state = baseline.initial_state()
+	print(len(state))
 
 	authors, reward = baseline.random_baseline(state)
 	print('random baseline: %f' % reward)
