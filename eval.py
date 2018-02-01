@@ -24,4 +24,5 @@ if __name__ == '__main__':
 	with open('cube/models/step3.pkl', 'r') as f:
 		cube = pickle.load(f)
 	test = DblpEval(cube, authors, label_type=label_type, method='rl')
+	test.writeGraph()
 	test.clusteringLINE()

@@ -1,3 +1,4 @@
+import os
 import pickle
 import shutil
 from collections import defaultdict
@@ -45,13 +46,13 @@ class DblpEval(object):
 			self.true[labelmap.index(labels[i])][i] = 1
 
 	def writeGraph(self, ):
+		os.mkdir(self.label_type + '/' + self.method)
 		with open(self.label_type + '/' + self.method + '/node-a-0.txt', 'w') as nodef, open(self.label_type + '/' + self.method + '/edge-aa-0.txt', 'w') as edgef:
 			for i in range(len(self.nodes)):
 				nodef.write(str(i)+'\n')
 			for key in self.edges.keys():
 				tokens = key.split(',')
 				edgef.write(str(self.nodes.index(tokens[0]))+'\t'+str(self.nodes.index(tokens[1]))+'\t'+str(self.edges[key])+'\n')
-
 
 
 	#mengxiong
