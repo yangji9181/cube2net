@@ -46,7 +46,7 @@ class DblpEval(object):
 			self.true[labelmap.index(labels[i])][i] = 1
 
 	def writeGraph(self, ):
-		os.mkdir(self.label_type + '/' + self.method)
+		os.makedirs(self.label_type + '/' + self.method)
 		with open(self.label_type + '/' + self.method + '/node-a-0.txt', 'w') as nodef, open(self.label_type + '/' + self.method + '/edge-aa-0.txt', 'w') as edgef:
 			for i in range(len(self.nodes)):
 				nodef.write(str(i)+'\n')
