@@ -34,7 +34,8 @@ def init_dir(args):
 	args.year_file = args.data_dir + 'year.txt'
 	args.cube_file = args.data_dir + 'cube.pkl'
 	args.cell_file = args.data_dir + 'cell.txt'
-	args.test_file = args.data_dir + 'label.txt'
+	args.test_file = args.data_dir + label_type + '.txt'
 
+label_type = 'group'
 args = parse_args()
 init_dir(args)
