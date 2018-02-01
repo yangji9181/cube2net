@@ -31,7 +31,7 @@ class Environment(object):
 		self.cell_embed = np.array(cell_embed)
 
 	def initial_state(self):
-		return self.cube.initial_state(self.params.test_file, self.params.intersect_threshold, self.params.debug)
+		return self.cube.initial_state(self.params.test_file, self.params.low_limit, self.params.high_limit, self.params.debug)
 
 	def state_embed(self, state):
 		return np.mean(self.cell_embed[state], axis=0)

@@ -31,7 +31,7 @@ class Baseline(object):
 		self.cell_embed = np.array(cell_embed)
 
 	def initial_state(self):
-		return self.cube.initial_state(self.params.test_file, self.params.intersect_threshold, self.params.debug)
+		return self.cube.initial_state(self.params.test_file, self.params.low_limit, self.params.high_limit, self.params.debug)
 
 	def random_baseline(self, state):
 		actions = set(list(np.random.choice(len(self.cube.id_to_cell), self.params.trajectory_length, replace=False)))

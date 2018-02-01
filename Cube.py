@@ -5,17 +5,27 @@ from copy import deepcopy
 
 
 class Cube(object):
-	def initial_state(self, path, threshold, debug=False):
+	def initial_state(self, path, low_limit, high_limit, debug=False):
 		if debug:
 			return set(list(np.random.choice(len(self.id_to_cell), 10, replace=False)))
-		authors = set()
+		test_authors = set()
 		with open(path) as f:
 			for line in f:
-				authors.add(line.rstrip().split('\t')[0].replace('_', ' '))
-		self.init_authors = authors
+				test_authors.add(line.rstrip().split('\t')[0].replace('_', ' '))
+
+		# self.author_1st = deepcopy(test_authors)
+		# for links in self.id_to_link:
+		# 	for pair in links:
+		# 		if pair[0] in self.author_1st:
+		# 			self.author_1st.add(pair[1])
+		# 		elif pair[1] in self.author_1st:
+		# 			self.author_1st.add(pair[0])
+
+		self.init_authors = test_authors
 		ids = []
 		for id, _ in enumerate(self.id_to_cell):
-			if len(self.id_to_author[id] & authors) > threshold:
+			count = len(self.id_to_author[id] & test_authors)
+			if count >= low_limit and count < high_limit:
 				ids.append(id)
 		return set(ids)
 
