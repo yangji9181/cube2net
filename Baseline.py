@@ -47,6 +47,8 @@ class Baseline(object):
 				local_queue.append((state_copy, self.cube.total_reward(state_copy, self.params.measure)))
 		if len(local_queue) > 0:
 			queue.put(max(local_queue, key=lambda e: e[1]))
+		else:
+			queue.put((state, self.cube.total_reward(state, self.params.measure)))
 
 	def embedding_worker(self, state, candidates, num_worker, worker_id, queue):
 		state_embed = np.array([self.cell_embed[id] for id in state])
@@ -58,11 +60,14 @@ class Baseline(object):
 				local_queue.append((state_copy, np.amin(np.linalg.norm(self.cell_embed[cell_id] - state_embed, ord=2, axis=1))))
 		if len(local_queue) > 0:
 			queue.put(min(local_queue, key=lambda e: e[1]))
+		else:
+			queue.put((state, 0))
 
 	def greedy_baseline(self, state, num_candidate, embedding=False):
 		num_worker = self.params.num_process
 		next = deepcopy(state)
-		for _ in range(self.params.trajectory_length):
+		for i in range(self.params.trajectory_length):
+			print('step %d' % i)
 			candidates = list(np.random.choice(len(self.cube.id_to_cell), num_candidate, replace=False))
 			queue = Queue()
 			processes = []
@@ -84,7 +89,6 @@ class Baseline(object):
 if __name__ == '__main__':
 	baseline = Baseline(args)
 	state = baseline.initial_state()
-	print(len(state))
 	_, reward = baseline.random_baseline(state)
 	print('random baseline: %f' % reward)
 	_, reward = baseline.greedy_baseline(state, args.baseline_candidate, embedding=True)
