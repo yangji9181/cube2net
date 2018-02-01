@@ -19,11 +19,11 @@ if __name__ == '__main__':
 	test.writeGraph()
 	test.clusteringLINE()
 
-	authors, reward = baseline.greedy_baseline(state, args.baseline_candidate, embedding=True)
-	print('greedy embedding baseline: %f' % reward)
-	test = DblpEval(cube, authors, label_type=label_type, method='embedding')
-	test.writeGraph()
-	test.clusteringLINE()
+	# authors, reward = baseline.greedy_baseline(state, args.baseline_candidate, embedding=True)
+	# print('greedy embedding baseline: %f' % reward)
+	# test = DblpEval(cube, authors, label_type=label_type, method='embedding')
+	# test.writeGraph()
+	# test.clusteringLINE()
 
 	authors, reward = baseline.greedy_baseline(state, args.baseline_candidate)
 	print('greedy baseline: %f' % reward)

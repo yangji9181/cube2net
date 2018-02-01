@@ -13,13 +13,13 @@ class Cube(object):
 			for line in f:
 				test_authors.add(line.rstrip().split('\t')[0].replace('_', ' '))
 
-		# self.author_1st = deepcopy(test_authors)
-		# for links in self.id_to_link:
-		# 	for pair in links:
-		# 		if pair[0] in self.author_1st:
-		# 			self.author_1st.add(pair[1])
-		# 		elif pair[1] in self.author_1st:
-		# 			self.author_1st.add(pair[0])
+		self.author_1st = deepcopy(test_authors)
+		for links in self.id_to_link:
+			for pair in links:
+				if pair[0] in self.author_1st:
+					self.author_1st.add(pair[1])
+				elif pair[1] in self.author_1st:
+					self.author_1st.add(pair[0])
 
 		self.init_authors = test_authors
 		ids = []
@@ -63,7 +63,7 @@ class Cube(object):
 	def reward(self, G, params):
 		nodes = set(nx.nodes(G))
 		return params.transitivity_c * nx.transitivity(G) + \
-		       params.connectivity_c * float(len(nodes & self.init_authors)) / float(len(nodes))
+		       params.connectivity_c * float(len(nodes & self.author_1st)) / float(len(nodes))
 
 
 	@staticmethod
