@@ -15,15 +15,15 @@ if __name__ == '__main__':
 
 	authors, reward = baseline.random_baseline(state)
 	print('random baseline: %f' % reward)
-	test = DblpEval(cube, authors)
+	test = DblpEval(cube, authors, method='random')
 	test.clusteringLINE()
 
 	authors, reward = baseline.greedy_baseline(state, args.baseline_candidate, embedding=True)
 	print('greedy embedding baseline: %f' % reward)
-	test = DblpEval(cube, authors)
+	test = DblpEval(cube, authors, method='embedding')
 	test.clusteringLINE()
 
 	authors, reward = baseline.greedy_baseline(state, args.baseline_candidate)
 	print('greedy baseline: %f' % reward)
-	test = DblpEval(cube, authors)
+	test = DblpEval(cube, authors, method='greedy')
 	test.clusteringLINE()

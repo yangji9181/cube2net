@@ -1,4 +1,5 @@
 import pickle
+import shutil
 from collections import defaultdict
 import evaluate
 from cube_construction import DblpCube
@@ -7,12 +8,14 @@ from sklearn.cluster import KMeans
 import numpy as np
 
 
-class DblpEval(object, label_type='label'):
+class DblpEval(object):
 	#label_type:
 		#group: small set of 116 authors
 		#label: large set of 4236 authors
-	def __init__(self, cube, authors):
+	def __init__(self, cube, authors, label_type='label', method='random'):
 		self.cube = cube
+		self.label_type = label_type
+		self.method = method
 		self.edges = defaultdict(int)
 		self.nodes = list(authors)
 		authors = set(authors)
@@ -41,6 +44,14 @@ class DblpEval(object, label_type='label'):
 		for i in range(len(self.names)):
 			self.true[labelmap.index(labels[i])][i] = 1
 
+	def writeGraph(self, ):
+		with open(self.label_type + '/' + self.method + '/node-a-0.txt', 'w') as nodef, open(self.label_type + '/' + self.method + '/edge-aa-0.txt', 'w') as edgef:
+			for i in range(len(self.nodes)):
+				nodef.write(str(i)+'\n')
+			for key in self.edges.keys():
+				tokens = key.split(',')
+				edgef.write(str(self.nodes.index(tokens[0]))+'\t'+str(self.nodes.index(tokens[1]))+'\t'+str(self.edges[key])+'\n')
+
 
 
 	#mengxiong
@@ -51,13 +62,8 @@ class DblpEval(object, label_type='label'):
 		run the following system call
 		after termination, output embeddings are available in line/output-a-0.txt
 		'''
-
-		with open('line/node-a-0.txt', 'w') as nodef, open('line/edge-aa-0.txt', 'w') as edgef:
-			for i in range(len(self.nodes)):
-				nodef.write(str(i)+'\n')
-			for key in self.edges.keys():
-				tokens = key.split(',')
-				edgef.write(str(self.nodes.index(tokens[0]))+'\t'+str(self.nodes.index(tokens[1]))+'\t'+str(self.edges[key])+'\n')
+		shutil.copyfile(self.label_type + '/' + self.method + '/node-a-0.txt', 'line/node-a-0.txt')
+		shutil.copyfile(self.label_type + '/' + self.method + '/edge-aa-0.txt', 'line/edge-aa-0.txt')
 
 		embed_size = 128
 		call('./embed -size %d -iter 100' % embed_size, shell=True, cwd='line/')
