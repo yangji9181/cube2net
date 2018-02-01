@@ -37,7 +37,7 @@ class Environment(object):
 		return np.mean(self.cell_embed[state], axis=0)
 
 	def total_reward(self, state):
-		return self.cube.total_reward(state, self.params.measure)
+		return self.cube.total_reward(state, self.params)
 
 	def reward_multiprocessing(self, state_embeds, initial_states, actions):
 		def worker(worker_id):
@@ -68,7 +68,7 @@ class Environment(object):
 
 
 	def trajectory_reward(self, state, actions):
-		return self.cube.trajectory_reward(state, actions, self.params.measure)
+		return self.cube.trajectory_reward(state, actions, self.params)
 
 	def convert_state(self, state):
 		return self.cube.all_authors(state)

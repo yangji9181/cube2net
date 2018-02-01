@@ -1,12 +1,12 @@
 import argparse
 import os
-import sys
 
 
 def parse_args():
 	parser = argparse.ArgumentParser()
 	parser.add_argument('--debug', type=bool, default=False, help=None)
-	parser.add_argument('--measure', type=str, default='transitivity', help=None)
+	parser.add_argument('--transitivity_c', type=float, default=0.1, help='Reward coefficient')
+	parser.add_argument('--connectivity_c', type=float, default=1.0, help='Reward coefficient')
 	parser.add_argument('--hidden_dim', type=list, default=[256], help=None)
 	parser.add_argument('--learning_rate', type=float, default=1e-3, help=None)
 	parser.add_argument('--embed_dim', type=int, default=129, help=None)

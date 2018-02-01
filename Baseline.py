@@ -36,7 +36,7 @@ class Baseline(object):
 	def random_baseline(self, state):
 		actions = set(list(np.random.choice(len(self.cube.id_to_cell), self.params.trajectory_length, replace=False)))
 		final = state | actions
-		return self.cube.all_authors(final), self.cube.total_reward(final, self.params.measure)
+		return self.cube.all_authors(final), self.cube.total_reward(final, self.params)
 
 	def greedy_worker(self, state, candidates, num_worker, worker_id, queue):
 		local_queue = []
@@ -44,11 +44,11 @@ class Baseline(object):
 			if cell_id not in state and idx % num_worker == worker_id:
 				state_copy = deepcopy(state)
 				state_copy.add(cell_id)
-				local_queue.append((state_copy, self.cube.total_reward(state_copy, self.params.measure)))
+				local_queue.append((state_copy, self.cube.total_reward(state_copy, self.params)))
 		if len(local_queue) > 0:
 			queue.put(max(local_queue, key=lambda e: e[1]))
 		else:
-			queue.put((state, self.cube.total_reward(state, self.params.measure)))
+			queue.put((state, self.cube.total_reward(state, self.params)))
 
 	def embedding_worker(self, state, candidates, num_worker, worker_id, queue):
 		state_embed = np.array([self.cell_embed[id] for id in state])
@@ -66,8 +66,7 @@ class Baseline(object):
 	def greedy_baseline(self, state, num_candidate, embedding=False):
 		num_worker = self.params.num_process
 		next = deepcopy(state)
-		for i in range(self.params.trajectory_length):
-			print('step %d' % i)
+		for _ in range(self.params.trajectory_length):
 			candidates = list(np.random.choice(len(self.cube.id_to_cell), num_candidate, replace=False))
 			queue = Queue()
 			processes = []
@@ -83,7 +82,7 @@ class Baseline(object):
 				pair = queue.get()
 				nexts.append(pair)
 			next = max(nexts, key=lambda e: e[1])[0]
-		return self.cube.all_authors(next), self.cube.total_reward(next, self.params.measure)
+		return self.cube.all_authors(next), self.cube.total_reward(next, self.params)
 
 
 if __name__ == '__main__':

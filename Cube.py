@@ -26,15 +26,15 @@ class Cube(object):
 		return authors
 
 	# compute reward to go
-	def trajectory_reward(self, state, actions, func):
+	def trajectory_reward(self, state, actions, params):
 		G = nx.Graph()
 		for cell in state:
 			self.add_cell(G, cell)
-		rewards = [getattr(nx, func)(G)]
+		rewards = [self.reward(G, params)]
 
 		for cell in actions:
 			self.add_cell(G, cell)
-			rewards.append(getattr(nx, func)(G))
+			rewards.append(self.reward(G, params))
 		total = rewards[-1]
 		rewards = [total - r for r in rewards]
 		return rewards[:-1]
@@ -44,11 +44,16 @@ class Cube(object):
 		for pair in self.id_to_link[cell]:
 			G.add_edge(pair[0], pair[1])
 
-	def total_reward(self, state, func):
+	def total_reward(self, state, params):
 		G = nx.Graph()
 		for cell in state:
 			self.add_cell(G, cell)
-		return getattr(nx, func)(G)
+		return self.reward(G, params)
+
+	def reward(self, G, params):
+		nodes = set(nx.nodes(G))
+		return params.transitivity_c * nx.transitivity(G) + \
+		       params.connectivity_c * float(len(nodes & self.init_authors)) / float(len(nodes))
 
 
 	@staticmethod
