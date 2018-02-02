@@ -67,8 +67,8 @@ class DblpEval(object):
 		shutil.copyfile(self.label_type + '/' + self.method + '/node-a-0.txt', 'line/node-a-0.txt')
 		shutil.copyfile(self.label_type + '/' + self.method + '/edge-aa-0.txt', 'line/edge-aa-0.txt')
 
-		embed_size = 128
-		call('./embed -size %d -iter 100' % embed_size, shell=True, cwd='line/')
+		embed_size = 256
+		call('./embed -size %d -iter 1000' % embed_size, shell=True, cwd='line/')
 
 		embed = np.zeros((len(self.names), embed_size))
 		with open('line/output-a-0.txt', 'r') as embf:
@@ -76,7 +76,7 @@ class DblpEval(object):
 				tokens = line.split('\t')
 				if self.nodes[int(tokens[0])] in self.names:
 					embed[self.names.index(self.nodes[int(tokens[0])])] = np.array(list(map(float, tokens[1].strip().split(' '))))
-		print(embed)
+		# print(embed)
 
 		kmeans = KMeans(n_clusters=self.k_true).fit(embed)
 		pred = [[0]*len(self.names) for i in range(self.k_true)]
