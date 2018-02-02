@@ -22,19 +22,23 @@ class DblpCube(object):
 		self.topic_link = [defaultdict(int) for x in range(self.params['num_topics'])]
 		self.paper_author = []
 
-		self.author0 = set()
-		self.author1 = set()
-		self.author2 = set()
-
 	def step1(self):
+		basenet = {}
+		basenet['author0'] = set()
+		basenet['author1'] = set()
+		basenet['author2'] = set()
+		basenet['link0'] = defaultdict(int)
+		basenet['link1'] = defaultdict(int)
+		basenet['link2'] = defaultdict(int)
+
 		# input author0
 		with open(self.params['author_file']+self.params['label_type']+'.txt', 'r') as f:
 			for line in f:
 				name = line.strip().replace('_', ' ')
-				self.author0.add(name)
-		print('#author0: '+str(len(self.author0)))
+				basenet['author0'].add(name)
+		print('#author0: '+str(len(basenet['author0'])))
 
-		# scan dblp data once, record author1
+		# first scan on dblp data, record author1
 		for file_name in self.params['dblp_files']:
 			with open(file_name, 'r') as f:
 				for line in f:
@@ -52,12 +56,12 @@ class DblpCube(object):
 					  or (not re.match("^[\w\s,.:?-]+$", p['abstract'])):
 						continue
 					
-					if len(set(p['authors']) & self.author0) > 0:
+					if len(set(p['authors']) & basenet['author0']) > 0:
 						for name in p['authors']:
-							self.author1.add(name)
-		print('#author1: '+str(len(self.author1)))
+							basenet['author1'].add(name)
+		print('#author1: '+str(len(basenet['author1'])))
 
-		# scan dblp data once, record author2
+		# second scan on dblp data, record author2
 		for file_name in self.params['dblp_files']:
 			with open(file_name, 'r') as f:
 				for line in f:
@@ -75,12 +79,12 @@ class DblpCube(object):
 					  or (not re.match("^[\w\s,.:?-]+$", p['abstract'])):
 						continue
 					
-					if len(set(p['authors']) & self.author1) > 0:
+					if len(set(p['authors']) & basenet['author1']) > 0:
 						for name in p['authors']:
-							self.author2.add(name)
-		print('#author2: '+str(len(self.author2)))
+							basenet['author2'].add(name)
+		print('#author2: '+str(len(basenet['author2'])))
 
-		# scan dblp data once, record year, venue and content of papers including author2
+		# third scan on dblp data, record year, venue and content of papers including author2
 		count = 0
 		valid = 0
 		content_file = open(self.params['content_file'], 'w')
@@ -91,7 +95,7 @@ class DblpCube(object):
 					p = json.loads(line)
 					if ('id' not in p) \
 					  or ('authors' not in p) \
-					  or (len(set(p['authors']) & self.author2) == 0) \
+					  or (len(set(p['authors']) & basenet['author2']) == 0) \
 					  or (len(p['authors']) < 2) \
 					  or ('venue' not in p) \
 					  or (not re.match("^[\w\s,.:?-]+$", p['venue'])) \
@@ -133,11 +137,31 @@ class DblpCube(object):
 							if a1 != a2:
 								self.year_link[self.year_name.index(p['year'])][a1+','+a2] += 1
 
-					#if valid % 10000 == 0:
-						#print("step1: "+strftime("%Y-%m-%d %H:%M:%S", gmtime())+': processing paper '+str(valid))
-						#print(len(self.cell_venue), len(self.cell_year))
-
 		content_file.close()
+
+		for authors_list in self.paper_author:
+			coauthors = authors_list & basenet['author0']
+			if len(coauthors) > 1:
+				for i in coauthors:
+					for j in coauthors:
+						if i != j:
+							basenet['link0'][i+','+j] += 1
+			coauthors = authors_list & basenet['author1']
+			if len(coauthors) > 1:
+				for i in coauthors:
+					for j in coauthors:
+						if i != j:
+							basenet['link1'][i+','+j] += 1
+			coauthors = authors_list & basenet['author2']
+			if len(coauthors) > 1:
+				for i in coauthors:
+					for j in coauthors:
+						if i != j:
+							basenet['link2'][i+','+j] += 1
+
+		with open('models/basenet.pkl', 'wb') as f:
+			pickle.dump(basenet, f)
+
 		with open('models/step1.pkl', 'wb') as f:
 			pickle.dump(self, f)
 		print('step1: finished processing '+str(valid)+'/'+str(count)+' papers.')
@@ -174,10 +198,10 @@ class DblpCube(object):
 		print("lda: computing model")
 		if not os.path.exists('models/ldamodel.pkl'):
 			ldamodel = models.ldamodel.LdaModel(corpus, num_topics=self.params['num_topics'], id2word = dictionary, passes=20)
-			with open('models/ldamodel.pkl', 'w') as f:
+			with open('models/ldamodel.pkl', 'wb') as f:
 				pickle.dump(ldamodel, f)
 		else:
-			with open('models/ldamodel.pkl', 'r') as f:
+			with open('models/ldamodel.pkl', 'rb') as f:
 				ldamodel = pickle.load(f)
 		print("lda: saving topical phrases")
 		for i in range(self.params['num_topics']):
@@ -253,9 +277,9 @@ class DblpCube(object):
 							num_edge += 1
 		print('step3: finished topic network files with '+str(num_node)+' nodes and '+str(num_edge)+' edges.')
 
-		#del self.venue_name
-		#del self.year_name
-		#del self.topic_name
+		self.venue_name
+		self.year_name
+		self.topic_name
 		with open('models/step3.pkl', 'wb') as f:
 			pickle.dump(self, f)
 
@@ -263,7 +287,7 @@ if __name__ == '__main__':
 	params = {}
 	params['dblp_files'] = ['../dblp-ref/dblp-ref-0.json', '../dblp-ref/dblp-ref-1.json', '../dblp-ref/dblp-ref-2.json', '../dblp-ref/dblp-ref-3.json']
 	params['author_file'] = '../clus_dblp/vocab-'
-	params['label_type'] = 'label'
+	params['label_type'] = 'group'
 	params['content_file'] = 'models/content_file.txt'
 	params['topic_file'] = 'models/topic_file.txt'
 	params['num_topics'] = 100
