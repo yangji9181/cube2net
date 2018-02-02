@@ -9,7 +9,7 @@ from Cube import Cube
 if __name__ == '__main__':
 	environment = Environment(args)
 	tf.reset_default_graph()
-	os.environ['CUDA_VISIBLE_DEVICES'] = '7'
+	os.environ['CUDA_VISIBLE_DEVICES'] = str(args.device_id)
 	with tf.device('/gpu:0'):
 		agent = PPO(args, environment)
 	with tf.Session(config=tf.ConfigProto(
