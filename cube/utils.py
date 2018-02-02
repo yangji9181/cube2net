@@ -39,6 +39,7 @@ class DblpEval(object):
 		for i in range(len(self.names)):
 			self.true[labelmap.index(labels[i])][i] = 1
 
+
 	def enlargeGraph(self, cells=[]):
 		for c in cells:
 			self.nodes = list(set(self.nodes) | (self.cube.year_author[c[0]] & self.cube.venue_author[c[1]] & self.cube.topic_author[c[2]]))
@@ -94,7 +95,7 @@ class DblpEval(object):
 		self.writeGraph(format_='node2vec')
 		shutil.copyfile(self.root + 'cube/models/'+self.label_type + '_' + self.method + '_edge.txt', self.root + 'node2vec/edgelist.txt')
 
-		call('python src/main.py --input edgelist.txt --output embeddings_out.txt --dimensions %d ' % embed_size, shell=True, cwd=self.root+'node2vec/')
+		call('python2 src/main.py --input edgelist.txt --output embeddings_out.txt --dimensions %d ' % embed_size, shell=True, cwd=self.root+'node2vec/')
 		self.embed = np.zeros((len(self.names), embed_size))
 		with open(self.root+'node2vec/embeddings_out.txt', 'r') as embf:
 			for line in embf:
@@ -189,6 +190,19 @@ class DblpEval(object):
 		with open(self.root+'cube/models/perform_'+str(len(basenodes))+'.pkl', 'wb') as f:
 			pickle.dump(res_u, f)
 			pickle.dump(res_s, f)
+
+	@staticmethod
+	def author_links(cube, authors):
+		links = defaultdict(int)
+		for authors_list in cube.paper_author:
+			coauthors = set(authors_list) & authors
+			if len(coauthors) > 1:
+				for i in coauthors:
+					for j in coauthors:
+						if i != j:
+							links[i + ',' + j] += 1
+		return links
+
 
 if __name__ == '__main__':
 	with open('models/step3.pkl', 'rb') as f:
