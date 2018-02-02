@@ -4,3 +4,8 @@
 /line/linelib.o
 /line/main.o
 /cube/models/step3.pkl
+/deepwalk/embeddings_out.txt
+/deepwalk/edgelist.txt
+/node2vec/edgelist.txt
+/node2vec/emb/karate.emd
+/node2vec/graph/karate.edgelist
