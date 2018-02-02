@@ -19,9 +19,9 @@ if __name__ == '__main__':
 	authors, reward = baseline.random_baseline(state)
 	print('random baseline: %f' % reward)
 	test = DblpEval(cube, authors, DblpEval.author_links(cube, authors), label_type=label_type, method='random')
-	test.evalAll(runs=3)
+	print(test.evalAll(runs=3))
 
 	authors, reward = baseline.greedy_baseline(state, args.baseline_candidate)
 	print('greedy baseline: %f' % reward)
 	test = DblpEval(cube, authors, DblpEval.author_links(cube, authors), label_type=label_type, method='greedy')
-	test.evalAll(runs=3)
+	print(test.evalAll(runs=3))

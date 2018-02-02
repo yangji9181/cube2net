@@ -120,14 +120,14 @@ class DblpEval(object):
 		return((f1, jc, nmi))
 
 	def evalAll(self, runs=1):
-		u = np.ndarray(shape=(3, 3), dtype=np.float32)
-		s = np.ndarray(shape=(3, 3), dtype=np.float32)
+		u = np.ndarray(shape=(2, 3), dtype=np.float32)
+		s = np.ndarray(shape=(2, 3), dtype=np.float32)
 
 		f1 = []
 		jc = []
 		nmi = []
 		for i in range(runs):
-			self.embeddingLINE()
+			self.embeddingDeepWalk()
 			t = self.evalClustering()
 			f1.append(t[0])
 			jc.append(t[1])
@@ -139,25 +139,13 @@ class DblpEval(object):
 		jc = []
 		nmi = []
 		for i in range(runs):
-			self.embeddingDeepWalk()
+			self.embeddingNode2Vec()
 			t = self.evalClustering()
 			f1.append(t[0])
 			jc.append(t[1])
 			nmi.append(t[2])
 		u[1, :] = np.array([np.mean(f1), np.mean(jc), np.mean(nmi)])
 		s[1, :] = np.array([np.std(f1), np.std(jc), np.std(nmi)])
-
-		f1 = []
-		jc = []
-		nmi = []
-		for i in range(runs):
-			self.embeddingNode2Vec()
-			t = self.evalClustering()
-			f1.append(t[0])
-			jc.append(t[1])
-			nmi.append(t[2])
-		u[2, :] = np.array([np.mean(f1), np.mean(jc), np.mean(nmi)])
-		s[2, :] = np.array([np.std(f1), np.std(jc), np.std(nmi)])
 
 		return((u, s))
 
