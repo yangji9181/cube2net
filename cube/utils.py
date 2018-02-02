@@ -68,7 +68,7 @@ class DblpEval(object):
 		shutil.copyfile(self.label_type + '/' + self.method + '/edge-aa-0.txt', 'line/edge-aa-0.txt')
 
 		embed_size = 512
-		call('./embed -size %d -iter 1000' % embed_size, shell=True, cwd='line/')
+		call('./embed -size %d -iter 2000' % embed_size, shell=True, cwd='line/')
 
 		embed = np.zeros((len(self.names), embed_size))
 		with open('line/output-a-0.txt', 'r') as embf:
