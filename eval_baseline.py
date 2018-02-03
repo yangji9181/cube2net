@@ -1,4 +1,5 @@
 import pickle
+import time
 from collections import defaultdict
 from cube.utils import DblpEval
 from config import *
@@ -26,7 +27,10 @@ if __name__ == '__main__':
 	# test = DblpEval(cube, authors, DblpEval.author_links(cube, authors), label_type=label_type, method='embedding')
 	# print(test.evalAll(runs=3))
 
+	start = time.time()
 	authors, reward = baseline.greedy_baseline(state, args.baseline_candidate)
+	end = time.time()
 	print('greedy baseline: %f' % reward)
+	print('time %f s' % (end - start))
 	test = DblpEval(cube, authors, DblpEval.author_links(cube, authors), label_type=label_type, method='greedy')
 	print(test.evalAll(runs=3))

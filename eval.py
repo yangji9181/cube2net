@@ -1,4 +1,5 @@
 import pickle
+import time
 from cube.utils import DblpEval
 from config import *
 from Environment import *
@@ -18,8 +19,11 @@ if __name__ == '__main__':
 				per_process_gpu_memory_fraction=0.5,
 				allow_growth=True))) as sess:
 		agent.train(sess)
+		start = time.time()
 		authors, reward = agent.plan(sess)
+		end = time.time()
 		print('total reward: %f' % reward)
+		print('time %f s' % (end - start))
 
 	with open('cube/models/step3.pkl', 'r') as f:
 		cube = pickle.load(f)
