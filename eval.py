@@ -29,4 +29,4 @@ if __name__ == '__main__':
 		cube = pickle.load(f)
 
 	test = DblpEval(cube, authors, DblpEval.author_links(cube, authors), label_type=label_type, method='rl')
-	print(test.evalAll(runs=3))
+	print(test.evalAll(args.eval_dim, runs=3))

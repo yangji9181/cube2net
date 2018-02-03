@@ -61,7 +61,7 @@ class DblpEval(object):
 					edgef.write(str(self.nodes.index(tokens[0]))+' '+str(self.nodes.index(tokens[1]))+'\n')
 		print('finished graph writing.')
 
-	def embeddingLINE(self, embed_size=256):
+	def embeddingLINE(self, embed_size):
 		self.embed_method = 'line'
 		self.writeGraph(format_='line')
 		shutil.copyfile(self.root + 'cube/models/'+self.label_type + '_' + self.method + '_node.txt', self.root + 'line/node-a-0.txt')
@@ -76,7 +76,7 @@ class DblpEval(object):
 				if self.nodes[int(tokens[0])] in self.names:
 					self.embed[self.names.index(self.nodes[int(tokens[0])])] = np.array(list(map(float, tokens[1].strip().split(' '))))
 
-	def embeddingDeepWalk(self, embed_size=128):
+	def embeddingDeepWalk(self, embed_size):
 		self.embed_method = 'deepwalk'
 		self.writeGraph(format_='deepwalk')
 		shutil.copyfile(self.root + 'cube/models/'+self.label_type + '_' + self.method + '_edge.txt', self.root + 'deepwalk/edgelist.txt')
@@ -90,7 +90,7 @@ class DblpEval(object):
 					if self.nodes[int(tokens[0])] in self.names:
 						self.embed[self.names.index(self.nodes[int(tokens[0])])] = np.array(list(map(float, tokens[1:])))
 
-	def embeddingNode2Vec(self, embed_size=128):
+	def embeddingNode2Vec(self, embed_size):
 		self.embed_method = 'node2vec'
 		self.writeGraph(format_='node2vec')
 		shutil.copyfile(self.root + 'cube/models/'+self.label_type + '_' + self.method + '_edge.txt', self.root + 'node2vec/edgelist.txt')
@@ -119,7 +119,7 @@ class DblpEval(object):
 
 		return((f1, jc, nmi))
 
-	def evalAll(self, runs=1):
+	def evalAll(self, embed_size, runs=1):
 		u = np.ndarray(shape=(2, 3), dtype=np.float32)
 		s = np.ndarray(shape=(2, 3), dtype=np.float32)
 
@@ -127,7 +127,7 @@ class DblpEval(object):
 		jc = []
 		nmi = []
 		for i in range(runs):
-			self.embeddingDeepWalk()
+			self.embeddingDeepWalk(embed_size)
 			t = self.evalClustering()
 			f1.append(t[0])
 			jc.append(t[1])
@@ -139,7 +139,7 @@ class DblpEval(object):
 		jc = []
 		nmi = []
 		for i in range(runs):
-			self.embeddingNode2Vec()
+			self.embeddingNode2Vec(embed_size)
 			t = self.evalClustering()
 			f1.append(t[0])
 			jc.append(t[1])
@@ -170,7 +170,7 @@ class DblpEval(object):
 			celllist_file.write('Adding cell %d with %d overlaps:\n' % (c, overlap))
 			celllist_file.write('<'+str(self.cube.year_name[t[0]])+', '+str(self.cube.venue_name[t[1]])+', '+str(self.cube.topic_name[t[2]])+'>\n')
 			self.enlargeGraph([t])
-			t = self.evalAll(runs=runs)
+			t = self.evalAll(128, runs=runs)
 			res_u[c,:,:] = t[0]
 			res_s[c,:,:] = t[1]
 

@@ -20,12 +20,12 @@ if __name__ == '__main__':
 	authors, reward = baseline.random_baseline(state)
 	print('random baseline: %f' % reward)
 	test = DblpEval(cube, authors, DblpEval.author_links(cube, authors), label_type=label_type, method='random')
-	print(test.evalAll(runs=3))
+	print(test.evalAll(args.eval_dim, runs=3))
 
 	# authors, reward = baseline.greedy_baseline(state, args.baseline_candidate, embedding=True)
 	# print('embedding baseline: %f' % reward)
 	# test = DblpEval(cube, authors, DblpEval.author_links(cube, authors), label_type=label_type, method='embedding')
-	# print(test.evalAll(runs=3))
+	# print(test.evalAll(args.eval_dim, runs=3))
 
 	start = time.time()
 	authors, reward = baseline.greedy_baseline(state, args.baseline_candidate)
@@ -33,4 +33,4 @@ if __name__ == '__main__':
 	print('greedy baseline: %f' % reward)
 	print('time %f s' % (end - start))
 	test = DblpEval(cube, authors, DblpEval.author_links(cube, authors), label_type=label_type, method='greedy')
-	print(test.evalAll(runs=3))
+	print(test.evalAll(args.eval_dim, runs=3))

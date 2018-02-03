@@ -25,6 +25,7 @@ def parse_args():
 	parser.add_argument('--num_process', type=int, default=20, help='Number of subprocesses')
 	parser.add_argument('--init_state_limit', type=int, default=1, help=None)
 	parser.add_argument('--baseline_candidate', type=int, default=1000, help='Number of candidates for baseline')
+	parser.add_argument('--eval_dim', type=int, default=512, help='Dimension for evaluation framework')
 	return parser.parse_args()
 
 
