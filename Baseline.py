@@ -77,7 +77,7 @@ class Baseline(object):
 				processes.append(process)
 				process.start()
 			nexts = []
-			while not queue.empty():
+			for _ in num_worker:
 				pair = queue.get()
 				nexts.append(pair)
 			for process in processes:
