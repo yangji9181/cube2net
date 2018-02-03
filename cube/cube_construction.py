@@ -30,6 +30,8 @@ class DblpCube(object):
 		basenet['link0'] = defaultdict(int)
 		basenet['link1'] = defaultdict(int)
 		basenet['link2'] = defaultdict(int)
+		all_authors = set()
+		all_links = defaultdict(int)
 
 		# input author0
 		with open(self.params['author_file']+self.params['label_type']+'.txt', 'r') as f:
@@ -38,14 +40,13 @@ class DblpCube(object):
 				basenet['author0'].add(name)
 		print('#author0: '+str(len(basenet['author0'])))
 
-		# first scan on dblp data, record author1
+		# first scan on dblp data, record author1, print some stats
 		for file_name in self.params['dblp_files']:
 			with open(file_name, 'r') as f:
 				for line in f:
 					p = json.loads(line)
 					if ('id' not in p) \
 					  or ('authors' not in p) \
-					  or (len(p['authors']) < 2) \
 					  or ('venue' not in p) \
 					  or (not re.match("^[\w\s,.:?-]+$", p['venue'])) \
 					  or ('year' not in p) \
@@ -59,6 +60,13 @@ class DblpCube(object):
 					if len(set(p['authors']) & basenet['author0']) > 0:
 						for name in p['authors']:
 							basenet['author1'].add(name)
+
+					for name1 in p['authors']:
+						all_authors.add(name1)
+						for name2 in p['authors']:
+							if name1 != name2:
+								all_links[name1+','+name2] += 1
+
 		print('#author1: '+str(len(basenet['author1'])))
 
 		# second scan on dblp data, record author2
@@ -68,7 +76,6 @@ class DblpCube(object):
 					p = json.loads(line)
 					if ('id' not in p) \
 					  or ('authors' not in p) \
-					  or (len(p['authors']) < 2) \
 					  or ('venue' not in p) \
 					  or (not re.match("^[\w\s,.:?-]+$", p['venue'])) \
 					  or ('year' not in p) \
@@ -96,7 +103,6 @@ class DblpCube(object):
 					if ('id' not in p) \
 					  or ('authors' not in p) \
 					  or (len(set(p['authors']) & basenet['author2']) == 0) \
-					  or (len(p['authors']) < 2) \
 					  or ('venue' not in p) \
 					  or (not re.match("^[\w\s,.:?-]+$", p['venue'])) \
 					  or ('year' not in p) \
@@ -168,6 +174,7 @@ class DblpCube(object):
 		print('#venue: '+str(len(self.venue_name)))
 		print('#year: '+str(len(self.year_name)))
 		print('#paper: '+str(len(self.paper_author)))
+		print("#authors: %d, #links: %d " % (len(all_authors), len(all_links)))
 
 	def step2(self):
 		if not os.path.exists('models/segmentation.txt'):
