@@ -65,6 +65,8 @@ class Cube(object):
 
 	def reward(self, G, params):
 		nodes = set(nx.nodes(G))
+		if len(nodes) == 0:
+			return 0.0
 		return params.transitivity_c * nx.transitivity(G) + \
 		       params.connectivity_c * float(len(nodes & self.init_authors)) / float(len(nodes))
 

@@ -31,7 +31,7 @@ class Baseline(object):
 		self.cell_embed = np.array(cell_embed)
 
 	def initial_state(self):
-		return self.cube.initial_state(self.params.test_file, self.params.low_limit, self.params.high_limit, self.params.debug)
+		return self.cube.initial_state(self.params)
 
 	def random_baseline(self, state):
 		actions = set(list(np.random.choice(len(self.cube.id_to_cell), self.params.trajectory_length, replace=False)))
@@ -77,7 +77,7 @@ class Baseline(object):
 				processes.append(process)
 				process.start()
 			nexts = []
-			for _ in num_worker:
+			for _ in range(num_worker):
 				pair = queue.get()
 				nexts.append(pair)
 			for process in processes:

@@ -20,7 +20,7 @@ if __name__ == '__main__':
 	with open('cube/models/step3.pkl', 'rb') as f:
 		dblp = pickle.load(f)
 
-	cube.initial_state(args.test_file, args.low_limit, args.high_limit, args.debug)
+	cube.initial_state(args)
 	cells = rank(cube)
 	for i in range(0, 1000, 100):
 		print('num cells %d' % i)

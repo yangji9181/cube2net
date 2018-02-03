@@ -31,9 +31,11 @@ class Environment(object):
 		self.cell_embed = np.array(cell_embed)
 
 	def initial_state(self):
-		return self.cube.initial_state(self.params.test_file, self.params.low_limit, self.params.high_limit, self.params.debug)
+		return self.cube.initial_state(self.params)
 
 	def state_embed(self, state):
+		if len(state) == 0:
+			return np.zeros(self.params.embed_dim)
 		return np.mean(self.cell_embed[state], axis=0)
 
 	def total_reward(self, state):
