@@ -23,6 +23,7 @@ def parse_args():
 	parser.add_argument('--start_year', type=int, default=1954, help=None)
 	parser.add_argument('--end_year', type=int, default=2018, help=None)
 	parser.add_argument('--num_process', type=int, default=20, help='Number of subprocesses')
+	parser.add_argument('--init_state_limit', type=int, default=100, help=None)
 	parser.add_argument('--baseline_candidate', type=int, default=1000, help='Number of candidates for baseline')
 	return parser.parse_args()
 

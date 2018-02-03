@@ -5,11 +5,11 @@ from copy import deepcopy
 
 
 class Cube(object):
-	def initial_state(self, path, low_limit, high_limit, debug=False):
-		if debug:
+	def initial_state(self, params):
+		if params.debug:
 			return set(list(np.random.choice(len(self.id_to_cell), 10, replace=False)))
 		test_authors = set()
-		with open(path) as f:
+		with open(params.test_file) as f:
 			for line in f:
 				test_authors.add(line.rstrip().split('\t')[0].replace('_', ' '))
 
@@ -25,8 +25,11 @@ class Cube(object):
 		ids = []
 		for id, _ in enumerate(self.id_to_cell):
 			count = len(self.id_to_author[id] & test_authors)
-			if count >= low_limit and count < high_limit:
+			if count >= params.low_limit and count < params.high_limit:
 				ids.append(id)
+
+		if len(ids) > params.init_state_limit:
+			ids = list(np.random.choice(ids, params.init_state_limit, replace=False))
 		return set(ids)
 
 	def all_authors(self, state):

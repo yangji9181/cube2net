@@ -76,12 +76,12 @@ class Baseline(object):
 				                  args=(next, candidates, num_worker, id, queue))
 				processes.append(process)
 				process.start()
-			for process in processes:
-				process.join()
 			nexts = []
 			while not queue.empty():
 				pair = queue.get()
 				nexts.append(pair)
+			for process in processes:
+				process.join()
 			next = max(nexts, key=lambda e: e[1])[0]
 		return self.cube.all_authors(next), self.cube.total_reward(next, self.params)
 
