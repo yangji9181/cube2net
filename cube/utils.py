@@ -39,8 +39,8 @@ class DblpEval(object):
 		for i in range(len(self.names)):
 			self.true[labelmap.index(labels[i])][i] = 1
 
-		print('num nodes %d', len(self.nodes))
-		print('num edges %d', len(self.edges))
+		print('num nodes %d' % len(self.nodes))
+		print('num edges %d' % len(self.edges))
 
 
 	def enlargeGraph(self, cells=[]):
