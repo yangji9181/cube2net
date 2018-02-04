@@ -18,7 +18,10 @@ if __name__ == '__main__':
 			gpu_options=tf.GPUOptions(
 				per_process_gpu_memory_fraction=0.5,
 				allow_growth=True))) as sess:
+		start = time.time()
 		agent.train(sess)
+		end = time.time()
+		print('training time: %f' % (end - start))
 		start = time.time()
 		authors, reward = agent.plan(sess)
 		end = time.time()
