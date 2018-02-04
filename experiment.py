@@ -9,7 +9,7 @@ from cube.cube_construction import DblpCube
 def rank(cube):
 	tuples = []
 	for i, authors in enumerate(cube.id_to_author):
-		tuples.append((i, float(len(authors & cube.author_1st)) / float(len(authors))))
+		tuples.append((i, len(authors & cube.init_authors)))
 	tuples.sort(key=lambda t: t[1], reverse=True)
 	return [t[0] for t in tuples]
 
