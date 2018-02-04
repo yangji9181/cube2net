@@ -12,7 +12,7 @@ class DblpEval(object):
 	#label_type:
 		#group: small set of 116 authors
 		#label: large set of 4236 authors
-	def __init__(self, cube, authors, links, label_type='group', method='unknown'):
+	def __init__(self, cube, authors, links, label_type='label', method='unknown'):
 		self.cube = cube
 		self.label_type = label_type
 		self.method = method
@@ -39,10 +39,6 @@ class DblpEval(object):
 		for i in range(len(self.names)):
 			self.true[labelmap.index(labels[i])][i] = 1
 
-		print('num nodes %d' % len(self.nodes))
-		print('num edges %d' % len(self.edges))
-
-
 	def enlargeGraph(self, cells=[]):
 		for c in cells:
 			self.nodes = list(set(self.nodes) | (self.cube.year_author[c[0]] & self.cube.venue_author[c[1]] & self.cube.topic_author[c[2]]))
@@ -64,7 +60,7 @@ class DblpEval(object):
 					edgef.write(str(self.nodes.index(tokens[0]))+' '+str(self.nodes.index(tokens[1]))+'\n')
 		print('finished graph writing.')
 
-	def embeddingLINE(self, embed_size):
+	def embeddingLINE(self, embed_size=256):
 		self.embed_method = 'line'
 		self.writeGraph(format_='line')
 		shutil.copyfile(self.root + 'cube/models/'+self.label_type + '_' + self.method + '_node.txt', self.root + 'line/node-a-0.txt')
@@ -79,7 +75,7 @@ class DblpEval(object):
 				if self.nodes[int(tokens[0])] in self.names:
 					self.embed[self.names.index(self.nodes[int(tokens[0])])] = np.array(list(map(float, tokens[1].strip().split(' '))))
 
-	def embeddingDeepWalk(self, embed_size):
+	def embeddingDeepWalk(self, embed_size=128):
 		self.embed_method = 'deepwalk'
 		self.writeGraph(format_='deepwalk')
 		shutil.copyfile(self.root + 'cube/models/'+self.label_type + '_' + self.method + '_edge.txt', self.root + 'deepwalk/edgelist.txt')
@@ -93,12 +89,12 @@ class DblpEval(object):
 					if self.nodes[int(tokens[0])] in self.names:
 						self.embed[self.names.index(self.nodes[int(tokens[0])])] = np.array(list(map(float, tokens[1:])))
 
-	def embeddingNode2Vec(self, embed_size):
+	def embeddingNode2Vec(self, embed_size=128):
 		self.embed_method = 'node2vec'
 		self.writeGraph(format_='node2vec')
 		shutil.copyfile(self.root + 'cube/models/'+self.label_type + '_' + self.method + '_edge.txt', self.root + 'node2vec/edgelist.txt')
 
-		call('python2 src/main.py --input edgelist.txt --output embeddings_out.txt --dimensions %d ' % embed_size, shell=True, cwd=self.root+'node2vec/')
+		call('python src/main.py --input edgelist.txt --output embeddings_out.txt --dimensions %d ' % embed_size, shell=True, cwd=self.root+'node2vec/')
 		self.embed = np.zeros((len(self.names), embed_size))
 		with open(self.root+'node2vec/embeddings_out.txt', 'r') as embf:
 			for line in embf:
@@ -122,15 +118,15 @@ class DblpEval(object):
 
 		return((f1, jc, nmi))
 
-	def evalAll(self, embed_size, runs=1):
-		u = np.ndarray(shape=(2, 3), dtype=np.float32)
-		s = np.ndarray(shape=(2, 3), dtype=np.float32)
+	def evalAll(self, runs=1):
+		u = np.ndarray(shape=(3, 3), dtype=np.float32)
+		s = np.ndarray(shape=(3, 3), dtype=np.float32)
 
 		f1 = []
 		jc = []
 		nmi = []
 		for i in range(runs):
-			self.embeddingDeepWalk(embed_size)
+			self.embeddingLINE()
 			t = self.evalClustering()
 			f1.append(t[0])
 			jc.append(t[1])
@@ -142,13 +138,25 @@ class DblpEval(object):
 		jc = []
 		nmi = []
 		for i in range(runs):
-			self.embeddingNode2Vec(embed_size)
+			self.embeddingDeepWalk()
 			t = self.evalClustering()
 			f1.append(t[0])
 			jc.append(t[1])
 			nmi.append(t[2])
 		u[1, :] = np.array([np.mean(f1), np.mean(jc), np.mean(nmi)])
 		s[1, :] = np.array([np.std(f1), np.std(jc), np.std(nmi)])
+
+		f1 = []
+		jc = []
+		nmi = []
+		for i in range(runs):
+			self.embeddingNode2Vec()
+			t = self.evalClustering()
+			f1.append(t[0])
+			jc.append(t[1])
+			nmi.append(t[2])
+		u[2, :] = np.array([np.mean(f1), np.mean(jc), np.mean(nmi)])
+		s[2, :] = np.array([np.std(f1), np.std(jc), np.std(nmi)])
 
 		return((u, s))
 
@@ -173,7 +181,7 @@ class DblpEval(object):
 			celllist_file.write('Adding cell %d with %d overlaps:\n' % (c, overlap))
 			celllist_file.write('<'+str(self.cube.year_name[t[0]])+', '+str(self.cube.venue_name[t[1]])+', '+str(self.cube.topic_name[t[2]])+'>\n')
 			self.enlargeGraph([t])
-			t = self.evalAll(128, runs=runs)
+			t = self.evalAll(runs=runs)
 			res_u[c,:,:] = t[0]
 			res_s[c,:,:] = t[1]
 
@@ -181,19 +189,6 @@ class DblpEval(object):
 		with open(self.root+'cube/models/perform_'+str(len(basenodes))+'.pkl', 'wb') as f:
 			pickle.dump(res_u, f)
 			pickle.dump(res_s, f)
-
-	@staticmethod
-	def author_links(cube, authors):
-		links = defaultdict(int)
-		for authors_list in cube.paper_author:
-			coauthors = set(authors_list) & authors
-			if len(coauthors) > 1:
-				for i in coauthors:
-					for j in coauthors:
-						if i != j:
-							links[i + ',' + j] += 1
-		return links
-
 
 if __name__ == '__main__':
 	with open('models/step3.pkl', 'rb') as f:

@@ -33,12 +33,13 @@ class DblpCube(object):
 		all_authors = set()
 		all_links = defaultdict(int)
 
-		# input author0
+		# input v
+		v = set()
 		with open(self.params['author_file']+self.params['label_type']+'.txt', 'r') as f:
 			for line in f:
 				name = line.strip().replace('_', ' ')
-				basenet['author0'].add(name)
-		print('#author0: '+str(len(basenet['author0'])))
+				v.add(name)
+		print('#v: '+str(len(v)))
 
 		# first scan on dblp data, record author1, print some stats
 		for file_name in self.params['dblp_files']:
@@ -57,7 +58,10 @@ class DblpCube(object):
 					  or (not re.match("^[\w\s,.:?-]+$", p['abstract'])):
 						continue
 					
-					if len(set(p['authors']) & basenet['author0']) > 0:
+					vs = set(p['authors']) & v
+					if len(vs) > 0:
+						for vv in vs:
+							basenet['author0'].add(vv)
 						for name in p['authors']:
 							basenet['author1'].add(name)
 
@@ -67,7 +71,14 @@ class DblpCube(object):
 							if name1 != name2:
 								all_links[name1+','+name2] += 1
 
+		print('#author0: '+str(len(basenet['author0'])))
 		print('#author1: '+str(len(basenet['author1'])))
+
+		with open('../clus_dblp/name-label.txt', 'r') as f1, open('../clus_dblp/name-label_.txt', 'w') as f2:
+			for line in f1:
+				tokens = line.split('\t')
+				if tokens[0].strip().replace('_', ' ') in basenet['author0']:
+					f2.write(line)
 
 		# second scan on dblp data, record author2
 		for file_name in self.params['dblp_files']:
@@ -164,6 +175,10 @@ class DblpCube(object):
 					for j in coauthors:
 						if i != j:
 							basenet['link2'][i+','+j] += 1
+
+		print('#link0: '+str(len(basenet['link0'])))
+		print('#link1: '+str(len(basenet['link1'])))
+		print('#link2: '+str(len(basenet['link2'])))
 
 		with open('models/basenet.pkl', 'wb') as f:
 			pickle.dump(basenet, f)
@@ -294,7 +309,7 @@ if __name__ == '__main__':
 	params = {}
 	params['dblp_files'] = ['../dblp-ref/dblp-ref-0.json', '../dblp-ref/dblp-ref-1.json', '../dblp-ref/dblp-ref-2.json', '../dblp-ref/dblp-ref-3.json']
 	params['author_file'] = '../clus_dblp/vocab-'
-	params['label_type'] = 'group'
+	params['label_type'] = 'label'
 	params['content_file'] = 'models/content_file.txt'
 	params['topic_file'] = 'models/topic_file.txt'
 	params['num_topics'] = 100
