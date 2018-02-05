@@ -141,7 +141,7 @@ class DblpEval(object):
 		jc = []
 		nmi = []
 		for i in range(runs):
-			self.embeddingNode2Vec()
+			self.embeddingNode2Vec(embed_size)
 			t = self.evalClustering()
 			f1.append(t[0])
 			jc.append(t[1])
