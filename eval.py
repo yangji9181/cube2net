@@ -39,12 +39,11 @@ if __name__ == '__main__':
 			authors, reward, actions = agent.plan(sess)
 			print('rl time %f s' % (time.time() - start))
 			print('total reward: %f' % reward)
+			cells = [environment.cube.id_to_cell[id] for id in actions]
+			print_cells(cube, cells)
 			test = DblpEval(cube, authors, DblpEval.author_links(cube, authors), label_type=label_type, method='rl')
 			scores = test.evalAll(args.eval_dim, runs=1)
 			deepwalks.append(scores[0][0])
 			node2vecs.append(scores[0][1])
-		print('deepwalk mean %f, std %f' % (np.mean(deepwalks, axis=0), np.std(deepwalks, axis=0)))
-		print('node2vec mean %f, std %f' % (np.mean(node2vecs, axis=0), np.std(node2vecs, axis=0)))
-
-	cells = [environment.cube.id_to_cell[id] for id in actions]
-	print_cells(cube, cells)
+		print('deepwalk mean, std', np.mean(deepwalks, axis=0), np.std(deepwalks, axis=0))
+		print('node2vec mean, std', np.mean(node2vecs, axis=0), np.std(node2vecs, axis=0))

@@ -26,8 +26,8 @@ if __name__ == '__main__':
 		scores = test.evalAll(args.eval_dim, runs=1)
 		deepwalks.append(scores[0][0])
 		node2vecs.append(scores[0][1])
-	print('deepwalk mean %f, std %f' % (np.mean(deepwalks, axis=0), np.std(deepwalks, axis=0)))
-	print('node2vec mean %f, std %f' % (np.mean(node2vecs, axis=0), np.std(node2vecs, axis=0)))
+	print('deepwalk mean, std', np.mean(deepwalks, axis=0), np.std(deepwalks, axis=0))
+	print('node2vec mean, std', np.mean(node2vecs, axis=0), np.std(node2vecs, axis=0))
 
 	deepwalks, node2vecs = [], []
 	for _ in range(args.num_exp):
@@ -39,6 +39,6 @@ if __name__ == '__main__':
 		scores = test.evalAll(args.eval_dim, runs=1)
 		deepwalks.append(scores[0][0])
 		node2vecs.append(scores[0][1])
-	print('deepwalk mean %f, std %f' % (np.mean(deepwalks, axis=0), np.std(deepwalks, axis=0)))
-	print('node2vec mean %f, std %f' % (np.mean(node2vecs, axis=0), np.std(node2vecs, axis=0)))
+	print('deepwalk mean, std', np.mean(deepwalks, axis=0), np.std(deepwalks, axis=0))
+	print('node2vec mean, std', np.mean(node2vecs, axis=0), np.std(node2vecs, axis=0))
 
