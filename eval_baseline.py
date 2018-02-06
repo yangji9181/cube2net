@@ -8,6 +8,12 @@ from Baseline import Baseline
 from Cube import Cube
 from cube.cube_construction import DblpCube
 
+def print_cells(cube, cells):
+	for t, v, y in cells:
+		print(cube.topic_name[t][:10])
+		print(cube.venue_name[v])
+		print(y)
+
 
 
 if __name__ == '__main__':
@@ -20,8 +26,10 @@ if __name__ == '__main__':
 
 	deepwalks, node2vecs = [], []
 	for _ in range(args.num_exp):
-		authors, reward = baseline.random_baseline(state)
+		authors, reward, actions = baseline.random_baseline(state)
 		print('random baseline: %f' % reward)
+		cells = [baseline.cube.id_to_cell[id] for id in actions if id > -1]
+		print_cells(cube, cells)
 		test = DblpEval(cube, authors, DblpEval.author_links(cube, authors), label_type=label_type, method='random')
 		scores = test.evalAll(args.eval_dim, runs=1)
 		deepwalks.append(scores[0][0])
@@ -32,9 +40,11 @@ if __name__ == '__main__':
 	deepwalks, node2vecs = [], []
 	for _ in range(args.num_exp):
 		start = time.time()
-		authors, reward = baseline.greedy_baseline(state, args.baseline_candidate)
+		authors, reward, actions = baseline.greedy_baseline(state, args.baseline_candidate)
 		print('greedy time %f s' % (time.time() - start))
 		print('greedy baseline: %f' % reward)
+		cells = [baseline.cube.id_to_cell[id] for id in actions if id > -1]
+		print_cells(cube, cells)
 		test = DblpEval(cube, authors, DblpEval.author_links(cube, authors), label_type=label_type, method='greedy')
 		scores = test.evalAll(args.eval_dim, runs=1)
 		deepwalks.append(scores[0][0])

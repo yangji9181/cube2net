@@ -36,7 +36,7 @@ class Baseline(object):
 	def random_baseline(self, state):
 		actions = set(list(np.random.choice(len(self.cube.id_to_cell), self.params.trajectory_length, replace=False)))
 		final = state | actions
-		return self.cube.all_authors(final), self.cube.total_reward(final, self.params)
+		return self.cube.all_authors(final), self.cube.total_reward(final, self.params), actions
 
 	def greedy_worker(self, state, candidates, num_worker, worker_id, queue):
 		local_queue = []
@@ -44,28 +44,16 @@ class Baseline(object):
 			if cell_id not in state and idx % num_worker == worker_id:
 				state_copy = deepcopy(state)
 				state_copy.add(cell_id)
-				local_queue.append((state_copy, self.cube.total_reward(state_copy, self.params)))
+				local_queue.append((state_copy, self.cube.total_reward(state_copy, self.params), cell_id))
 		if len(local_queue) > 0:
 			queue.put(max(local_queue, key=lambda e: e[1]))
 		else:
-			queue.put((state, self.cube.total_reward(state, self.params)))
-
-	def embedding_worker(self, state, candidates, num_worker, worker_id, queue):
-		state_embed = np.array([self.cell_embed[id] for id in state])
-		local_queue = []
-		for idx, cell_id in enumerate(candidates):
-			if cell_id not in state and idx % num_worker == worker_id:
-				state_copy = deepcopy(state)
-				state_copy.add(cell_id)
-				local_queue.append((state_copy, np.amin(np.linalg.norm(self.cell_embed[cell_id] - state_embed, ord=2, axis=1))))
-		if len(local_queue) > 0:
-			queue.put(min(local_queue, key=lambda e: e[1]))
-		else:
-			queue.put((state, 0))
+			queue.put((state, self.cube.total_reward(state, self.params), -1))
 
 	def greedy_baseline(self, state, num_candidate, embedding=False):
 		num_worker = self.params.num_process
 		next = deepcopy(state)
+		actions = []
 		for i in range(self.params.trajectory_length):
 			print('step %d' % i)
 			candidates = list(np.random.choice(len(self.cube.id_to_cell), num_candidate, replace=False))
@@ -83,7 +71,8 @@ class Baseline(object):
 			for process in processes:
 				process.join()
 			next = max(nexts, key=lambda e: e[1])[0]
-		return self.cube.all_authors(next), self.cube.total_reward(next, self.params)
+			actions.append(max(nexts, key=lambda e: e[1])[1])
+		return self.cube.all_authors(next), self.cube.total_reward(next, self.params), actions
 
 
 if __name__ == '__main__':
