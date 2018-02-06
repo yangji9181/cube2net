@@ -309,7 +309,7 @@ if __name__ == '__main__':
 	params = {}
 	params['dblp_files'] = ['../dblp-ref/dblp-ref-0.json', '../dblp-ref/dblp-ref-1.json', '../dblp-ref/dblp-ref-2.json', '../dblp-ref/dblp-ref-3.json']
 	params['author_file'] = '../clus_dblp/vocab-'
-	params['label_type'] = 'label'
+	params['label_type'] = 'group'
 	params['content_file'] = 'models/content_file.txt'
 	params['topic_file'] = 'models/topic_file.txt'
 	params['num_topics'] = 100

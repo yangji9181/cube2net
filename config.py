@@ -39,6 +39,6 @@ def init_dir(args):
 	args.cell_file = args.data_dir + 'cell.txt'
 	args.test_file = args.data_dir + label_type + '.txt'
 
-label_type = 'label'
+label_type = 'group'
 args = parse_args()
 init_dir(args)
