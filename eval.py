@@ -7,6 +7,13 @@ from PPO import *
 from cube.cube_construction import DblpCube
 from Cube import Cube
 
+def print_cells(cube, cells):
+	for t, v, y in cells:
+		print(cube.topic_name[t][:10])
+		print(cube.venue_name[v])
+		print(y)
+
+
 if __name__ == '__main__':
 	environment = Environment(args)
 	tf.reset_default_graph()
@@ -21,9 +28,9 @@ if __name__ == '__main__':
 		start = time.time()
 		agent.train(sess)
 		end = time.time()
-		print('training time: %f' % (end - start))
+		print('training time: %f s' % (end - start))
 		start = time.time()
-		authors, reward = agent.plan(sess)
+		authors, reward, actions = agent.plan(sess)
 		end = time.time()
 		print('total reward: %f' % reward)
 		print('time %f s' % (end - start))
@@ -31,5 +38,8 @@ if __name__ == '__main__':
 	with open('cube/models/step3.pkl', 'r') as f:
 		cube = pickle.load(f)
 
+	cells = [environment.cube.id_to_cell[id] for id in actions]
+	print_cells(cube, cells)
+
 	test = DblpEval(cube, authors, DblpEval.author_links(cube, authors), label_type=label_type, method='rl')
-	print(test.evalAll(args.eval_dim, runs=3))
+	print(test.evalAll(args.eval_dim, runs=1))

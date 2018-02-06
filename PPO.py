@@ -98,8 +98,10 @@ class PPO(object):
 
 	def plan(self, sess):
 		state = self.environment.init_state
+		actions = []
 		for _ in range(self.params.trajectory_length):
 			feed_state = np.expand_dims(self.environment.state_embed(list(state)), axis=0)
 			action = sess.run(self.decision, feed_dict={self.state: feed_state})
+			actions.append(action[0])
 			state.add(action[0])
-		return self.environment.convert_state(state), self.environment.total_reward(state)
+		return self.environment.convert_state(state), self.environment.total_reward(state), actions
