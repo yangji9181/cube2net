@@ -4,7 +4,7 @@ import os
 
 def parse_args():
 	parser = argparse.ArgumentParser()
-	parser.add_argument('--num_exp', type=int, default=3, help=None)
+	parser.add_argument('--num_exp', type=int, default=1, help=None)
 	parser.add_argument('--device_id', type=int, default=4, help=None)
 	parser.add_argument('--debug', type=bool, default=False, help=None)
 	parser.add_argument('--sigma_ratio', type=float, default=1e2, help='Covariance matrix scale')
