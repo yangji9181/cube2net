@@ -7,6 +7,7 @@ def parse_args():
 	parser.add_argument('--num_exp', type=int, default=3, help=None)
 	parser.add_argument('--device_id', type=int, default=4, help=None)
 	parser.add_argument('--debug', type=bool, default=False, help=None)
+	parser.add_argument('--sigma_ratio', type=float, default=1e3, help='Covariance matrix scale')
 	parser.add_argument('--transitivity_c', type=float, default=0.1, help='Reward coefficient')
 	parser.add_argument('--connectivity_c', type=float, default=0.9, help='Reward coefficient')
 	parser.add_argument('--hidden_dim', type=list, default=[256], help=None)

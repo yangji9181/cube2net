@@ -71,7 +71,7 @@ class Baseline(object):
 			for process in processes:
 				process.join()
 			next = max(nexts, key=lambda e: e[1])[0]
-			actions.append(max(nexts, key=lambda e: e[1])[1])
+			actions.append(max(nexts, key=lambda e: e[1])[2])
 		return self.cube.all_authors(next), self.cube.total_reward(next, self.params), actions
 
 
