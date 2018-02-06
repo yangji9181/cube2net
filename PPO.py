@@ -31,6 +31,7 @@ class PPO(object):
 
 		# use scaled std of embedding vectors as policy std
 		sigma = tf.Variable(self.environment.sigma * self.params.sigma_ratio, trainable=False, dtype=tf.float32)
+		print(self.environment.sigma * self.params.sigma_ratio)
 		self.build_train(tf.nn.embedding_lookup(self.cell_embed, self.action), self.reward_to_go, value, policy, policy_old, sigma)
 		self.decision = self.build_plan(policy, sigma)
 
@@ -48,6 +49,7 @@ class PPO(object):
 
 	def build_plan(self, policy_mean, sigma):
 		policy = tf.distributions.Normal(policy_mean, sigma)
+		policy = tf.Print(policy, [policy])
 		action_embed = policy.sample()
 		return tf.argmin(tf.reduce_sum(
 			tf.squared_difference(tf.expand_dims(action_embed, axis=1), tf.expand_dims(self.cell_embed, axis=0)), axis=-1), axis=-1)
