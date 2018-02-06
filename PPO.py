@@ -30,7 +30,7 @@ class PPO(object):
 		self.assign_ops = tf.group(*assign_ops)
 
 		# use scaled std of embedding vectors as policy std
-		sigma = tf.Variable(self.environment.sigma / 2.0, trainable=False, dtype=tf.float32)
+		sigma = tf.Variable(self.environment.sigma, trainable=False, dtype=tf.float32)
 		self.build_train(tf.nn.embedding_lookup(self.cell_embed, self.action), self.reward_to_go, value, policy, policy_old, sigma)
 		self.decision = self.build_plan(policy, sigma)
 

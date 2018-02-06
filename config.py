@@ -4,6 +4,7 @@ import os
 
 def parse_args():
 	parser = argparse.ArgumentParser()
+	parser.add_argument('--num_exp', type=int, default=3, help=None)
 	parser.add_argument('--device_id', type=int, default=7, help=None)
 	parser.add_argument('--debug', type=bool, default=False, help=None)
 	parser.add_argument('--transitivity_c', type=float, default=0.1, help='Reward coefficient')

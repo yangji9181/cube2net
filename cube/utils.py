@@ -1,4 +1,5 @@
 import pickle
+import time
 import shutil
 from collections import defaultdict
 import evaluate
@@ -129,7 +130,9 @@ class DblpEval(object):
 		jc = []
 		nmi = []
 		for i in range(runs):
+			start = time.time()
 			self.embeddingDeepWalk(embed_size)
+			print('deepwalk running time %f s' % (time.time() - start))
 			t = self.evalClustering()
 			f1.append(t[0])
 			jc.append(t[1])
@@ -141,7 +144,9 @@ class DblpEval(object):
 		jc = []
 		nmi = []
 		for i in range(runs):
+			start = time.time()
 			self.embeddingNode2Vec(embed_size)
+			print('node2vec running time %f s' % (time.time() - start))
 			t = self.evalClustering()
 			f1.append(t[0])
 			jc.append(t[1])

@@ -15,6 +15,9 @@ def print_cells(cube, cells):
 
 
 if __name__ == '__main__':
+	with open('cube/models/step3.pkl', 'r') as f:
+		cube = pickle.load(f)
+
 	environment = Environment(args)
 	tf.reset_default_graph()
 	os.environ['CUDA_VISIBLE_DEVICES'] = str(args.device_id)
@@ -29,17 +32,19 @@ if __name__ == '__main__':
 		agent.train(sess)
 		end = time.time()
 		print('training time: %f s' % (end - start))
-		start = time.time()
-		authors, reward, actions = agent.plan(sess)
-		end = time.time()
-		print('total reward: %f' % reward)
-		print('time %f s' % (end - start))
 
-	with open('cube/models/step3.pkl', 'r') as f:
-		cube = pickle.load(f)
+		deepwalks, node2vecs = [], []
+		for _ in range(args.num_exp):
+			start = time.time()
+			authors, reward, actions = agent.plan(sess)
+			print('rl time %f s' % (time.time() - start))
+			print('total reward: %f' % reward)
+			test = DblpEval(cube, authors, DblpEval.author_links(cube, authors), label_type=label_type, method='rl')
+			scores = test.evalAll(args.eval_dim, runs=1)
+			deepwalks.append(scores[0][0])
+			node2vecs.append(scores[0][1])
+		print('deepwalk mean %f, std %f' % (np.mean(deepwalks, axis=0), np.std(deepwalks, axis=0)))
+		print('node2vec mean %f, std %f' % (np.mean(node2vecs, axis=0), np.std(node2vecs, axis=0)))
 
 	cells = [environment.cube.id_to_cell[id] for id in actions]
 	print_cells(cube, cells)
-
-	test = DblpEval(cube, authors, DblpEval.author_links(cube, authors), label_type=label_type, method='rl')
-	print(test.evalAll(args.eval_dim, runs=1))
