@@ -15,9 +15,9 @@ def print_cells(cube, cells):
 
 
 if __name__ == '__main__':
-	with open('cube/models/step3.pkl', 'r') as f:
-		cube = pickle.load(f)
-
+	# with open('cube/models/step3.pkl', 'r') as f:
+	# 	cube = pickle.load(f)
+	#
 	environment = Environment(args)
 	tf.reset_default_graph()
 	os.environ['CUDA_VISIBLE_DEVICES'] = str(args.device_id)

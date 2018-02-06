@@ -50,7 +50,6 @@ class PPO(object):
 	def build_plan(self, policy_mean, sigma):
 		policy = tf.distributions.Normal(policy_mean, sigma)
 		action_embed = policy.sample()
-		action_embed = tf.Print(action_embed, [action_embed])
 		return tf.argmin(tf.reduce_sum(
 			tf.squared_difference(tf.expand_dims(action_embed, axis=1), tf.expand_dims(self.cell_embed, axis=0)), axis=-1), axis=-1)
 
