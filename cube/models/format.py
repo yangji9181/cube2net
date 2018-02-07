@@ -7,11 +7,24 @@ dimension = ['topic', 'venue']
 embed_size = 64
 
 def deepwalk_thread(prefix):
-	call('deepwalk --format edgelist --input edgelist.txt --output %s_out.txt --representation-size %d' % (prefix, embed_size), shell=True, cwd='../../deepwalk/')
+	cwd = '../../deepwalk/'
+	call('deepwalk --format edgelist --input edgelist.txt --output %s_tmp.txt --representation-size %d' % (prefix, embed_size), shell=True, cwd=cwd)
+	with open(cwd + prefix + '_tmp.txt') as fr:
+		with open(cwd + prefix + '_out.txt', 'w') as fw:
+			next(fr)
+			for line in fr:
+				splits = line.rstrip().split()
+				fw.write(splits[0] + '\t' + ' '.join(splits[1:]) + '\n')
 
 def node2vec_thread(prefix):
-	call('python2 src/main.py --input edgelist.txt --output %s_out.txt --dimensions %d ' % (prefix, embed_size), shell=True, cwd='../../node2vec/')
-
+	cwd = '../../node2vec/'
+	call('python2 src/main.py --input edgelist.txt --output %s_tmp.txt --dimensions %d ' % (prefix, embed_size), shell=True, cwd=cwd)
+	with open(cwd + prefix + '_tmp.txt') as fr:
+		with open(cwd + prefix + '_out.txt', 'w') as fw:
+			next(fr)
+			for line in fr:
+				splits = line.rstrip().split()
+				fw.write(splits[0] + '\t' + ' '.join(splits[1:]) + '\n')
 
 if __name__ == '__main__':
 	for prefix in dimension:
