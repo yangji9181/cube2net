@@ -97,7 +97,7 @@ class PPO(object):
 					         feed_dict={self.state: states[batch_indices], self.action: actions[batch_indices], self.reward_to_go: rewards[batch_indices]})
 			sess.run(self.assign_ops)
 
-	def plan(self, sess):
+	def plan(self, sess, union=True):
 		state = self.environment.init_state
 		actions = []
 		for _ in range(self.params.trajectory_length):
@@ -105,4 +105,4 @@ class PPO(object):
 			action = sess.run(self.decision, feed_dict={self.state: feed_state})
 			actions.append(action[0])
 			state.add(action[0])
-		return self.environment.convert_state(state), self.environment.total_reward(state), actions
+		return self.environment.convert_state(state, union=union), self.environment.total_reward(state), actions

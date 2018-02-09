@@ -1,0 +1,92 @@
+(lp0
+(S'Jiawei Han'
+p1
+S'Wei Wang'
+p2
+tp3
+a(VMichael I. Jordan
+p4
+VGert R. G. Lanckriet
+p5
+tp6
+a(VJure Leskovec
+p7
+VJiawei Han
+p8
+tp9
+a(VMichael I. Jordan
+p10
+VLawrence K. Saul
+p11
+tp12
+a(VLawrence K. Saul
+p13
+VZoubin Ghahramani
+p14
+tp15
+a(VMichael I. Jordan
+p16
+VDavid M. Blei
+p17
+tp18
+a(VMing-Hsuan Yang
+p19
+VDan Roth
+p20
+tp21
+a(VMichael I. Jordan
+p22
+VZoubin Ghahramani
+p23
+tp24
+a(VDavid M. Blei
+p25
+VMichael I. Jordan
+p26
+tp27
+a(VLei Xu
+p28
+VMichael I. Jordan
+p29
+tp30
+a(VDan Roth
+p31
+VMing-Hsuan Yang
+p32
+tp33
+a(VJiawei Han
+p34
+VJure Leskovec
+p35
+tp36
+a(VMichael I. Jordan
+p37
+VLei Xu
+p38
+tp39
+a(VLawrence K. Saul
+p40
+VMichael I. Jordan
+p41
+tp42
+a(S'Wei Wang'
+p43
+S'Jiawei Han'
+p44
+tp45
+a(VZoubin Ghahramani
+p46
+VMichael I. Jordan
+p47
+tp48
+a(VZoubin Ghahramani
+p49
+VLawrence K. Saul
+p50
+tp51
+a(VGert R. G. Lanckriet
+p52
+VMichael I. Jordan
+p53
+tp54
+a.

@@ -38,6 +38,12 @@ class Cube(object):
 			authors |= self.id_to_author[id]
 		return authors
 
+	def state_authors(self, state):
+		authors = set()
+		for id in state:
+			authors |= self.id_to_author[id]
+		return authors
+
 	# compute reward to go
 	def trajectory_reward(self, state, actions, params):
 		G = nx.Graph()

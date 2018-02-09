@@ -72,5 +72,7 @@ class Environment(object):
 	def trajectory_reward(self, state, actions):
 		return self.cube.trajectory_reward(state, actions, self.params)
 
-	def convert_state(self, state):
-		return self.cube.all_authors(state)
+	def convert_state(self, state, union=True):
+		if union:
+			return self.cube.all_authors(state)
+		return self.cube.state_authors(state)

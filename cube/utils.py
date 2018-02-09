@@ -198,6 +198,17 @@ class DblpEval(object):
 							links[i + ',' + j] += 1
 		return links
 
+	@staticmethod
+	def coauthors(cube, authors, order=0):
+		if order <= 0:
+			return authors
+		coauthors = authors
+		for authors_list in cube.paper_author:
+			intersect = set(authors_list) & authors
+			if len(intersect) > 0:
+				coauthors |= set(intersect)
+		return DblpEval.coauthors(cube, coauthors, order - 1)
+
 if __name__ == '__main__':
 	with open('models/step3.pkl', 'rb') as f:
 		cube = pickle.load(f)

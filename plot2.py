@@ -28,20 +28,20 @@ def plot(nodes, edges, group, suffix):
 		                       node_color=color, node_size=20)
 	nx.draw_networkx_edges(G, pos, width=0.5)
 	nx.draw_networkx_labels(G, pos, font_size=8)
-	plt.savefig(cwd + suffix + '.png')
+	plt.savefig(cwd + suffix + '2.png')
 
 
 def dump_graph(nodes, edges, suffix):
-	with open(cwd + 'nodes_' + suffix + '.pkl', 'wb') as f:
+	with open(cwd + 'nodes_' + suffix + '2.pkl', 'wb') as f:
 		pickle.dump(nodes, f)
-	with open(cwd + 'edges_' + suffix + '.pkl', 'w') as f:
+	with open(cwd + 'edges_' + suffix + '2.pkl', 'w') as f:
 		pickle.dump(edges, f)
 
 
 def read_graph(suffix):
-	with open(cwd + 'nodes_' + suffix + '.pkl', 'rb') as f:
+	with open(cwd + 'nodes_' + suffix + '2.pkl', 'rb') as f:
 		nodes = pickle.load(f)
-	with open(cwd + 'edges_' + suffix + '.pkl', 'rb') as f:
+	with open(cwd + 'edges_' + suffix + '2.pkl', 'rb') as f:
 		edges = pickle.load(f)
 	return nodes, edges
 
@@ -63,21 +63,13 @@ if __name__ == '__main__':
 			splits = line.rstrip().split('\t')
 			test_authors[splits[0].replace('_', ' ')] = int(splits[1])
 
-	if os.path.isfile(cwd + 'nodes_baseline.pkl') and os.path.isfile(cwd + 'edges_baseline.pkl'):
-		authors, links = read_graph('baseline')
+	if os.path.isfile(cwd + 'nodes_baseline2.pkl') and os.path.isfile(cwd + 'edges_baseline2.pkl') \
+			and os.path.isfile(cwd + 'nodes_rl2.pkl') and os.path.isfile(cwd + 'edges_rl2.pkl'):
+		intersect_authors, intersect_links = read_graph('baseline')
+		coauthors, colinks = read_graph('rl')
 	else:
 		with open('cube/models/step3.pkl', 'r') as f:
 			cube = pickle.load(f)
-		authors, links = cube.author0, parse_links(DblpEval.author_links(cube, cube.author0))
-		dump_graph(authors, links, 'baseline')
-	plot(authors, links, test_authors, 'baseline')
-
-	if os.path.isfile(cwd + 'nodes_rl.pkl') and os.path.isfile(cwd + 'edges_rl.pkl'):
-		authors, links = read_graph('rl')
-	else:
-		if cube is None:
-			with open('cube/models/step3.pkl', 'r') as f:
-				cube = pickle.load(f)
 
 		environment = Environment(args)
 		tf.reset_default_graph()
@@ -90,7 +82,14 @@ if __name__ == '__main__':
 					per_process_gpu_memory_fraction=0.5,
 					allow_growth=True))) as sess:
 			agent.train(sess)
-			authors, reward, actions = agent.plan(sess)
-		links = parse_links(DblpEval.author_links(cube, authors))
-		dump_graph(authors, links, 'rl')
-	plot(authors, links, test_authors, 'rl')
+			authors, reward, actions = agent.plan(sess, union=False)
+		intersect_authors = authors & cube.author0
+		intersect_links = parse_links(DblpEval.author_links(cube, intersect_authors))
+		coauthors = DblpEval.coauthors(cube, intersect_authors, order=2)
+		colinks = parse_links(DblpEval.author_links(cube, coauthors))
+		dump_graph(intersect_authors, intersect_links, 'baseline')
+		dump_graph(coauthors, colinks, 'rl')
+
+	plot(intersect_authors, intersect_links, test_authors, 'baseline')
+	plot(coauthors, colinks, test_authors, 'rl')
+
