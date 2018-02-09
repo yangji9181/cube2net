@@ -22,10 +22,10 @@ def plot(nodes, edges, group, suffix):
 	G.add_edges_from(edges)
 	pos = nx.spring_layout(G)
 
-	# nx.draw_networkx_nodes(G, pos, nodelist=[node for node in nodes if node not in group], node_color='w', node_size=50)
+	nx.draw_networkx_nodes(G, pos, nodelist=[node for node in nodes if node not in group], node_color='w', node_size=20)
 	for g_id, color in colors:
 		nx.draw_networkx_nodes(G, pos, nodelist=[node for node in nodes if node in group and group[node] == g_id],
-		                       node_color=color, node_size=50)
+		                       node_color=color, node_size=20)
 	nx.draw_networkx_edges(G, pos, width=0.5)
 	plt.savefig(cwd + suffix + '.png')
 
