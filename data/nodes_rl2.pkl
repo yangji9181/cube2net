@@ -2,30 +2,166 @@ c__builtin__
 set
 p0
 ((lp1
-S'Jin Li'
+VQingshan Jiang
 p2
-aS'Gert R. G. Lanckriet'
+aVJimeng Sun
 p3
-aS'Wei Wang'
+aVLei Chen
 p4
-aS'Zoubin Ghahramani'
+aVQi Wang
 p5
-aS'Lawrence K. Saul'
+aVXue Li
 p6
-aS'Jure Leskovec'
+aVGuozhu Dong
 p7
-aS'Dan Roth'
+aVXiaoyong Du
 p8
-aS'Michael I. Jordan'
+aVXindong Wu
 p9
-aS'Lei Xu'
+aVThomas Hofmann
 p10
-aS'Ming-Hsuan Yang'
+aVWei Zhang
 p11
-aS'David M. Blei'
+aVChao Zhang
 p12
-aS'Jiawei Han'
+aVYu Wang
 p13
-atp14
-Rp15
+aVKe Wang
+p14
+aVFarshad Fotouhi
+p15
+aVLi Liu
+p16
+aVPeng Shi
+p17
+aVYang Xu
+p18
+aVAoying Zhou
+p19
+aVEamonn J. Keogh
+p20
+aVFuchun Sun
+p21
+aVBing Liu
+p22
+aVHang Li
+p23
+aVJianmin Wang
+p24
+aVFeifei Li
+p25
+aVMateu Sbert
+p26
+aVJeffrey Xu Yu
+p27
+aVWei Wang
+p28
+aVPeng Wang
+p29
+aVMichael K. Ng
+p30
+aVLi Wang
+p31
+aVDan Roth
+p32
+aVShiwei Tang
+p33
+aVYing Wang
+p34
+aVBeng Chin Ooi
+p35
+aVCheng Chen
+p36
+aVDan Wang
+p37
+aVJiawei Han
+p38
+aVJie Yang
+p39
+aVJun Zhang
+p40
+aVWei Xiong
+p41
+aVJin Li
+p42
+aVRong Jin
+p43
+aVYing Liu
+p44
+aVHong Cheng
+p45
+aVJian Pei
+p46
+aVAthanasios V. Vasilakos
+p47
+aVBo Liu
+p48
+aVJianzhong Li
+p49
+aVZhongfei Zhang
+p50
+aVLatifur Khan
+p51
+aVJun Li
+p52
+aVXiang Zhang
+p53
+aVEnhong Chen
+p54
+aVMichael I. Jordan
+p55
+aVZhaoyang Zhang
+p56
+aVTamara G. Kolda
+p57
+aVXin Li
+p58
+aVLei Wang
+p59
+aVJames Bailey
+p60
+aVLei Zhang
+p61
+aVHuaping Liu
+p62
+aVZheng Chen
+p63
+aVAidong Zhang
+p64
+aVWei Liu
+p65
+aVBhavani M. Thuraisingham
+p66
+aVHiroyuki Kitagawa
+p67
+aVLars Kulik
+p68
+aVBo Zhang
+p69
+aVYi Wang
+p70
+aVFan Zhang
+p71
+aVRong Liu
+p72
+aVCharu C. Aggarwal
+p73
+aVLiang Wang
+p74
+aVYan Zhang
+p75
+aVChristos Faloutsos
+p76
+aVJun Wang
+p77
+aVMichael J. Franklin
+p78
+aVJian Chen
+p79
+aVXi Chen
+p80
+aVPhilip S. Yu
+p81
+atp82
+Rp83
 .

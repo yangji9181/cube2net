@@ -4,89 +4,69 @@ p1
 S'Wei Wang'
 p2
 tp3
-a(VMichael I. Jordan
+a(VJiawei Han
 p4
-VGert R. G. Lanckriet
+VJian Pei
 p5
 tp6
-a(VJure Leskovec
+a(VJimeng Sun
 p7
-VJiawei Han
+VChristos Faloutsos
 p8
 tp9
-a(VMichael I. Jordan
+a(VJiawei Han
 p10
-VLawrence K. Saul
+VHong Cheng
 p11
 tp12
-a(VLawrence K. Saul
+a(VJian Pei
 p13
-VZoubin Ghahramani
+VJiawei Han
 p14
 tp15
-a(VMichael I. Jordan
+a(VHong Cheng
 p16
-VDavid M. Blei
+VJiawei Han
 p17
 tp18
-a(VMing-Hsuan Yang
+a(VDan Roth
 p19
-VDan Roth
+VXin Li
 p20
 tp21
-a(VMichael I. Jordan
+a(VWei Wang
 p22
-VZoubin Ghahramani
+VJian Pei
 p23
 tp24
-a(VDavid M. Blei
+a(VMichael I. Jordan
 p25
-VMichael I. Jordan
+VThomas Hofmann
 p26
 tp27
-a(VLei Xu
+a(VJian Pei
 p28
-VMichael I. Jordan
+VWei Wang
 p29
 tp30
-a(VDan Roth
+a(VChristos Faloutsos
 p31
-VMing-Hsuan Yang
+VJimeng Sun
 p32
 tp33
-a(VJiawei Han
+a(S'Wei Wang'
 p34
-VJure Leskovec
+S'Jiawei Han'
 p35
 tp36
-a(VMichael I. Jordan
+a(VThomas Hofmann
 p37
-VLei Xu
+VMichael I. Jordan
 p38
 tp39
-a(VLawrence K. Saul
+a(VXin Li
 p40
-VMichael I. Jordan
+VDan Roth
 p41
 tp42
-a(S'Wei Wang'
-p43
-S'Jiawei Han'
-p44
-tp45
-a(VZoubin Ghahramani
-p46
-VMichael I. Jordan
-p47
-tp48
-a(VZoubin Ghahramani
-p49
-VLawrence K. Saul
-p50
-tp51
-a(VGert R. G. Lanckriet
-p52
-VMichael I. Jordan
-p53
-tp54
 a.

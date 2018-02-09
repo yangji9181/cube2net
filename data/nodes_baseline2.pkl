@@ -4,28 +4,26 @@ p0
 ((lp1
 S'Jin Li'
 p2
-aS'Gert R. G. Lanckriet'
+aS'Xin Li'
 p3
-aS'Wei Wang'
+aS'Hong Cheng'
 p4
-aS'Zoubin Ghahramani'
+aS'Jian Pei'
 p5
-aS'Lawrence K. Saul'
+aS'Wei Wang'
 p6
-aS'Jure Leskovec'
-p7
 aS'Dan Roth'
-p8
+p7
 aS'Michael I. Jordan'
+p8
+aS'Christos Faloutsos'
 p9
-aS'Lei Xu'
+aS'Jimeng Sun'
 p10
-aS'Ming-Hsuan Yang'
-p11
-aS'David M. Blei'
-p12
 aS'Jiawei Han'
-p13
-atp14
-Rp15
+p11
+aS'Thomas Hofmann'
+p12
+atp13
+Rp14
 .

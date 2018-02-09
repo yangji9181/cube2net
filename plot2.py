@@ -85,7 +85,7 @@ if __name__ == '__main__':
 			authors, reward, actions = agent.plan(sess, union=False)
 		intersect_authors = authors & cube.author0
 		intersect_links = parse_links(DblpEval.author_links(cube, intersect_authors))
-		coauthors = DblpEval.coauthors(cube, intersect_authors, order=2)
+		coauthors = authors & DblpEval.coauthors(cube, intersect_authors, order=1)
 		colinks = parse_links(DblpEval.author_links(cube, coauthors))
 		dump_graph(intersect_authors, intersect_links, 'baseline')
 		dump_graph(coauthors, colinks, 'rl')

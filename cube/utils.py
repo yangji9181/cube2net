@@ -2,6 +2,7 @@ import pickle
 import time
 import shutil
 from collections import defaultdict
+from copy import deepcopy
 import evaluate
 from cube_construction import DblpCube
 from subprocess import call
@@ -202,11 +203,11 @@ class DblpEval(object):
 	def coauthors(cube, authors, order=0):
 		if order <= 0:
 			return authors
-		coauthors = authors
+		coauthors = deepcopy(authors)
 		for authors_list in cube.paper_author:
 			intersect = set(authors_list) & authors
 			if len(intersect) > 0:
-				coauthors |= set(intersect)
+				coauthors |= set(authors_list)
 		return DblpEval.coauthors(cube, coauthors, order - 1)
 
 if __name__ == '__main__':

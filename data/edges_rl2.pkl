@@ -1,92 +1,2052 @@
 (lp0
-(S'Jiawei Han'
+(VEamonn J. Keogh
 p1
-S'Wei Wang'
+VJian Pei
 p2
 tp3
-a(VMichael I. Jordan
+a(VAidong Zhang
 p4
-VGert R. G. Lanckriet
+VJian Pei
 p5
 tp6
-a(VJure Leskovec
+a(VJian Pei
 p7
 VJiawei Han
 p8
 tp9
-a(VMichael I. Jordan
+a(VJeffrey Xu Yu
 p10
-VLawrence K. Saul
+VPhilip S. Yu
 p11
 tp12
-a(VLawrence K. Saul
+a(VRong Jin
 p13
-VZoubin Ghahramani
+VJiawei Han
 p14
 tp15
-a(VMichael I. Jordan
+a(VLi Liu
 p16
-VDavid M. Blei
+VLatifur Khan
 p17
 tp18
-a(VMing-Hsuan Yang
+a(VQingshan Jiang
 p19
-VDan Roth
+VWei Zhang
 p20
 tp21
-a(VMichael I. Jordan
+a(VLei Zhang
 p22
-VZoubin Ghahramani
+VBing Liu
 p23
 tp24
-a(VDavid M. Blei
+a(VXue Li
 p25
-VMichael I. Jordan
+VPeng Shi
 p26
 tp27
-a(VLei Xu
+a(VJun Li
 p28
-VMichael I. Jordan
+VWei Wang
 p29
 tp30
-a(VDan Roth
+a(VJun Zhang
 p31
-VMing-Hsuan Yang
+VWei Wang
 p32
 tp33
-a(VJiawei Han
+a(VPhilip S. Yu
 p34
-VJure Leskovec
+VXin Li
 p35
 tp36
-a(VMichael I. Jordan
+a(VFan Zhang
 p37
-VLei Xu
+VLei Wang
 p38
 tp39
-a(VLawrence K. Saul
+a(VJeffrey Xu Yu
 p40
-VMichael I. Jordan
+VXiaoyong Du
 p41
 tp42
-a(S'Wei Wang'
+a(VMichael J. Franklin
 p43
-S'Jiawei Han'
+VMichael I. Jordan
 p44
 tp45
-a(VZoubin Ghahramani
+a(VLiang Wang
 p46
-VMichael I. Jordan
+VWei Wang
 p47
 tp48
-a(VZoubin Ghahramani
+a(VJun Zhang
 p49
-VLawrence K. Saul
+VJeffrey Xu Yu
 p50
 tp51
-a(VGert R. G. Lanckriet
+a(VEamonn J. Keogh
 p52
-VMichael I. Jordan
+VPhilip S. Yu
 p53
 tp54
+a(VJeffrey Xu Yu
+p55
+VWei Wang
+p56
+tp57
+a(VWei Wang
+p58
+VZhaoyang Zhang
+p59
+tp60
+a(VJun Li
+p61
+VJun Zhang
+p62
+tp63
+a(VYang Xu
+p64
+VYi Wang
+p65
+tp66
+a(VLei Chen
+p67
+VJeffrey Xu Yu
+p68
+tp69
+a(VWei Wang
+p70
+VLi Wang
+p71
+tp72
+a(VJun Li
+p73
+VYi Wang
+p74
+tp75
+a(VDan Roth
+p76
+VZheng Chen
+p77
+tp78
+a(VJeffrey Xu Yu
+p79
+VJiawei Han
+p80
+tp81
+a(VJimeng Sun
+p82
+VFeifei Li
+p83
+tp84
+a(VPhilip S. Yu
+p85
+VJianmin Wang
+p86
+tp87
+a(VMichael K. Ng
+p88
+VJeffrey Xu Yu
+p89
+tp90
+a(VLei Zhang
+p91
+VBo Zhang
+p92
+tp93
+a(VJiawei Han
+p94
+VPhilip S. Yu
+p95
+tp96
+a(VBhavani M. Thuraisingham
+p97
+VJiawei Han
+p98
+tp99
+a(VWei Wang
+p100
+VBeng Chin Ooi
+p101
+tp102
+a(VJun Zhang
+p103
+VJian Chen
+p104
+tp105
+a(VJianmin Wang
+p106
+VJeffrey Xu Yu
+p107
+tp108
+a(VYi Wang
+p109
+VAoying Zhou
+p110
+tp111
+a(VJeffrey Xu Yu
+p112
+VJianmin Wang
+p113
+tp114
+a(VChao Zhang
+p115
+VYu Wang
+p116
+tp117
+a(VChao Zhang
+p118
+VJun Li
+p119
+tp120
+a(VXiaoyong Du
+p121
+VJeffrey Xu Yu
+p122
+tp123
+a(VShiwei Tang
+p124
+VXin Li
+p125
+tp126
+a(VKe Wang
+p127
+VJeffrey Xu Yu
+p128
+tp129
+a(VCharu C. Aggarwal
+p130
+VJimeng Sun
+p131
+tp132
+a(VWei Wang
+p133
+VYan Zhang
+p134
+tp135
+a(VLei Wang
+p136
+VJie Yang
+p137
+tp138
+a(VYi Wang
+p139
+VHong Cheng
+p140
+tp141
+a(VYi Wang
+p142
+VJun Li
+p143
+tp144
+a(VJian Pei
+p145
+VPhilip S. Yu
+p146
+tp147
+a(VPhilip S. Yu
+p148
+VJiawei Han
+p149
+tp150
+a(VJames Bailey
+p151
+VLars Kulik
+p152
+tp153
+a(VJeffrey Xu Yu
+p154
+VGuozhu Dong
+p155
+tp156
+a(VLi Liu
+p157
+VBhavani M. Thuraisingham
+p158
+tp159
+a(VYan Zhang
+p160
+VJianzhong Li
+p161
+tp162
+a(VLei Wang
+p163
+VBo Liu
+p164
+tp165
+a(VJun Wang
+p166
+VLiang Wang
+p167
+tp168
+a(VLei Zhang
+p169
+VXin Li
+p170
+tp171
+a(VEnhong Chen
+p172
+VQi Wang
+p173
+tp174
+a(VEnhong Chen
+p175
+VJian Pei
+p176
+tp177
+a(VJian Pei
+p178
+VEamonn J. Keogh
+p179
+tp180
+a(VChristos Faloutsos
+p181
+VZhongfei Zhang
+p182
+tp183
+a(VXiaoyong Du
+p184
+VWei Wang
+p185
+tp186
+a(VJie Yang
+p187
+VXiang Zhang
+p188
+tp189
+a(VJun Zhang
+p190
+VJianmin Wang
+p191
+tp192
+a(VJian Pei
+p193
+VLei Chen
+p194
+tp195
+a(VHong Cheng
+p196
+VYi Wang
+p197
+tp198
+a(VJun Zhang
+p199
+VJun Li
+p200
+tp201
+a(VBo Zhang
+p202
+VJun Wang
+p203
+tp204
+a(VJimeng Sun
+p205
+VCharu C. Aggarwal
+p206
+tp207
+a(VWei Wang
+p208
+VKe Wang
+p209
+tp210
+a(VFuchun Sun
+p211
+VYing Liu
+p212
+tp213
+a(VJun Zhang
+p214
+VAthanasios V. Vasilakos
+p215
+tp216
+a(VChristos Faloutsos
+p217
+VXindong Wu
+p218
+tp219
+a(VLei Zhang
+p220
+VYan Zhang
+p221
+tp222
+a(VWei Wang
+p223
+VLiang Wang
+p224
+tp225
+a(VGuozhu Dong
+p226
+VJiawei Han
+p227
+tp228
+a(VJimeng Sun
+p229
+VTamara G. Kolda
+p230
+tp231
+a(VYu Wang
+p232
+VLiang Wang
+p233
+tp234
+a(VAthanasios V. Vasilakos
+p235
+VWei Wang
+p236
+tp237
+a(VJie Yang
+p238
+VBo Liu
+p239
+tp240
+a(VZhaoyang Zhang
+p241
+VYing Liu
+p242
+tp243
+a(VChristos Faloutsos
+p244
+VHiroyuki Kitagawa
+p245
+tp246
+a(VKe Wang
+p247
+VJiawei Han
+p248
+tp249
+a(VJiawei Han
+p250
+VXue Li
+p251
+tp252
+a(VKe Wang
+p253
+VWei Wang
+p254
+tp255
+a(VJiawei Han
+p256
+VBing Liu
+p257
+tp258
+a(VYu Wang
+p259
+VChao Zhang
+p260
+tp261
+a(VJimeng Sun
+p262
+VPhilip S. Yu
+p263
+tp264
+a(VCharu C. Aggarwal
+p265
+VPhilip S. Yu
+p266
+tp267
+a(VJin Li
+p268
+VLei Wang
+p269
+tp270
+a(VLei Chen
+p271
+VPhilip S. Yu
+p272
+tp273
+a(VTamara G. Kolda
+p274
+VChristos Faloutsos
+p275
+tp276
+a(VDan Wang
+p277
+VWei Wang
+p278
+tp279
+a(VXiang Zhang
+p280
+VJie Yang
+p281
+tp282
+a(VGuozhu Dong
+p283
+VJeffrey Xu Yu
+p284
+tp285
+a(VWei Liu
+p286
+VJames Bailey
+p287
+tp288
+a(VLatifur Khan
+p289
+VCharu C. Aggarwal
+p290
+tp291
+a(VAthanasios V. Vasilakos
+p292
+VJun Zhang
+p293
+tp294
+a(VWei Zhang
+p295
+VJianzhong Li
+p296
+tp297
+a(VXi Chen
+p298
+VMichael I. Jordan
+p299
+tp300
+a(VKe Wang
+p301
+VZheng Chen
+p302
+tp303
+a(VAoying Zhou
+p304
+VWei Wang
+p305
+tp306
+a(VKe Wang
+p307
+VPhilip S. Yu
+p308
+tp309
+a(VXiaoyong Du
+p310
+VHong Cheng
+p311
+tp312
+a(VXin Li
+p313
+VQingshan Jiang
+p314
+tp315
+a(VJiawei Han
+p316
+VKe Wang
+p317
+tp318
+a(VJian Pei
+p319
+VFeifei Li
+p320
+tp321
+a(VYing Wang
+p322
+VXin Li
+p323
+tp324
+a(VJin Li
+p325
+VBo Liu
+p326
+tp327
+a(VLei Wang
+p328
+VWei Liu
+p329
+tp330
+a(VPeng Wang
+p331
+VLei Wang
+p332
+tp333
+a(VJie Yang
+p334
+VLei Wang
+p335
+tp336
+a(VXin Li
+p337
+VShiwei Tang
+p338
+tp339
+a(VZheng Chen
+p340
+VDan Roth
+p341
+tp342
+a(VMichael I. Jordan
+p343
+VJianmin Wang
+p344
+tp345
+a(VLei Wang
+p346
+VFan Zhang
+p347
+tp348
+a(VFarshad Fotouhi
+p349
+VXin Li
+p350
+tp351
+a(VYing Wang
+p352
+VYi Wang
+p353
+tp354
+a(VBing Liu
+p355
+VKe Wang
+p356
+tp357
+a(VWei Wang
+p358
+VMichael K. Ng
+p359
+tp360
+a(VWei Wang
+p361
+VJeffrey Xu Yu
+p362
+tp363
+a(VJun Wang
+p364
+VPeng Shi
+p365
+tp366
+a(VBhavani M. Thuraisingham
+p367
+VLatifur Khan
+p368
+tp369
+a(VJimeng Sun
+p370
+VChristos Faloutsos
+p371
+tp372
+a(VCharu C. Aggarwal
+p373
+VBhavani M. Thuraisingham
+p374
+tp375
+a(VCharu C. Aggarwal
+p376
+VJian Pei
+p377
+tp378
+a(VJun Li
+p379
+VChao Zhang
+p380
+tp381
+a(VXin Li
+p382
+VFarshad Fotouhi
+p383
+tp384
+a(VXin Li
+p385
+VYang Xu
+p386
+tp387
+a(VLatifur Khan
+p388
+VLei Wang
+p389
+tp390
+a(VJianmin Wang
+p391
+VJun Zhang
+p392
+tp393
+a(VJian Pei
+p394
+VHang Li
+p395
+tp396
+a(VHang Li
+p397
+VJian Pei
+p398
+tp399
+a(VZheng Chen
+p400
+VKe Wang
+p401
+tp402
+a(VJian Pei
+p403
+VCharu C. Aggarwal
+p404
+tp405
+a(VPhilip S. Yu
+p406
+VJun Zhang
+p407
+tp408
+a(VBo Liu
+p409
+VLei Wang
+p410
+tp411
+a(VChao Zhang
+p412
+VJiawei Han
+p413
+tp414
+a(VYi Wang
+p415
+VYang Xu
+p416
+tp417
+a(VBeng Chin Ooi
+p418
+VAoying Zhou
+p419
+tp420
+a(VBo Liu
+p421
+VPhilip S. Yu
+p422
+tp423
+a(VJian Pei
+p424
+VPeng Wang
+p425
+tp426
+a(VYan Zhang
+p427
+VLei Zhang
+p428
+tp429
+a(VPhilip S. Yu
+p430
+VWei Wang
+p431
+tp432
+a(VJie Yang
+p433
+VYan Zhang
+p434
+tp435
+a(VJian Pei
+p436
+VGuozhu Dong
+p437
+tp438
+a(VMichael I. Jordan
+p439
+VMichael J. Franklin
+p440
+tp441
+a(VJun Wang
+p442
+VChao Zhang
+p443
+tp444
+a(VCharu C. Aggarwal
+p445
+VLatifur Khan
+p446
+tp447
+a(VWei Wang
+p448
+VJun Zhang
+p449
+tp450
+a(VHong Cheng
+p451
+VPhilip S. Yu
+p452
+tp453
+a(VWei Wang
+p454
+VPeng Wang
+p455
+tp456
+a(VJin Li
+p457
+VChao Zhang
+p458
+tp459
+a(VAoying Zhou
+p460
+VXindong Wu
+p461
+tp462
+a(VFuchun Sun
+p463
+VHuaping Liu
+p464
+tp465
+a(VWei Wang
+p466
+VYing Liu
+p467
+tp468
+a(VLei Chen
+p469
+VFeifei Li
+p470
+tp471
+a(VDan Roth
+p472
+VXin Li
+p473
+tp474
+a(VYing Liu
+p475
+VLei Wang
+p476
+tp477
+a(VChristos Faloutsos
+p478
+VPhilip S. Yu
+p479
+tp480
+a(VJianzhong Li
+p481
+VJianmin Wang
+p482
+tp483
+a(VMichael K. Ng
+p484
+VJian Chen
+p485
+tp486
+a(VWei Wang
+p487
+VRong Liu
+p488
+tp489
+a(VJian Chen
+p490
+VMichael K. Ng
+p491
+tp492
+a(VLi Liu
+p493
+VLei Wang
+p494
+tp495
+a(VChristos Faloutsos
+p496
+VTamara G. Kolda
+p497
+tp498
+a(VLars Kulik
+p499
+VJian Pei
+p500
+tp501
+a(VXindong Wu
+p502
+VAoying Zhou
+p503
+tp504
+a(VJeffrey Xu Yu
+p505
+VAoying Zhou
+p506
+tp507
+a(VBo Liu
+p508
+VLi Wang
+p509
+tp510
+a(VXin Li
+p511
+VDan Roth
+p512
+tp513
+a(VJian Pei
+p514
+VXindong Wu
+p515
+tp516
+a(VWei Wang
+p517
+VWei Liu
+p518
+tp519
+a(VKe Wang
+p520
+VBing Liu
+p521
+tp522
+a(VWei Liu
+p523
+VJie Yang
+p524
+tp525
+a(VWei Liu
+p526
+VJun Wang
+p527
+tp528
+a(VPhilip S. Yu
+p529
+VHong Cheng
+p530
+tp531
+a(VBhavani M. Thuraisingham
+p532
+VLi Liu
+p533
+tp534
+a(VChao Zhang
+p535
+VJun Wang
+p536
+tp537
+a(VJian Chen
+p538
+VJian Pei
+p539
+tp540
+a(VWei Zhang
+p541
+VQingshan Jiang
+p542
+tp543
+a(VWei Liu
+p544
+VChao Zhang
+p545
+tp546
+a(VWei Zhang
+p547
+VJun Li
+p548
+tp549
+a(VWei Wang
+p550
+VQi Wang
+p551
+tp552
+a(VAoying Zhou
+p553
+VYi Wang
+p554
+tp555
+a(VJian Pei
+p556
+VJian Chen
+p557
+tp558
+a(VHang Li
+p559
+VEnhong Chen
+p560
+tp561
+a(VJianmin Wang
+p562
+VWei Wang
+p563
+tp564
+a(VJianzhong Li
+p565
+VYan Zhang
+p566
+tp567
+a(VJin Li
+p568
+VAoying Zhou
+p569
+tp570
+a(VJun Li
+p571
+VXin Li
+p572
+tp573
+a(VWei Zhang
+p574
+VWei Wang
+p575
+tp576
+a(VZhongfei Zhang
+p577
+VPhilip S. Yu
+p578
+tp579
+a(VJie Yang
+p580
+VHong Cheng
+p581
+tp582
+a(VJun Wang
+p583
+VBo Zhang
+p584
+tp585
+a(VWei Wang
+p586
+VMateu Sbert
+p587
+tp588
+a(VBing Liu
+p589
+VPhilip S. Yu
+p590
+tp591
+a(VYing Liu
+p592
+VWei Wang
+p593
+tp594
+a(VXin Li
+p595
+VLi Liu
+p596
+tp597
+a(VJianmin Wang
+p598
+VPhilip S. Yu
+p599
+tp600
+a(VJian Pei
+p601
+VJames Bailey
+p602
+tp603
+a(VJianmin Wang
+p604
+VJianzhong Li
+p605
+tp606
+a(VPhilip S. Yu
+p607
+VEnhong Chen
+p608
+tp609
+a(VLiang Wang
+p610
+VJun Zhang
+p611
+tp612
+a(VJianzhong Li
+p613
+VWei Zhang
+p614
+tp615
+a(VChao Zhang
+p616
+VMichael K. Ng
+p617
+tp618
+a(VMichael I. Jordan
+p619
+VXi Chen
+p620
+tp621
+a(VPhilip S. Yu
+p622
+VKe Wang
+p623
+tp624
+a(VYing Liu
+p625
+VZhaoyang Zhang
+p626
+tp627
+a(VKe Wang
+p628
+VPeng Wang
+p629
+tp630
+a(VWei Liu
+p631
+VLei Zhang
+p632
+tp633
+a(VWei Wang
+p634
+VFan Zhang
+p635
+tp636
+a(VPeng Shi
+p637
+VJun Wang
+p638
+tp639
+a(VJian Pei
+p640
+VJeffrey Xu Yu
+p641
+tp642
+a(VPeng Wang
+p643
+VWei Wang
+p644
+tp645
+a(VEnhong Chen
+p646
+VLei Zhang
+p647
+tp648
+a(VJianmin Wang
+p649
+VMichael I. Jordan
+p650
+tp651
+a(VJiawei Han
+p652
+VRong Jin
+p653
+tp654
+a(VHong Cheng
+p655
+VXiaoyong Du
+p656
+tp657
+a(VBeng Chin Ooi
+p658
+VWei Wang
+p659
+tp660
+a(VHong Cheng
+p661
+VFuchun Sun
+p662
+tp663
+a(VYan Zhang
+p664
+VWei Wang
+p665
+tp666
+a(VYang Xu
+p667
+VWei Wang
+p668
+tp669
+a(VHong Cheng
+p670
+VJie Yang
+p671
+tp672
+a(VWei Wang
+p673
+VJianzhong Li
+p674
+tp675
+a(VPhilip S. Yu
+p676
+VJimeng Sun
+p677
+tp678
+a(VHuaping Liu
+p679
+VFuchun Sun
+p680
+tp681
+a(VPhilip S. Yu
+p682
+VZhongfei Zhang
+p683
+tp684
+a(VBeng Chin Ooi
+p685
+VMichael J. Franklin
+p686
+tp687
+a(VJie Yang
+p688
+VWei Liu
+p689
+tp690
+a(VCheng Chen
+p691
+VWei Wang
+p692
+tp693
+a(VJian Pei
+p694
+VLars Kulik
+p695
+tp696
+a(VWei Wang
+p697
+VWei Xiong
+p698
+tp699
+a(VJun Li
+p700
+VEnhong Chen
+p701
+tp702
+a(VXiang Zhang
+p703
+VWei Wang
+p704
+tp705
+a(VWei Liu
+p706
+VLei Wang
+p707
+tp708
+a(VAoying Zhou
+p709
+VBeng Chin Ooi
+p710
+tp711
+a(VQi Wang
+p712
+VJun Li
+p713
+tp714
+a(VHong Cheng
+p715
+VJiawei Han
+p716
+tp717
+a(VWei Wang
+p718
+VJianmin Wang
+p719
+tp720
+a(VBing Liu
+p721
+VWei Wang
+p722
+tp723
+a(VJiawei Han
+p724
+VHong Cheng
+p725
+tp726
+a(VJianzhong Li
+p727
+VWei Wang
+p728
+tp729
+a(VLi Wang
+p730
+VWei Wang
+p731
+tp732
+a(VWei Liu
+p733
+VLi Liu
+p734
+tp735
+a(VAoying Zhou
+p736
+VBo Zhang
+p737
+tp738
+a(VMichael J. Franklin
+p739
+VBeng Chin Ooi
+p740
+tp741
+a(VEnhong Chen
+p742
+VPhilip S. Yu
+p743
+tp744
+a(VLars Kulik
+p745
+VJames Bailey
+p746
+tp747
+a(VBhavani M. Thuraisingham
+p748
+VCharu C. Aggarwal
+p749
+tp750
+a(VJun Wang
+p751
+VJin Li
+p752
+tp753
+a(VPhilip S. Yu
+p754
+VBo Liu
+p755
+tp756
+a(VAoying Zhou
+p757
+VJin Li
+p758
+tp759
+a(VJames Bailey
+p760
+VWei Liu
+p761
+tp762
+a(VWei Wang
+p763
+VAthanasios V. Vasilakos
+p764
+tp765
+a(VXin Li
+p766
+VYing Wang
+p767
+tp768
+a(VJeffrey Xu Yu
+p769
+VJun Zhang
+p770
+tp771
+a(VWei Wang
+p772
+VJiawei Han
+p773
+tp774
+a(VJiawei Han
+p775
+VLatifur Khan
+p776
+tp777
+a(VJian Pei
+p778
+VBo Zhang
+p779
+tp780
+a(VThomas Hofmann
+p781
+VMichael I. Jordan
+p782
+tp783
+a(VPhilip S. Yu
+p784
+VChristos Faloutsos
+p785
+tp786
+a(VBo Zhang
+p787
+VAoying Zhou
+p788
+tp789
+a(VYu Wang
+p790
+VWei Wang
+p791
+tp792
+a(VYi Wang
+p793
+VJun Wang
+p794
+tp795
+a(VWei Wang
+p796
+VJun Li
+p797
+tp798
+a(VJian Pei
+p799
+VWei Wang
+p800
+tp801
+a(VGuozhu Dong
+p802
+VJian Pei
+p803
+tp804
+a(VBing Liu
+p805
+VJiawei Han
+p806
+tp807
+a(VBo Zhang
+p808
+VJian Pei
+p809
+tp810
+a(VQi Wang
+p811
+VWei Wang
+p812
+tp813
+a(VLei Wang
+p814
+VLi Liu
+p815
+tp816
+a(VMichael K. Ng
+p817
+VChao Zhang
+p818
+tp819
+a(VJiawei Han
+p820
+VBhavani M. Thuraisingham
+p821
+tp822
+a(VBo Liu
+p823
+VXindong Wu
+p824
+tp825
+a(VJun Li
+p826
+VQi Wang
+p827
+tp828
+a(VJiawei Han
+p829
+VCharu C. Aggarwal
+p830
+tp831
+a(VLei Zhang
+p832
+VJun Li
+p833
+tp834
+a(VLei Zhang
+p835
+VWei Wang
+p836
+tp837
+a(VJiawei Han
+p838
+VJian Pei
+p839
+tp840
+a(VBo Zhang
+p841
+VLei Zhang
+p842
+tp843
+a(VFuchun Sun
+p844
+VHong Cheng
+p845
+tp846
+a(VFeifei Li
+p847
+VJian Pei
+p848
+tp849
+a(VHong Cheng
+p850
+VHuaping Liu
+p851
+tp852
+a(VWei Wang
+p853
+VDan Wang
+p854
+tp855
+a(VFan Zhang
+p856
+VWei Wang
+p857
+tp858
+a(VWei Liu
+p859
+VCharu C. Aggarwal
+p860
+tp861
+a(VPeng Wang
+p862
+VJian Pei
+p863
+tp864
+a(VCharu C. Aggarwal
+p865
+VJiawei Han
+p866
+tp867
+a(VEnhong Chen
+p868
+VHang Li
+p869
+tp870
+a(VTamara G. Kolda
+p871
+VJimeng Sun
+p872
+tp873
+a(VZhaoyang Zhang
+p874
+VWei Wang
+p875
+tp876
+a(VJun Zhang
+p877
+VYu Wang
+p878
+tp879
+a(VJeffrey Xu Yu
+p880
+VJian Pei
+p881
+tp882
+a(VWei Wang
+p883
+VXiang Zhang
+p884
+tp885
+a(VJiawei Han
+p886
+VJeffrey Xu Yu
+p887
+tp888
+a(VLei Wang
+p889
+VLatifur Khan
+p890
+tp891
+a(VLi Liu
+p892
+VXin Li
+p893
+tp894
+a(VWei Wang
+p895
+VLei Zhang
+p896
+tp897
+a(VXin Li
+p898
+VLei Zhang
+p899
+tp900
+a(VLatifur Khan
+p901
+VLi Liu
+p902
+tp903
+a(VLiang Wang
+p904
+VJun Wang
+p905
+tp906
+a(VWei Wang
+p907
+VPhilip S. Yu
+p908
+tp909
+a(VPeng Shi
+p910
+VWei Wang
+p911
+tp912
+a(VWei Liu
+p913
+VWei Wang
+p914
+tp915
+a(VPhilip S. Yu
+p916
+VBing Liu
+p917
+tp918
+a(VXin Li
+p919
+VPhilip S. Yu
+p920
+tp921
+a(VLatifur Khan
+p922
+VJiawei Han
+p923
+tp924
+a(VWei Wang
+p925
+VBo Zhang
+p926
+tp927
+a(VHuaping Liu
+p928
+VHong Cheng
+p929
+tp930
+a(VYan Zhang
+p931
+VXindong Wu
+p932
+tp933
+a(VQi Wang
+p934
+VEnhong Chen
+p935
+tp936
+a(VPeng Shi
+p937
+VXue Li
+p938
+tp939
+a(VYang Xu
+p940
+VXin Li
+p941
+tp942
+a(VXindong Wu
+p943
+VYan Zhang
+p944
+tp945
+a(VKe Wang
+p946
+VGuozhu Dong
+p947
+tp948
+a(VHang Li
+p949
+VJames Bailey
+p950
+tp951
+a(VXindong Wu
+p952
+VJian Pei
+p953
+tp954
+a(VJeffrey Xu Yu
+p955
+VKe Wang
+p956
+tp957
+a(VBo Zhang
+p958
+VCharu C. Aggarwal
+p959
+tp960
+a(VFan Zhang
+p961
+VYi Wang
+p962
+tp963
+a(VYan Zhang
+p964
+VJie Yang
+p965
+tp966
+a(VWei Xiong
+p967
+VWei Wang
+p968
+tp969
+a(VBo Liu
+p970
+VJie Yang
+p971
+tp972
+a(VPhilip S. Yu
+p973
+VCharu C. Aggarwal
+p974
+tp975
+a(VQingshan Jiang
+p976
+VXin Li
+p977
+tp978
+a(VJeffrey Xu Yu
+p979
+VLei Chen
+p980
+tp981
+a(VYing Liu
+p982
+VFuchun Sun
+p983
+tp984
+a(VYi Wang
+p985
+VYing Wang
+p986
+tp987
+a(VEnhong Chen
+p988
+VJun Li
+p989
+tp990
+a(VXin Li
+p991
+VBing Liu
+p992
+tp993
+a(VWei Wang
+p994
+VYang Xu
+p995
+tp996
+a(VWei Wang
+p997
+VAoying Zhou
+p998
+tp999
+a(VChao Zhang
+p1000
+VWei Liu
+p1001
+tp1002
+a(VWei Wang
+p1003
+VBing Liu
+p1004
+tp1005
+a(VLatifur Khan
+p1006
+VBhavani M. Thuraisingham
+p1007
+tp1008
+a(VMichael I. Jordan
+p1009
+VThomas Hofmann
+p1010
+tp1011
+a(VAoying Zhou
+p1012
+VJeffrey Xu Yu
+p1013
+tp1014
+a(VLei Chen
+p1015
+VJian Pei
+p1016
+tp1017
+a(VLei Wang
+p1018
+VYing Liu
+p1019
+tp1020
+a(VPhilip S. Yu
+p1021
+VEamonn J. Keogh
+p1022
+tp1023
+a(VXindong Wu
+p1024
+VBo Liu
+p1025
+tp1026
+a(VXindong Wu
+p1027
+VJames Bailey
+p1028
+tp1029
+a(VWei Wang
+p1030
+VJian Pei
+p1031
+tp1032
+a(VJames Bailey
+p1033
+VXindong Wu
+p1034
+tp1035
+a(VJiawei Han
+p1036
+VGuozhu Dong
+p1037
+tp1038
+a(VXi Chen
+p1039
+VYi Wang
+p1040
+tp1041
+a(VWei Wang
+p1042
+VPeng Shi
+p1043
+tp1044
+a(VJian Chen
+p1045
+VJun Zhang
+p1046
+tp1047
+a(VChao Zhang
+p1048
+VLei Zhang
+p1049
+tp1050
+a(VLi Liu
+p1051
+VWei Liu
+p1052
+tp1053
+a(VYi Wang
+p1054
+VXi Chen
+p1055
+tp1056
+a(VJun Zhang
+p1057
+VLiang Wang
+p1058
+tp1059
+a(VChao Zhang
+p1060
+VJin Li
+p1061
+tp1062
+a(VPeng Wang
+p1063
+VKe Wang
+p1064
+tp1065
+a(VBo Liu
+p1066
+VJin Li
+p1067
+tp1068
+a(VJiawei Han
+p1069
+VChao Zhang
+p1070
+tp1071
+a(VPhilip S. Yu
+p1072
+VJian Pei
+p1073
+tp1074
+a(VYi Wang
+p1075
+VFan Zhang
+p1076
+tp1077
+a(VJames Bailey
+p1078
+VJian Pei
+p1079
+tp1080
+a(VChristos Faloutsos
+p1081
+VJimeng Sun
+p1082
+tp1083
+a(VGuozhu Dong
+p1084
+VKe Wang
+p1085
+tp1086
+a(VYu Wang
+p1087
+VJun Zhang
+p1088
+tp1089
+a(VJun Wang
+p1090
+VWei Liu
+p1091
+tp1092
+a(VHiroyuki Kitagawa
+p1093
+VChristos Faloutsos
+p1094
+tp1095
+a(VMateu Sbert
+p1096
+VWei Wang
+p1097
+tp1098
+a(VYang Xu
+p1099
+VPeng Shi
+p1100
+tp1101
+a(VXindong Wu
+p1102
+VChristos Faloutsos
+p1103
+tp1104
+a(VLiang Wang
+p1105
+VYu Wang
+p1106
+tp1107
+a(VZhongfei Zhang
+p1108
+VChristos Faloutsos
+p1109
+tp1110
+a(VJian Pei
+p1111
+VKe Wang
+p1112
+tp1113
+a(VWei Wang
+p1114
+VCheng Chen
+p1115
+tp1116
+a(VFeifei Li
+p1117
+VLei Chen
+p1118
+tp1119
+a(VWei Wang
+p1120
+VYu Wang
+p1121
+tp1122
+a(VBo Zhang
+p1123
+VWei Wang
+p1124
+tp1125
+a(VLi Wang
+p1126
+VBo Liu
+p1127
+tp1128
+a(VRong Liu
+p1129
+VWei Wang
+p1130
+tp1131
+a(VJun Zhang
+p1132
+VPhilip S. Yu
+p1133
+tp1134
+a(VJiawei Han
+p1135
+VWei Wang
+p1136
+tp1137
+a(VJun Li
+p1138
+VWei Zhang
+p1139
+tp1140
+a(VJames Bailey
+p1141
+VHang Li
+p1142
+tp1143
+a(VKe Wang
+p1144
+VJian Pei
+p1145
+tp1146
+a(VJeffrey Xu Yu
+p1147
+VMichael K. Ng
+p1148
+tp1149
+a(VJeffrey Xu Yu
+p1150
+VHong Cheng
+p1151
+tp1152
+a(VCharu C. Aggarwal
+p1153
+VWei Liu
+p1154
+tp1155
+a(VJun Li
+p1156
+VLei Zhang
+p1157
+tp1158
+a(VLei Wang
+p1159
+VJin Li
+p1160
+tp1161
+a(VFeifei Li
+p1162
+VJimeng Sun
+p1163
+tp1164
+a(VJian Pei
+p1165
+VAidong Zhang
+p1166
+tp1167
+a(VLei Wang
+p1168
+VPeng Wang
+p1169
+tp1170
+a(VPhilip S. Yu
+p1171
+VJeffrey Xu Yu
+p1172
+tp1173
+a(VMichael K. Ng
+p1174
+VWei Wang
+p1175
+tp1176
+a(VWei Wang
+p1177
+VWei Zhang
+p1178
+tp1179
+a(VPhilip S. Yu
+p1180
+VLei Chen
+p1181
+tp1182
+a(VXin Li
+p1183
+VJun Li
+p1184
+tp1185
+a(VBing Liu
+p1186
+VXin Li
+p1187
+tp1188
+a(VJian Pei
+p1189
+VEnhong Chen
+p1190
+tp1191
+a(VPeng Shi
+p1192
+VYang Xu
+p1193
+tp1194
+a(VWei Wang
+p1195
+VXiaoyong Du
+p1196
+tp1197
+a(VLei Zhang
+p1198
+VChao Zhang
+p1199
+tp1200
+a(VLei Zhang
+p1201
+VWei Liu
+p1202
+tp1203
+a(VHong Cheng
+p1204
+VJeffrey Xu Yu
+p1205
+tp1206
+a(VBing Liu
+p1207
+VLei Zhang
+p1208
+tp1209
+a(VCharu C. Aggarwal
+p1210
+VBo Zhang
+p1211
+tp1212
+a(VXue Li
+p1213
+VJiawei Han
+p1214
+tp1215
+a(VJun Wang
+p1216
+VYi Wang
+p1217
+tp1218
+a(VJin Li
+p1219
+VJun Wang
+p1220
+tp1221
+a(VLei Zhang
+p1222
+VEnhong Chen
+p1223
+tp1224
+a(VGuozhu Dong
+p1225
+VJames Bailey
+p1226
+tp1227
+a(VJames Bailey
+p1228
+VGuozhu Dong
+p1229
+tp1230
 a.
