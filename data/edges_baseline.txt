@@ -1,0 +1,318 @@
+Xin Li, Erik Riedel
+Xiaoxin Yin, Dong Xin
+Tianyi Wu, Dong Xin
+Betty Xia, Yongjian Fu
+Hua Zhu, Nebojsa Stefanovic
+Christos Faloutsos, Jia-Yu Pan
+Jian Pei, Jiawei Han
+Jiawei Han, Yue Huang
+David M. Blei, Erik B. Sudderth
+Feida Zhu, Hong Cheng
+Fan Guo, Christos Faloutsos
+Jiawei Han, Zhijun Yin
+Betty Xia, Jiawei Han
+Dong Xin, Xiaoxin Yin
+Wei Lu, Jiawei Han
+Wen-tau Yih, Dan Roth
+Yizhou Sun, Xifeng Yan
+Jiawei Han, Jean Hou
+Sonny Han Seng Chee, Yijun Lu
+Anthony K. H. Tung, Wei Wang
+Alice X. Zheng, Michael I. Jordan
+Vivek Srikumar, Ming-Wei Chang
+Yizhou Sun, Jiawei Han
+Krzysztof Koperski, Yongjian Fu
+Jiawei Han, Manish Gupta
+Zhijun Yin, Jiawei Han
+Jiawei Han, Jure Leskovec
+Michael I. Jordan, Lei Xu
+Rodrigo de Salvo Braz, Vasin Punyakanok
+Yijun Lu, Betty Xia
+Bolin Ding, Jiawei Han
+Dong Xin, Jiawei Han
+Yijun Lu, Jiawei Han
+Hwanjo Yu, Xiaolei Li
+Spiros Papadimitriou, Jimeng Sun
+Dan Roth, Vivek Srikumar
+XuanLong Nguyen, Michael I. Jordan
+Xiaoxin Yin, Jiawei Han
+Amynmohamed Rajan, Krzysztof Koperski
+Yijun Lu, Krzysztof Koperski
+Hong Cheng, Dong Xin
+Hua Zhu, Krzysztof Koperski
+Helen Pinto, Jian Pei
+Michael I. Jordan, Zhihua Zhang
+Yongjian Fu, Yue Huang
+Christos Faloutsos, Leman Akoglu
+Betty Xia, Hua Zhu
+Jimeng Sun, Spiros Papadimitriou
+Sonny Han Seng Chee, Nebojsa Stefanovic
+Yue Huang, Yongjian Fu
+Jiawei Han, Xiaoxin Yin
+Krzysztof Koperski, Yijun Lu
+Vasin Punyakanok, Dan Roth
+Zoubin Ghahramani, Lawrence K. Saul
+Feida Zhu, Jiawei Han
+Jiawei Han, Chen Chen
+Jimeng Sun, Christos Faloutsos
+Jiawei Han, Bolin Ding
+Yijun Lu, Wei Wang
+Xiaolei Li, Jiawei Han
+Yongjian Fu, Yijun Lu
+Nebojsa Stefanovic, Yijun Lu
+Jiawei Han, Xin Jin
+Dan Roth, Vasin Punyakanok
+Yijun Lu, Sonny Han Seng Chee
+Wan Gong, Jiawei Han
+Amynmohamed Rajan, Wan Gong
+Jiawei Han, Yizhou Sun
+Vasin Punyakanok, Wen-tau Yih
+Michael I. Jordan, Gert R. G. Lanckriet
+Michael I. Jordan, Thomas Hofmann
+Jiawei Han, Sangkyum Kim
+Betty Xia, Nebojsa Stefanovic
+Michael I. Jordan, Erik B. Sudderth
+Nebojsa Stefanovic, Wei Wang
+Yijun Lu, Wan Gong
+Hong Cheng, Jiawei Han
+Yizhou Sun, Jing Gao
+Dan Roth, Dav Zimak
+Krzysztof Koperski, Sonny Han Seng Chee
+Wei Wang, Wan Gong
+Ming-Wei Chang, Lev-Arie Ratinov
+Jiawei Han, Dong Xin
+Vasin Punyakanok, Rodrigo de Salvo Braz
+Christos Faloutsos, Leejay Wu
+Nebojsa Stefanovic, Betty Xia
+Wei Wang, Nebojsa Stefanovic
+Wei Wang, Yijun Lu
+Wei Wang, Hanghang Tong
+Wei Wang, Jian Pei
+Tianyi Wu, Jiawei Han
+Mary McGlohon, Christos Faloutsos
+Yijun Lu, Hua Zhu
+Xin Jin, Jiawei Han
+Hanghang Tong, Wei Wang
+Anthony K. H. Tung, Wen Jin
+Sonny Han Seng Chee, Jiawei Han
+Xiaolei Li, Xiaoxin Yin
+Vasin Punyakanok, Dav Zimak
+Jian Pei, Helen Pinto
+Amynmohamed Rajan, Wei Wang
+Christos Faloutsos, Fan Guo
+Michael I. Jordan, Alice X. Zheng
+Xiaolei Li, Dong Xin
+Yee Whye Teh, Zoubin Ghahramani
+Xiaoxin Yin, Xiaolei Li
+Jiawei Han, Helen Pinto
+Jiawei Han, Ling Liu
+Jiawei Han, Wan Gong
+Nebojsa Stefanovic, Wan Gong
+Hua Zhu, Yijun Lu
+Nebojsa Stefanovic, Yongjian Fu
+Krzysztof Koperski, Nebojsa Stefanovic
+Michael I. Jordan, Chiranjib Bhattacharyya
+Wan Gong, Yiwen Yin
+Michael I. Jordan, Emily B. Fox
+Lawrence K. Saul, Zoubin Ghahramani
+Martin J. Wainwright, Erik B. Sudderth
+Dan Roth, Wei Lu
+Jiawei Han, Yijun Lu
+Wei Wang, Tianyi Wu
+Emily B. Fox, Michael I. Jordan
+Zhihua Zhang, Michael I. Jordan
+Jiawei Han, Wen Jin
+Michael I. Jordan, Fei Sha
+Shashank Pandit, Christos Faloutsos
+Wen-tau Yih, Dav Zimak
+Dan Roth, Kevin Small
+Amynmohamed Rajan, Yongjian Fu
+Ming-Wei Chang, Dan Roth
+Jiawei Han, Yongjian Fu
+Chiranjib Bhattacharyya, Michael I. Jordan
+Wen-tau Yih, Vasin Punyakanok
+Yongjian Fu, Jiawei Han
+Krzysztof Koperski, Betty Xia
+Lei Xu, Michael I. Jordan
+Jiawei Han, Yiwen Yin
+Xifeng Yan, Feida Zhu
+Gert R. G. Lanckriet, Chiranjib Bhattacharyya
+Chen Chen, Jiawei Han
+Ling Liu, Jiawei Han
+Lev-Arie Ratinov, Ming-Wei Chang
+Leman Akoglu, Mary McGlohon
+Krzysztof Koperski, Wei Wang
+Jiawei Han, Amynmohamed Rajan
+Lawrence K. Saul, Fei Sha
+Yizhou Sun, Manish Gupta
+Wen Jin, Anthony K. H. Tung
+Hua Zhu, Betty Xia
+Christos Faloutsos, Jimeng Sun
+Wei Wang, Jiawei Han
+Wan Gong, Nebojsa Stefanovic
+Hong Cheng, Feida Zhu
+Christos Faloutsos, Spiros Papadimitriou
+Nebojsa Stefanovic, Hua Zhu
+Betty Xia, Sonny Han Seng Chee
+Nebojsa Stefanovic, Jiawei Han
+Jia-Yu Pan, Christos Faloutsos
+Ming-Wei Chang, Vivek Srikumar
+Jiawei Han, Anthony K. H. Tung
+Zhijun Yin, Xin Jin
+Thomas Hofmann, Michael I. Jordan
+Wan Gong, Betty Xia
+Jing Gao, Bolin Ding
+Jiawei Han, Jian Pei
+Hwanjo Yu, Jiawei Han
+Betty Xia, Wei Wang
+Dav Zimak, Vasin Punyakanok
+Zoubin Ghahramani, Michael I. Jordan
+Dav Zimak, Wen-tau Yih
+Jiawei Han, Krzysztof Koperski
+Erik B. Sudderth, Martin J. Wainwright
+Erik Riedel, Xin Li
+Helen Pinto, Jiawei Han
+Jiawei Han, Zhaohui Xie
+Jing Gao, Manish Gupta
+Wan Gong, Yijun Lu
+Dan Roth, Xin Li
+Xifeng Yan, Jiawei Han
+Dan Roth, Ming-Hsuan Yang
+Dong Xin, Tianyi Wu
+Jiawei Han, Sonny Han Seng Chee
+Wen Jin, Jiawei Han
+Jian Pei, Wei Wang
+Manish Gupta, Jiawei Han
+Lawrence K. Saul, Michael I. Jordan
+Yongjian Fu, Wan Gong
+Wan Gong, Sonny Han Seng Chee
+Jiawei Han, Wei Wang
+Betty Xia, Krzysztof Koperski
+Jiawei Han, Feida Zhu
+Erik B. Sudderth, David M. Blei
+Erik B. Sudderth, Michael I. Jordan
+Betty Xia, Wan Gong
+Xin Jin, Zhijun Yin
+Dong Xin, Hong Cheng
+Michael I. Jordan, David M. Blei
+Manish Gupta, Yizhou Sun
+Martin J. Wainwright, Michael I. Jordan
+Wan Gong, Krzysztof Koperski
+Wei Wang, Anthony K. H. Tung
+Lev-Arie Ratinov, Dan Roth
+XuanLong Nguyen, Martin J. Wainwright
+Bolin Ding, Jing Gao
+Hua Zhu, Jiawei Han
+Nebojsa Stefanovic, Sonny Han Seng Chee
+Leman Akoglu, Christos Faloutsos
+Jiawei Han, Deng Cai
+Manish Gupta, Jing Gao
+Hua Zhu, Wan Gong
+Xin Li, Dan Roth
+Sonny Han Seng Chee, Hua Zhu
+Erik B. Sudderth, Emily B. Fox
+Dan Roth, Ming-Wei Chang
+David M. Blei, Michael I. Jordan
+Yijun Lu, Amynmohamed Rajan
+Michael I. Jordan, Percy Liang
+Sonny Han Seng Chee, Betty Xia
+Dong Xin, Zheng Shao
+Dan Roth, Shivani Agarwal
+Jing Gao, Jiawei Han
+Dav Zimak, Dan Roth
+Christos Faloutsos, Shashank Pandit
+Michael I. Jordan, Lawrence K. Saul
+Tianyi Wu, Wei Wang
+Yijun Lu, Nebojsa Stefanovic
+Wei Wang, Yongjian Fu
+Jiawei Han, Betty Xia
+Fei Sha, Lawrence K. Saul
+Yongjian Fu, Wei Wang
+Jean Hou, Jiawei Han
+Ling Liu, Zhaohui Xie
+Jiawei Han, Xiaolei Li
+Xifeng Yan, Yizhou Sun
+Jiawei Han, Xifeng Yan
+Betty Xia, Amynmohamed Rajan
+Deng Cai, Jiawei Han
+Xiaolei Li, Hwanjo Yu
+Manish Gupta, Zhijun Yin
+Jure Leskovec, Jiawei Han
+Zoubin Ghahramani, Yee Whye Teh
+Sonny Han Seng Chee, Krzysztof Koperski
+Jiawei Han, Tianyi Wu
+Leejay Wu, Christos Faloutsos
+Jiawei Han, Jing Gao
+Wan Gong, Hua Zhu
+Yongjian Fu, Amynmohamed Rajan
+Shivani Agarwal, Dan Roth
+Yijun Lu, Yongjian Fu
+Amynmohamed Rajan, Jiawei Han
+Amynmohamed Rajan, Betty Xia
+Zheng Shao, Jiawei Han
+Amynmohamed Rajan, Yijun Lu
+Jiawei Han, Hwanjo Yu
+Emily B. Fox, Erik B. Sudderth
+Percy Liang, Michael I. Jordan
+Jiawei Han, Nebojsa Stefanovic
+Wan Gong, Wei Wang
+Betty Xia, Yijun Lu
+Krzysztof Koperski, Wan Gong
+Nebojsa Stefanovic, Amynmohamed Rajan
+Wei Wang, Amynmohamed Rajan
+Jiawei Han, Hua Zhu
+Yiwen Yin, Wan Gong
+Michael I. Jordan, XuanLong Nguyen
+Yiwen Yin, Jiawei Han
+Vivek Srikumar, Dan Roth
+Dan Roth, Lev-Arie Ratinov
+Zhaohui Xie, Ling Liu
+Dan Roth, Rodrigo de Salvo Braz
+Dong Xin, Xifeng Yan
+Dong Xin, Xiaolei Li
+Hong Cheng, Xifeng Yan
+Krzysztof Koperski, Hua Zhu
+Jiawei Han, Zheng Shao
+Yongjian Fu, Betty Xia
+Mary McGlohon, Leman Akoglu
+Michael I. Jordan, Marina Meila
+Wan Gong, Yongjian Fu
+Zhijun Yin, Manish Gupta
+Yongjian Fu, Nebojsa Stefanovic
+Michael I. Jordan, Zoubin Ghahramani
+Kevin Small, Dan Roth
+Krzysztof Koperski, Jiawei Han
+Wei Wang, Betty Xia
+Spiros Papadimitriou, Christos Faloutsos
+Wen-tau Yih, Ming-Wei Chang
+Rodrigo de Salvo Braz, Dan Roth
+Michael I. Jordan, Martin J. Wainwright
+Hua Zhu, Sonny Han Seng Chee
+Wan Gong, Amynmohamed Rajan
+Nebojsa Stefanovic, Krzysztof Koperski
+Marina Meila, Michael I. Jordan
+Sangkyum Kim, Jiawei Han
+Krzysztof Koperski, Amynmohamed Rajan
+Jiawei Han, Wei Lu
+Zheng Shao, Dong Xin
+Christos Faloutsos, Mary McGlohon
+Xifeng Yan, Dong Xin
+Yongjian Fu, Krzysztof Koperski
+Feida Zhu, Xifeng Yan
+Yue Huang, Jiawei Han
+Dan Roth, Wen-tau Yih
+Xifeng Yan, Hong Cheng
+Martin J. Wainwright, XuanLong Nguyen
+Chiranjib Bhattacharyya, Gert R. G. Lanckriet
+Anthony K. H. Tung, Jiawei Han
+Jiawei Han, Hong Cheng
+Ming-Hsuan Yang, Dan Roth
+Sonny Han Seng Chee, Wan Gong
+Wei Wang, Krzysztof Koperski
+Zhaohui Xie, Jiawei Han
+Jing Gao, Yizhou Sun
+Wei Lu, Dan Roth
+Amynmohamed Rajan, Nebojsa Stefanovic
+Fei Sha, Michael I. Jordan
+Gert R. G. Lanckriet, Michael I. Jordan
+Ming-Wei Chang, Wen-tau Yih
