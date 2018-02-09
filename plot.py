@@ -2,6 +2,8 @@ import pickle
 import time
 import os
 import networkx as nx
+import matplotlib
+matplotlib.use('agg')
 import matplotlib.pyplot as plt
 from cube.utils import DblpEval
 from config import *
