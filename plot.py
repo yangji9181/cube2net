@@ -5,6 +5,7 @@ import networkx as nx
 import matplotlib
 matplotlib.use('agg')
 import matplotlib.pyplot as plt
+from collections import defaultdict
 from cube.utils import DblpEval
 from config import *
 from Environment import *
@@ -14,47 +15,62 @@ from Cube import Cube
 
 
 
-def plot(nodes, edges, suffix):
+def plot(nodes, edges, group, suffix):
+	colors = [(0, 'w'), (1, 'r'), (2, 'g'), (3, 'b'), (4, 'y')]
 	G = nx.Graph()
 	G.add_nodes_from(nodes)
 	G.add_edges_from(edges)
-	nx.draw(G)
-	plt.savefig(cwd + 'suffix.png')
+	pos = nx.spring_layout(G)
+
+	for g_id, color in colors:
+		nx.draw_networkx_nodes(G, pos, nodelist=[node for node in nodes if node in group and group[node] == g_id],
+		                       node_color=color, node_size=50)
+	nx.draw_networkx_edges(G, pos, width=0.5)
+	plt.savefig(cwd + suffix + '.png')
 
 
 def dump_graph(nodes, edges, suffix):
-	with open(cwd + 'nodes_' + suffix + '.txt', 'w') as f:
-		for node in nodes:
-			f.write(node + '\n')
-	with open(cwd + 'edges_' + suffix + '.txt', 'w') as f:
-		for edge in edges:
-			f.write(edge.replace(',', ', ') + '\n')
+	with open(cwd + 'nodes_' + suffix + '.pkl', 'wb') as f:
+		pickle.dump(nodes, f)
+	with open(cwd + 'edges_' + suffix + '.pkl', 'w') as f:
+		pickle.dump(edges, f)
+
 
 def read_graph(suffix):
-	with open(cwd + 'nodes_' + suffix + '.txt') as f:
-		nodes = []
-		for line in f:
-			nodes.append(line.rstrip())
-	with open(cwd + 'edges_' + suffix + '.txt') as f:
-		edges = []
-		for line in f:
-			edges.append(tuple(line.rstrip().split(', ')))
+	with open(cwd + 'nodes_' + suffix + '.pkl', 'rb') as f:
+		nodes = pickle.load(f)
+	with open(cwd + 'edges_' + suffix + '.pkl', 'rb') as f:
+		edges = pickle.load(f)
 	return nodes, edges
+
+
+def parse_links(links):
+	results = []
+	for link in links:
+		results.append(tuple(link.split(',')))
+	return results
+
 
 if __name__ == '__main__':
 	cwd = 'data/'
 	cube = None
 
-	if os.path.isfile(cwd + 'nodes_baseline.txt') and os.path.isfile(cwd + 'edges_baseline.txt'):
+	test_authors = defaultdict(set)
+	with open(args.test_file) as f:
+		for line in f:
+			splits = line.rstrip().split('\t')
+			test_authors[splits[0].replace('_', ' ')] = int(splits[1])
+
+	if os.path.isfile(cwd + 'nodes_baseline.pkl') and os.path.isfile(cwd + 'edges_baseline.pkl'):
 		authors, links = read_graph('baseline')
 	else:
 		with open('cube/models/step3.pkl', 'r') as f:
 			cube = pickle.load(f)
-		authors, links = cube.author0, DblpEval.author_links(cube, cube.author0)
+		authors, links = cube.author0, parse_links(DblpEval.author_links(cube, cube.author0))
 		dump_graph(authors, links, 'baseline')
-	plot(authors, links, 'baseline')
+	plot(authors, links, test_authors, 'baseline')
 
-	if os.path.isfile(cwd + 'nodes_rl.txt') and os.path.isfile(cwd + 'edges_rl.txt'):
+	if os.path.isfile(cwd + 'nodes_rl.pkl') and os.path.isfile(cwd + 'edges_rl.pkl'):
 		authors, links = read_graph('rl')
 	else:
 		if cube is None:
@@ -73,6 +89,6 @@ if __name__ == '__main__':
 					allow_growth=True))) as sess:
 			agent.train(sess)
 			authors, reward, actions = agent.plan(sess)
-		links = DblpEval.author_links(cube, authors)
+		links = parse_links(DblpEval.author_links(cube, authors))
 		dump_graph(authors, links, 'rl')
-	plot(authors, links, 'rl')
+	plot(authors, links, test_authors, 'rl')

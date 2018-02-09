@@ -1,0 +1,239 @@
+c__builtin__
+set
+p0
+((lp1
+S'Helen Pinto'
+p2
+aS'Manish Gupta'
+p3
+aS'Rodrigo de Salvo Braz'
+p4
+aS'Feida Zhu'
+p5
+aS'Jing Gao'
+p6
+aS'Xiaolei Li'
+p7
+aS'Betty Xia'
+p8
+aS'Kevin Small'
+p9
+aS'Milind R. Naphade'
+p10
+aS'Peixiang Zhao'
+p11
+aS'Shivani Agarwal'
+p12
+aS'Wan Gong'
+p13
+aS'Runying Mao'
+p14
+aS'Fei Sha'
+p15
+aS'Ming-Hsuan Yang'
+p16
+aS'Dmitry Zelenko'
+p17
+aS'Jin Li'
+p18
+aS'Hwanjo Yu'
+p19
+aS'Yair Weiss'
+p20
+aS'Paul Morie'
+p21
+aS'Tommi Jaakkola'
+p22
+aS'Zhijun Yin'
+p23
+aS'Lei Li'
+p24
+aS'Jiawei Han'
+p25
+aS'Sonny Han Seng Chee'
+p26
+aS'Jimeng Sun'
+p27
+aS'Krzysztof Koperski'
+p28
+aS'Alice X. Zheng'
+p29
+aS'Sangkyum Kim'
+p30
+aS'Ashutosh Garg'
+p31
+aS'Xiaoxin Yin'
+p32
+aS'Wen Jin'
+p33
+aS'Zhaohui Xie'
+p34
+aS'Yue Huang'
+p35
+aS'Chen Chen'
+p36
+aS'Yongjian Fu'
+p37
+aS'Dan Roth'
+p38
+aS'Lei Xu'
+p39
+aS'Erik B. Sudderth'
+p40
+aS'Behzad Mortazavi-Asl'
+p41
+aS'Michal Rosen-Zvi'
+p42
+aS'Wei Lu'
+p43
+aS'Yiwen Yin'
+p44
+aS'Hong Cheng'
+p45
+aS'Michael I. Jordan'
+p46
+aS'Yizhou Sun'
+p47
+aS'Wenmin Li'
+p48
+aS'Xin Jin'
+p49
+aS'Christos Faloutsos'
+p50
+aS'Tianyi Wu'
+p51
+aS'Chad M. Cumby'
+p52
+aS'Yijun Lu'
+p53
+aS'Neelay Shah'
+p54
+aS'Bolin Ding'
+p55
+aS'Mary McGlohon'
+p56
+aS'Yaqin Liao'
+p57
+aS'Deepayan Chakrabarti'
+p58
+aS'Leejay Wu'
+p59
+aS'Shashank Pandit'
+p60
+aS'Martin J. Wainwright'
+p61
+aS'Jia-Yu Pan'
+p62
+aS'Steve Hanneke'
+p63
+aS'Thomas Hofmann'
+p64
+aS'Ben Blum'
+p65
+aS'Jean Hou'
+p66
+aS'Fan Guo'
+p67
+aS'Dav Zimak'
+p68
+aS'Francis Bach'
+p69
+aS'Hua Zhu'
+p70
+aS'Zheng Shao'
+p71
+aS'Leman Akoglu'
+p72
+aS'Jian Pei'
+p73
+aS'Benjamin Liebald'
+p74
+aS'Alexandre Klementiev'
+p75
+aS'Amynmohamed Rajan'
+p76
+aS'Deng Cai'
+p77
+aS'Byoung-Kee Yi'
+p78
+aS'Yee Whye Teh'
+p79
+aS'Ming-Wei Chang'
+p80
+aS'XuanLong Nguyen'
+p81
+aS'Hector Gonzalez'
+p82
+aS'Jure Leskovec'
+p83
+aS'Anthony K. H. Tung'
+p84
+aS'Marina Meila'
+p85
+aS'King-Ip Lin'
+p86
+aS'Flip Korn'
+p87
+aS'Hanghang Tong'
+p88
+aS'Ling Liu'
+p89
+aS'Vivek Srikumar'
+p90
+aS'Zoubin Ghahramani'
+p91
+aS'Spiros Papadimitriou'
+p92
+aS'Zhiqiang Bi'
+p93
+aS'Purnamrita Sarkar'
+p94
+aS'Emily B. Fox'
+p95
+aS'Zhihua Zhang'
+p96
+aS'David M. Blei'
+p97
+aS'Wen-tau Yih'
+p98
+aS'Vasin Punyakanok'
+p99
+aS'Lev-Arie Ratinov'
+p100
+aS'Ibrahim Kamel'
+p101
+aS'Xin Li'
+p102
+aS'Gabor Melli'
+p103
+aS'Wei Wang'
+p104
+aS'Erik Riedel'
+p105
+aS'Lawrence K. Saul'
+p106
+aS'Michael Connor'
+p107
+aS'Nebojsa Stefanovic'
+p108
+aS'Percy Liang'
+p109
+aS'Gert R. G. Lanckriet'
+p110
+aS'Tong Lu'
+p111
+aS'Joyce M. W. Lam'
+p112
+aS'Xifeng Yan'
+p113
+aS'Yiping Zhan'
+p114
+aS'Chiranjib Bhattacharyya'
+p115
+aS'Dong Xin'
+p116
+aS'John Duchi'
+p117
+atp118
+Rp119
+.

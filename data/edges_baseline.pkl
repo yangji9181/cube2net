@@ -1,0 +1,1592 @@
+(lp0
+(VXin Li
+p1
+VErik Riedel
+p2
+tp3
+a(VXiaoxin Yin
+p4
+VDong Xin
+p5
+tp6
+a(VTianyi Wu
+p7
+VDong Xin
+p8
+tp9
+a(VBetty Xia
+p10
+VYongjian Fu
+p11
+tp12
+a(VHua Zhu
+p13
+VNebojsa Stefanovic
+p14
+tp15
+a(VChristos Faloutsos
+p16
+VJia-Yu Pan
+p17
+tp18
+a(VJian Pei
+p19
+VJiawei Han
+p20
+tp21
+a(VJiawei Han
+p22
+VYue Huang
+p23
+tp24
+a(VDavid M. Blei
+p25
+VErik B. Sudderth
+p26
+tp27
+a(VFeida Zhu
+p28
+VHong Cheng
+p29
+tp30
+a(VFan Guo
+p31
+VChristos Faloutsos
+p32
+tp33
+a(VJiawei Han
+p34
+VZhijun Yin
+p35
+tp36
+a(VBetty Xia
+p37
+VJiawei Han
+p38
+tp39
+a(VDong Xin
+p40
+VXiaoxin Yin
+p41
+tp42
+a(VWei Lu
+p43
+VJiawei Han
+p44
+tp45
+a(VWen-tau Yih
+p46
+VDan Roth
+p47
+tp48
+a(VYizhou Sun
+p49
+VXifeng Yan
+p50
+tp51
+a(VJiawei Han
+p52
+VJean Hou
+p53
+tp54
+a(VSonny Han Seng Chee
+p55
+VYijun Lu
+p56
+tp57
+a(VAnthony K. H. Tung
+p58
+VWei Wang
+p59
+tp60
+a(VAlice X. Zheng
+p61
+VMichael I. Jordan
+p62
+tp63
+a(VVivek Srikumar
+p64
+VMing-Wei Chang
+p65
+tp66
+a(VYizhou Sun
+p67
+VJiawei Han
+p68
+tp69
+a(VKrzysztof Koperski
+p70
+VYongjian Fu
+p71
+tp72
+a(VJiawei Han
+p73
+VManish Gupta
+p74
+tp75
+a(VZhijun Yin
+p76
+VJiawei Han
+p77
+tp78
+a(VJiawei Han
+p79
+VJure Leskovec
+p80
+tp81
+a(VMichael I. Jordan
+p82
+VLei Xu
+p83
+tp84
+a(VRodrigo de Salvo Braz
+p85
+VVasin Punyakanok
+p86
+tp87
+a(VYijun Lu
+p88
+VBetty Xia
+p89
+tp90
+a(VBolin Ding
+p91
+VJiawei Han
+p92
+tp93
+a(VDong Xin
+p94
+VJiawei Han
+p95
+tp96
+a(VYijun Lu
+p97
+VJiawei Han
+p98
+tp99
+a(VHwanjo Yu
+p100
+VXiaolei Li
+p101
+tp102
+a(VSpiros Papadimitriou
+p103
+VJimeng Sun
+p104
+tp105
+a(VDan Roth
+p106
+VVivek Srikumar
+p107
+tp108
+a(VXuanLong Nguyen
+p109
+VMichael I. Jordan
+p110
+tp111
+a(VXiaoxin Yin
+p112
+VJiawei Han
+p113
+tp114
+a(VAmynmohamed Rajan
+p115
+VKrzysztof Koperski
+p116
+tp117
+a(VYijun Lu
+p118
+VKrzysztof Koperski
+p119
+tp120
+a(VHong Cheng
+p121
+VDong Xin
+p122
+tp123
+a(VHua Zhu
+p124
+VKrzysztof Koperski
+p125
+tp126
+a(VHelen Pinto
+p127
+VJian Pei
+p128
+tp129
+a(VMichael I. Jordan
+p130
+VZhihua Zhang
+p131
+tp132
+a(VYongjian Fu
+p133
+VYue Huang
+p134
+tp135
+a(VChristos Faloutsos
+p136
+VLeman Akoglu
+p137
+tp138
+a(VBetty Xia
+p139
+VHua Zhu
+p140
+tp141
+a(VJimeng Sun
+p142
+VSpiros Papadimitriou
+p143
+tp144
+a(VSonny Han Seng Chee
+p145
+VNebojsa Stefanovic
+p146
+tp147
+a(VYue Huang
+p148
+VYongjian Fu
+p149
+tp150
+a(VJiawei Han
+p151
+VXiaoxin Yin
+p152
+tp153
+a(VKrzysztof Koperski
+p154
+VYijun Lu
+p155
+tp156
+a(VVasin Punyakanok
+p157
+VDan Roth
+p158
+tp159
+a(VZoubin Ghahramani
+p160
+VLawrence K. Saul
+p161
+tp162
+a(VFeida Zhu
+p163
+VJiawei Han
+p164
+tp165
+a(VJiawei Han
+p166
+VChen Chen
+p167
+tp168
+a(VJimeng Sun
+p169
+VChristos Faloutsos
+p170
+tp171
+a(VJiawei Han
+p172
+VBolin Ding
+p173
+tp174
+a(VYijun Lu
+p175
+VWei Wang
+p176
+tp177
+a(VXiaolei Li
+p178
+VJiawei Han
+p179
+tp180
+a(VYongjian Fu
+p181
+VYijun Lu
+p182
+tp183
+a(VNebojsa Stefanovic
+p184
+VYijun Lu
+p185
+tp186
+a(VJiawei Han
+p187
+VXin Jin
+p188
+tp189
+a(VDan Roth
+p190
+VVasin Punyakanok
+p191
+tp192
+a(VYijun Lu
+p193
+VSonny Han Seng Chee
+p194
+tp195
+a(VWan Gong
+p196
+VJiawei Han
+p197
+tp198
+a(VAmynmohamed Rajan
+p199
+VWan Gong
+p200
+tp201
+a(VJiawei Han
+p202
+VYizhou Sun
+p203
+tp204
+a(VVasin Punyakanok
+p205
+VWen-tau Yih
+p206
+tp207
+a(VMichael I. Jordan
+p208
+VGert R. G. Lanckriet
+p209
+tp210
+a(VMichael I. Jordan
+p211
+VThomas Hofmann
+p212
+tp213
+a(VJiawei Han
+p214
+VSangkyum Kim
+p215
+tp216
+a(VBetty Xia
+p217
+VNebojsa Stefanovic
+p218
+tp219
+a(VMichael I. Jordan
+p220
+VErik B. Sudderth
+p221
+tp222
+a(VNebojsa Stefanovic
+p223
+VWei Wang
+p224
+tp225
+a(VYijun Lu
+p226
+VWan Gong
+p227
+tp228
+a(VHong Cheng
+p229
+VJiawei Han
+p230
+tp231
+a(VYizhou Sun
+p232
+VJing Gao
+p233
+tp234
+a(VDan Roth
+p235
+VDav Zimak
+p236
+tp237
+a(VKrzysztof Koperski
+p238
+VSonny Han Seng Chee
+p239
+tp240
+a(VWei Wang
+p241
+VWan Gong
+p242
+tp243
+a(VMing-Wei Chang
+p244
+VLev-Arie Ratinov
+p245
+tp246
+a(VJiawei Han
+p247
+VDong Xin
+p248
+tp249
+a(VVasin Punyakanok
+p250
+VRodrigo de Salvo Braz
+p251
+tp252
+a(VChristos Faloutsos
+p253
+VLeejay Wu
+p254
+tp255
+a(VNebojsa Stefanovic
+p256
+VBetty Xia
+p257
+tp258
+a(VWei Wang
+p259
+VNebojsa Stefanovic
+p260
+tp261
+a(VWei Wang
+p262
+VYijun Lu
+p263
+tp264
+a(VWei Wang
+p265
+VHanghang Tong
+p266
+tp267
+a(VWei Wang
+p268
+VJian Pei
+p269
+tp270
+a(VTianyi Wu
+p271
+VJiawei Han
+p272
+tp273
+a(VMary McGlohon
+p274
+VChristos Faloutsos
+p275
+tp276
+a(VYijun Lu
+p277
+VHua Zhu
+p278
+tp279
+a(VXin Jin
+p280
+VJiawei Han
+p281
+tp282
+a(VHanghang Tong
+p283
+VWei Wang
+p284
+tp285
+a(VAnthony K. H. Tung
+p286
+VWen Jin
+p287
+tp288
+a(VSonny Han Seng Chee
+p289
+VJiawei Han
+p290
+tp291
+a(VXiaolei Li
+p292
+VXiaoxin Yin
+p293
+tp294
+a(VVasin Punyakanok
+p295
+VDav Zimak
+p296
+tp297
+a(VJian Pei
+p298
+VHelen Pinto
+p299
+tp300
+a(VAmynmohamed Rajan
+p301
+VWei Wang
+p302
+tp303
+a(VChristos Faloutsos
+p304
+VFan Guo
+p305
+tp306
+a(VMichael I. Jordan
+p307
+VAlice X. Zheng
+p308
+tp309
+a(VXiaolei Li
+p310
+VDong Xin
+p311
+tp312
+a(VYee Whye Teh
+p313
+VZoubin Ghahramani
+p314
+tp315
+a(VXiaoxin Yin
+p316
+VXiaolei Li
+p317
+tp318
+a(VJiawei Han
+p319
+VHelen Pinto
+p320
+tp321
+a(VJiawei Han
+p322
+VLing Liu
+p323
+tp324
+a(VJiawei Han
+p325
+VWan Gong
+p326
+tp327
+a(VNebojsa Stefanovic
+p328
+VWan Gong
+p329
+tp330
+a(VHua Zhu
+p331
+VYijun Lu
+p332
+tp333
+a(VNebojsa Stefanovic
+p334
+VYongjian Fu
+p335
+tp336
+a(VKrzysztof Koperski
+p337
+VNebojsa Stefanovic
+p338
+tp339
+a(VMichael I. Jordan
+p340
+VChiranjib Bhattacharyya
+p341
+tp342
+a(VWan Gong
+p343
+VYiwen Yin
+p344
+tp345
+a(VMichael I. Jordan
+p346
+VEmily B. Fox
+p347
+tp348
+a(VLawrence K. Saul
+p349
+VZoubin Ghahramani
+p350
+tp351
+a(VMartin J. Wainwright
+p352
+VErik B. Sudderth
+p353
+tp354
+a(VDan Roth
+p355
+VWei Lu
+p356
+tp357
+a(VJiawei Han
+p358
+VYijun Lu
+p359
+tp360
+a(VWei Wang
+p361
+VTianyi Wu
+p362
+tp363
+a(VEmily B. Fox
+p364
+VMichael I. Jordan
+p365
+tp366
+a(VZhihua Zhang
+p367
+VMichael I. Jordan
+p368
+tp369
+a(VJiawei Han
+p370
+VWen Jin
+p371
+tp372
+a(VMichael I. Jordan
+p373
+VFei Sha
+p374
+tp375
+a(VShashank Pandit
+p376
+VChristos Faloutsos
+p377
+tp378
+a(VWen-tau Yih
+p379
+VDav Zimak
+p380
+tp381
+a(VDan Roth
+p382
+VKevin Small
+p383
+tp384
+a(VAmynmohamed Rajan
+p385
+VYongjian Fu
+p386
+tp387
+a(VMing-Wei Chang
+p388
+VDan Roth
+p389
+tp390
+a(VJiawei Han
+p391
+VYongjian Fu
+p392
+tp393
+a(VChiranjib Bhattacharyya
+p394
+VMichael I. Jordan
+p395
+tp396
+a(VWen-tau Yih
+p397
+VVasin Punyakanok
+p398
+tp399
+a(VYongjian Fu
+p400
+VJiawei Han
+p401
+tp402
+a(VKrzysztof Koperski
+p403
+VBetty Xia
+p404
+tp405
+a(VLei Xu
+p406
+VMichael I. Jordan
+p407
+tp408
+a(VJiawei Han
+p409
+VYiwen Yin
+p410
+tp411
+a(VXifeng Yan
+p412
+VFeida Zhu
+p413
+tp414
+a(VGert R. G. Lanckriet
+p415
+VChiranjib Bhattacharyya
+p416
+tp417
+a(VChen Chen
+p418
+VJiawei Han
+p419
+tp420
+a(VLing Liu
+p421
+VJiawei Han
+p422
+tp423
+a(VLev-Arie Ratinov
+p424
+VMing-Wei Chang
+p425
+tp426
+a(VLeman Akoglu
+p427
+VMary McGlohon
+p428
+tp429
+a(VKrzysztof Koperski
+p430
+VWei Wang
+p431
+tp432
+a(VJiawei Han
+p433
+VAmynmohamed Rajan
+p434
+tp435
+a(VLawrence K. Saul
+p436
+VFei Sha
+p437
+tp438
+a(VYizhou Sun
+p439
+VManish Gupta
+p440
+tp441
+a(VWen Jin
+p442
+VAnthony K. H. Tung
+p443
+tp444
+a(VHua Zhu
+p445
+VBetty Xia
+p446
+tp447
+a(VChristos Faloutsos
+p448
+VJimeng Sun
+p449
+tp450
+a(VWei Wang
+p451
+VJiawei Han
+p452
+tp453
+a(VWan Gong
+p454
+VNebojsa Stefanovic
+p455
+tp456
+a(VHong Cheng
+p457
+VFeida Zhu
+p458
+tp459
+a(VChristos Faloutsos
+p460
+VSpiros Papadimitriou
+p461
+tp462
+a(VNebojsa Stefanovic
+p463
+VHua Zhu
+p464
+tp465
+a(VBetty Xia
+p466
+VSonny Han Seng Chee
+p467
+tp468
+a(VNebojsa Stefanovic
+p469
+VJiawei Han
+p470
+tp471
+a(VJia-Yu Pan
+p472
+VChristos Faloutsos
+p473
+tp474
+a(VMing-Wei Chang
+p475
+VVivek Srikumar
+p476
+tp477
+a(VJiawei Han
+p478
+VAnthony K. H. Tung
+p479
+tp480
+a(VZhijun Yin
+p481
+VXin Jin
+p482
+tp483
+a(VThomas Hofmann
+p484
+VMichael I. Jordan
+p485
+tp486
+a(VWan Gong
+p487
+VBetty Xia
+p488
+tp489
+a(VJing Gao
+p490
+VBolin Ding
+p491
+tp492
+a(VJiawei Han
+p493
+VJian Pei
+p494
+tp495
+a(VHwanjo Yu
+p496
+VJiawei Han
+p497
+tp498
+a(VBetty Xia
+p499
+VWei Wang
+p500
+tp501
+a(VDav Zimak
+p502
+VVasin Punyakanok
+p503
+tp504
+a(VZoubin Ghahramani
+p505
+VMichael I. Jordan
+p506
+tp507
+a(VDav Zimak
+p508
+VWen-tau Yih
+p509
+tp510
+a(VJiawei Han
+p511
+VKrzysztof Koperski
+p512
+tp513
+a(VErik B. Sudderth
+p514
+VMartin J. Wainwright
+p515
+tp516
+a(VErik Riedel
+p517
+VXin Li
+p518
+tp519
+a(VHelen Pinto
+p520
+VJiawei Han
+p521
+tp522
+a(VJiawei Han
+p523
+VZhaohui Xie
+p524
+tp525
+a(VJing Gao
+p526
+VManish Gupta
+p527
+tp528
+a(VWan Gong
+p529
+VYijun Lu
+p530
+tp531
+a(VDan Roth
+p532
+VXin Li
+p533
+tp534
+a(VXifeng Yan
+p535
+VJiawei Han
+p536
+tp537
+a(VDan Roth
+p538
+VMing-Hsuan Yang
+p539
+tp540
+a(VDong Xin
+p541
+VTianyi Wu
+p542
+tp543
+a(VJiawei Han
+p544
+VSonny Han Seng Chee
+p545
+tp546
+a(VWen Jin
+p547
+VJiawei Han
+p548
+tp549
+a(VJian Pei
+p550
+VWei Wang
+p551
+tp552
+a(VManish Gupta
+p553
+VJiawei Han
+p554
+tp555
+a(VLawrence K. Saul
+p556
+VMichael I. Jordan
+p557
+tp558
+a(VYongjian Fu
+p559
+VWan Gong
+p560
+tp561
+a(VWan Gong
+p562
+VSonny Han Seng Chee
+p563
+tp564
+a(VJiawei Han
+p565
+VWei Wang
+p566
+tp567
+a(VBetty Xia
+p568
+VKrzysztof Koperski
+p569
+tp570
+a(VJiawei Han
+p571
+VFeida Zhu
+p572
+tp573
+a(VErik B. Sudderth
+p574
+VDavid M. Blei
+p575
+tp576
+a(VErik B. Sudderth
+p577
+VMichael I. Jordan
+p578
+tp579
+a(VBetty Xia
+p580
+VWan Gong
+p581
+tp582
+a(VXin Jin
+p583
+VZhijun Yin
+p584
+tp585
+a(VDong Xin
+p586
+VHong Cheng
+p587
+tp588
+a(VMichael I. Jordan
+p589
+VDavid M. Blei
+p590
+tp591
+a(VManish Gupta
+p592
+VYizhou Sun
+p593
+tp594
+a(VMartin J. Wainwright
+p595
+VMichael I. Jordan
+p596
+tp597
+a(VWan Gong
+p598
+VKrzysztof Koperski
+p599
+tp600
+a(VWei Wang
+p601
+VAnthony K. H. Tung
+p602
+tp603
+a(VLev-Arie Ratinov
+p604
+VDan Roth
+p605
+tp606
+a(VXuanLong Nguyen
+p607
+VMartin J. Wainwright
+p608
+tp609
+a(VBolin Ding
+p610
+VJing Gao
+p611
+tp612
+a(VHua Zhu
+p613
+VJiawei Han
+p614
+tp615
+a(VNebojsa Stefanovic
+p616
+VSonny Han Seng Chee
+p617
+tp618
+a(VLeman Akoglu
+p619
+VChristos Faloutsos
+p620
+tp621
+a(VJiawei Han
+p622
+VDeng Cai
+p623
+tp624
+a(VManish Gupta
+p625
+VJing Gao
+p626
+tp627
+a(VHua Zhu
+p628
+VWan Gong
+p629
+tp630
+a(VXin Li
+p631
+VDan Roth
+p632
+tp633
+a(VSonny Han Seng Chee
+p634
+VHua Zhu
+p635
+tp636
+a(VErik B. Sudderth
+p637
+VEmily B. Fox
+p638
+tp639
+a(VDan Roth
+p640
+VMing-Wei Chang
+p641
+tp642
+a(VDavid M. Blei
+p643
+VMichael I. Jordan
+p644
+tp645
+a(VYijun Lu
+p646
+VAmynmohamed Rajan
+p647
+tp648
+a(VMichael I. Jordan
+p649
+VPercy Liang
+p650
+tp651
+a(VSonny Han Seng Chee
+p652
+VBetty Xia
+p653
+tp654
+a(VDong Xin
+p655
+VZheng Shao
+p656
+tp657
+a(VDan Roth
+p658
+VShivani Agarwal
+p659
+tp660
+a(VJing Gao
+p661
+VJiawei Han
+p662
+tp663
+a(VDav Zimak
+p664
+VDan Roth
+p665
+tp666
+a(VChristos Faloutsos
+p667
+VShashank Pandit
+p668
+tp669
+a(VMichael I. Jordan
+p670
+VLawrence K. Saul
+p671
+tp672
+a(VTianyi Wu
+p673
+VWei Wang
+p674
+tp675
+a(VYijun Lu
+p676
+VNebojsa Stefanovic
+p677
+tp678
+a(VWei Wang
+p679
+VYongjian Fu
+p680
+tp681
+a(VJiawei Han
+p682
+VBetty Xia
+p683
+tp684
+a(VFei Sha
+p685
+VLawrence K. Saul
+p686
+tp687
+a(VYongjian Fu
+p688
+VWei Wang
+p689
+tp690
+a(VJean Hou
+p691
+VJiawei Han
+p692
+tp693
+a(VLing Liu
+p694
+VZhaohui Xie
+p695
+tp696
+a(VJiawei Han
+p697
+VXiaolei Li
+p698
+tp699
+a(VXifeng Yan
+p700
+VYizhou Sun
+p701
+tp702
+a(VJiawei Han
+p703
+VXifeng Yan
+p704
+tp705
+a(VBetty Xia
+p706
+VAmynmohamed Rajan
+p707
+tp708
+a(VDeng Cai
+p709
+VJiawei Han
+p710
+tp711
+a(VXiaolei Li
+p712
+VHwanjo Yu
+p713
+tp714
+a(VManish Gupta
+p715
+VZhijun Yin
+p716
+tp717
+a(VJure Leskovec
+p718
+VJiawei Han
+p719
+tp720
+a(VZoubin Ghahramani
+p721
+VYee Whye Teh
+p722
+tp723
+a(VSonny Han Seng Chee
+p724
+VKrzysztof Koperski
+p725
+tp726
+a(VJiawei Han
+p727
+VTianyi Wu
+p728
+tp729
+a(VLeejay Wu
+p730
+VChristos Faloutsos
+p731
+tp732
+a(VJiawei Han
+p733
+VJing Gao
+p734
+tp735
+a(VWan Gong
+p736
+VHua Zhu
+p737
+tp738
+a(VYongjian Fu
+p739
+VAmynmohamed Rajan
+p740
+tp741
+a(VShivani Agarwal
+p742
+VDan Roth
+p743
+tp744
+a(VYijun Lu
+p745
+VYongjian Fu
+p746
+tp747
+a(VAmynmohamed Rajan
+p748
+VJiawei Han
+p749
+tp750
+a(VAmynmohamed Rajan
+p751
+VBetty Xia
+p752
+tp753
+a(VZheng Shao
+p754
+VJiawei Han
+p755
+tp756
+a(VAmynmohamed Rajan
+p757
+VYijun Lu
+p758
+tp759
+a(VJiawei Han
+p760
+VHwanjo Yu
+p761
+tp762
+a(VEmily B. Fox
+p763
+VErik B. Sudderth
+p764
+tp765
+a(VPercy Liang
+p766
+VMichael I. Jordan
+p767
+tp768
+a(VJiawei Han
+p769
+VNebojsa Stefanovic
+p770
+tp771
+a(VWan Gong
+p772
+VWei Wang
+p773
+tp774
+a(VBetty Xia
+p775
+VYijun Lu
+p776
+tp777
+a(VKrzysztof Koperski
+p778
+VWan Gong
+p779
+tp780
+a(VNebojsa Stefanovic
+p781
+VAmynmohamed Rajan
+p782
+tp783
+a(VWei Wang
+p784
+VAmynmohamed Rajan
+p785
+tp786
+a(VJiawei Han
+p787
+VHua Zhu
+p788
+tp789
+a(VYiwen Yin
+p790
+VWan Gong
+p791
+tp792
+a(VMichael I. Jordan
+p793
+VXuanLong Nguyen
+p794
+tp795
+a(VYiwen Yin
+p796
+VJiawei Han
+p797
+tp798
+a(VVivek Srikumar
+p799
+VDan Roth
+p800
+tp801
+a(VDan Roth
+p802
+VLev-Arie Ratinov
+p803
+tp804
+a(VZhaohui Xie
+p805
+VLing Liu
+p806
+tp807
+a(VDan Roth
+p808
+VRodrigo de Salvo Braz
+p809
+tp810
+a(VDong Xin
+p811
+VXifeng Yan
+p812
+tp813
+a(VDong Xin
+p814
+VXiaolei Li
+p815
+tp816
+a(VHong Cheng
+p817
+VXifeng Yan
+p818
+tp819
+a(VKrzysztof Koperski
+p820
+VHua Zhu
+p821
+tp822
+a(VJiawei Han
+p823
+VZheng Shao
+p824
+tp825
+a(VYongjian Fu
+p826
+VBetty Xia
+p827
+tp828
+a(VMary McGlohon
+p829
+VLeman Akoglu
+p830
+tp831
+a(VMichael I. Jordan
+p832
+VMarina Meila
+p833
+tp834
+a(VWan Gong
+p835
+VYongjian Fu
+p836
+tp837
+a(VZhijun Yin
+p838
+VManish Gupta
+p839
+tp840
+a(VYongjian Fu
+p841
+VNebojsa Stefanovic
+p842
+tp843
+a(VMichael I. Jordan
+p844
+VZoubin Ghahramani
+p845
+tp846
+a(VKevin Small
+p847
+VDan Roth
+p848
+tp849
+a(VKrzysztof Koperski
+p850
+VJiawei Han
+p851
+tp852
+a(VWei Wang
+p853
+VBetty Xia
+p854
+tp855
+a(VSpiros Papadimitriou
+p856
+VChristos Faloutsos
+p857
+tp858
+a(VWen-tau Yih
+p859
+VMing-Wei Chang
+p860
+tp861
+a(VRodrigo de Salvo Braz
+p862
+VDan Roth
+p863
+tp864
+a(VMichael I. Jordan
+p865
+VMartin J. Wainwright
+p866
+tp867
+a(VHua Zhu
+p868
+VSonny Han Seng Chee
+p869
+tp870
+a(VWan Gong
+p871
+VAmynmohamed Rajan
+p872
+tp873
+a(VNebojsa Stefanovic
+p874
+VKrzysztof Koperski
+p875
+tp876
+a(VMarina Meila
+p877
+VMichael I. Jordan
+p878
+tp879
+a(VSangkyum Kim
+p880
+VJiawei Han
+p881
+tp882
+a(VKrzysztof Koperski
+p883
+VAmynmohamed Rajan
+p884
+tp885
+a(VJiawei Han
+p886
+VWei Lu
+p887
+tp888
+a(VZheng Shao
+p889
+VDong Xin
+p890
+tp891
+a(VChristos Faloutsos
+p892
+VMary McGlohon
+p893
+tp894
+a(VXifeng Yan
+p895
+VDong Xin
+p896
+tp897
+a(VYongjian Fu
+p898
+VKrzysztof Koperski
+p899
+tp900
+a(VFeida Zhu
+p901
+VXifeng Yan
+p902
+tp903
+a(VYue Huang
+p904
+VJiawei Han
+p905
+tp906
+a(VDan Roth
+p907
+VWen-tau Yih
+p908
+tp909
+a(VXifeng Yan
+p910
+VHong Cheng
+p911
+tp912
+a(VMartin J. Wainwright
+p913
+VXuanLong Nguyen
+p914
+tp915
+a(VChiranjib Bhattacharyya
+p916
+VGert R. G. Lanckriet
+p917
+tp918
+a(VAnthony K. H. Tung
+p919
+VJiawei Han
+p920
+tp921
+a(VJiawei Han
+p922
+VHong Cheng
+p923
+tp924
+a(VMing-Hsuan Yang
+p925
+VDan Roth
+p926
+tp927
+a(VSonny Han Seng Chee
+p928
+VWan Gong
+p929
+tp930
+a(VWei Wang
+p931
+VKrzysztof Koperski
+p932
+tp933
+a(VZhaohui Xie
+p934
+VJiawei Han
+p935
+tp936
+a(VJing Gao
+p937
+VYizhou Sun
+p938
+tp939
+a(VWei Lu
+p940
+VDan Roth
+p941
+tp942
+a(VAmynmohamed Rajan
+p943
+VNebojsa Stefanovic
+p944
+tp945
+a(VFei Sha
+p946
+VMichael I. Jordan
+p947
+tp948
+a(VGert R. G. Lanckriet
+p949
+VMichael I. Jordan
+p950
+tp951
+a(VMing-Wei Chang
+p952
+VWen-tau Yih
+p953
+tp954
+a.
