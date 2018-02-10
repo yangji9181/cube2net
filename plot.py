@@ -27,7 +27,7 @@ def plot(nodes, edges, group, suffix):
 		nx.draw_networkx_nodes(G, pos, nodelist=[node for node in nodes if node in group and group[node] == g_id],
 		                       node_color=color, node_size=20)
 	nx.draw_networkx_edges(G, pos, width=0.5)
-	nx.draw_networkx_labels(G, pos, font_size=8)
+	# nx.draw_networkx_labels(G, pos, font_size=8)
 	plt.savefig(cwd + suffix + '.png')
 
 

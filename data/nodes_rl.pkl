@@ -2,2470 +2,3586 @@ c__builtin__
 set
 p0
 ((lp1
-VKokichi Futatsugi
+VZhiyong Liu
 p2
-aVStan Matwin
-p3
 aS'Manish Gupta'
+p3
+aVGuoqiang Hu
 p4
-aVYi-Ling Chen
+aVM. Tamer Özsu
 p5
-aVWei Fang
+aVFangfei Li
 p6
-aVDong Liang
-p7
-aVAthina P. Petropulu
-p8
-aVXuelong Li
-p9
-aVLiangpei Zhang
-p10
 aS'Xiaolei Li'
-p11
-aVAtsushi Shimada
-p12
+p7
+aVJianwen Feng
+p8
+aVJordan L. Boyd-Graber
+p9
+aVTobias Schreck
+p10
 aVHans-Peter Seidel
-p13
-aVDingding Wang
-p14
-aVFeng Xu
-p15
-aVJustin Zobel
-p16
-aVLi Liu
-p17
+p11
+aVToon Calders
+p12
 aVTim Sheard
-p18
-aVZhiyong Wang
-p19
-aVHai Jiang
-p20
-aVZhifeng Hao
-p21
-aVLi Li
-p22
-aVPheng-Ann Heng
-p23
-aVBin Tang
-p24
-aVDuen Horng Chau
-p25
+p13
+aVWei Xing Zheng
+p14
+aVTakashi Nanya
+p15
+aVBin Chen
+p16
 aVGe Yu
-p26
-aVYing Chen
-p27
-aVHanan Samet
-p28
-aVBo Zhou
-p29
-aVHuchuan Lu
-p30
-aVTao Wang
-p31
-aVChao Ma
-p32
-aVKazuo Ohta
-p33
-aVJing Wang
-p34
-aVAda Wai-Chee Fu
-p35
-aVHanspeter Pfister
-p36
-aS'Ming-Hsuan Yang'
-p37
-aVYang Liu
-p38
-aVYing Li
-p39
-aVYe Wang
-p40
-aVWei Xiong
-p41
-aS'Jin Li'
-p42
-aVWiro J. Niessen
-p43
-aVPierre Vandergheynst
-p44
-aVHongyuan Zha
-p45
-aVSong Zhang
-p46
-aVAthanasios V. Vasilakos
-p47
-aVYan Huang
-p48
-aVRama Chellappa
-p49
-aVGautam Biswas
-p50
-aVPierre Sens
-p51
-aVZhi-Hong Deng
-p52
-aVDavid J. DeWitt
-p53
-aVShuang Li
-p54
-aVYongjun Li
-p55
-aVHeng Huang
-p56
-aVXinping Guan
-p57
-aVBo Song
-p58
-aVWeining Zhang
-p59
-aVRandal E. Bryant
-p60
-aVJ. M. M. Montiel
-p61
-aVChandrika Kamath
-p62
-aVMadhav V. Marathe
-p63
-aVShankar Sastry
-p64
-aVQing He
-p65
-aVB. B. Chaudhuri
-p66
-aS'Zhijun Yin'
-p67
-aVYang Zhao
-p68
-aVKaiqi Huang
-p69
-aVZongquan Deng
-p70
-aVAshish Kapoor
-p71
-aVKai Zhang
-p72
-aVMubarak Shah
-p73
-aVMaria L. Gini
-p74
-aVFeng Ding
-p75
-aVMarco Cristani
-p76
-aVYuan Zhang
-p77
-aS'Krzysztof Koperski'
-p78
-aVYongdong Zhang
-p79
-aVBaocai Yin
-p80
-aVZhaohui Wu
-p81
-aVBo Wang
-p82
-aVYong Ge
-p83
-aVRaquel Urtasun
-p84
-aVWei Zhang
-p85
-aVFei Xu
-p86
-aVHao Chen
-p87
-aVYin Zhang
-p88
-aVZaiqing Nie
-p89
-aVAdnan Darwiche
-p90
-aS'Wen Jin'
-p91
-aVDaniel Thalmann
-p92
-aVSzymon Jaroszewicz
-p93
-aVShojiro Nishio
-p94
-aVYang Yang
-p95
-aVZhe Chen
-p96
-aVEmma Brunskill
-p97
-aVCordelia Schmid
-p98
-aVBin Ma
-p99
-aVMing Yang
-p100
-aVJan Chomicki
-p101
-aVBodo Rosenhahn
-p102
-aVStephen P. Boyd
-p103
-aVBo Yang
-p104
-aVStefano Soatto
-p105
-aS'Dan Roth'
-p106
-aVShulin Wang
-p107
-aVChenliang Xu
-p108
-aVAn Liu
-p109
-aVChristopher Leckie
-p110
-aVZhongzhi Shi
-p111
-aVChun Chen
-p112
-aVHaizhou Li
-p113
-aVThomas Seidl
-p114
-aS'Jiawei Han'
-p115
-aS'Michal Rosen-Zvi'
-p116
-aVRoberto Manduchi
-p117
-aVWei Wu
-p118
-aVTiejun Huang
-p119
-aVSatoru Miyano
-p120
-aVJun Peng
-p121
-aVJian Liu
-p122
-aS'Hong Cheng'
-p123
-aVLiang Liu
-p124
-aVQian Wang
-p125
-aVKonstantinos Samdanis
-p126
-aVJosé M. Bernabéu-Aubán
-p127
-aVYue Wu
-p128
-aS'Yizhou Sun'
-p129
-aVLiang Zhang
-p130
-aVAnthony G. Cohn
-p131
-aVKai Li
-p132
-aVLoe M. G. Feijs
-p133
-aVXiao Wu
-p134
-aVBin Fu
-p135
-aVZhiyong Liu
-p136
-aVChin-Hui Lee
-p137
-aVPaul R. Cohen
-p138
-aVWeiming Hu
-p139
-aVMohamed G. Gouda
-p140
-aVJunwei Han
-p141
-aVAlan L. Yuille
-p142
-aVBo Zhang
-p143
-aVChang Xu
-p144
-aS'Wenmin Li'
-p145
-aVBir Bhanu
-p146
-aVEvgeniy Gabrilovich
-p147
-aS'Xin Jin'
-p148
-aVYong Yang
-p149
-aVSiddhartha Chatterjee
-p150
-aVDaniela Rus
-p151
-aVAoying Zhou
-p152
-aVNorman C. Beaulieu
-p153
-aVXiaoling Wang
-p154
-aVQi Liu
-p155
-aVJun Wu
-p156
-aVRicardo da Silva Torres
-p157
-aVWeiwei Lin
-p158
-aS'Yijun Lu'
-p159
-aVVincent S. Tseng
-p160
-aVJing Liu
-p161
-aVXiaojun Chen
-p162
-aVQiang Huang
-p163
-aVBin Wang
-p164
-aVDat Tran
-p165
-aVHong Zhang
-p166
-aVSoo-Young Lee
-p167
-aVAlicia Fornés
-p168
-aVDong Wang
-p169
-aVFred B. Schneider
-p170
-aVIan F. Akyildiz
-p171
+p17
+aVStefano Lonardi
+p18
+aVChangsoo Ok
+p19
 aVJian-Huang Lai
-p172
-aVJan Peters
-p173
-aVCostantino Grana
-p174
-aVNam Nguyen
-p175
-aVRuzena Bajcsy
-p176
-aVAlexander G. Hauptmann
-p177
-aVLori A. Clarke
-p178
-aVWalid G. Aref
-p179
-aVXiaohua Hu
-p180
-aVXiaoyan Zhu
-p181
-aVHailin Zhang
-p182
-aS'Jean Hou'
-p183
-aVSuya You
-p184
-aVNick Roussopoulos
-p185
-aVJianfei Cai
-p186
-aVHao Wang
-p187
-aVLuc De Raedt
-p188
-aS'Francis Bach'
-p189
-aVPanos M. Pardalos
-p190
-aVXiang Wang
-p191
-aVChong Liu
-p192
-aVEdward Omiecinski
-p193
-aVGerhard Rigoll
-p194
-aVChin-Chen Chang
-p195
-aVYing Zhou
-p196
-aS'Leman Akoglu'
-p197
-aVPanos J. Antsaklis
-p198
-aVNaren Ramakrishnan
-p199
-aVRui Li
-p200
-aVGerd Ascheid
-p201
-aVJin Wang
-p202
-aVAlberto Del Bimbo
-p203
-aVXu Wang
-p204
-aVYi Sun
-p205
-aVWei Ding
-p206
-aVQionghai Dai
-p207
-aVRyen W. White
-p208
-aVVijay V. Vazirani
-p209
-aVWolfram Burgard
-p210
-aS'Byoung-Kee Yi'
-p211
-aVKonrad Schindler
-p212
-aVJun Yan
-p213
-aVTakeo Kanade
-p214
-aVZheng Chen
-p215
-aVQi Zhou
-p216
-aVFredrik Kahl
-p217
-aVJiawan Zhang
-p218
-aVMarcelo H. Ang
-p219
-aVMing Li
-p220
-aVRan Cheng
-p221
-aVRandolph Y. Wang
-p222
-aVWei He
-p223
-aVJun Yu
-p224
-aS'Anthony K. H. Tung'
-p225
-aVKostas Daniilidis
-p226
-aS'Marina Meila'
-p227
-aVBaochun Li
-p228
-aVJie Lin
-p229
-aVLiusheng Huang
-p230
-aVDharma P. Agrawal
-p231
-aS'Flip Korn'
-p232
-aVJie Liu
-p233
-aVIan Davidson
-p234
-aVXiaoyi Jiang
-p235
-aVJian Wu
-p236
-aVDirk Wollherr
-p237
-aS'Hanghang Tong'
-p238
-aVTakeshi Yamada
-p239
-aVQi Tian
-p240
-aVQiang Wang
-p241
-aVLaxmi N. Bhuyan
-p242
-aVQi Wang
-p243
-aVFred Glover
-p244
-aVGencai Chen
-p245
-aVAaron Hertzmann
-p246
-aVLise Getoor
-p247
-aVBin Hu
-p248
-aVRiccardo Rizzo
-p249
-aVDerek Hoiem
-p250
-aVI. V. Ramakrishnan
-p251
-aVIra Assent
-p252
-aVKhalid A. Qaraqe
-p253
-aVLong Quan
-p254
-aVZhen Liu
-p255
-aVIvan Lee
-p256
-aVYang Song
-p257
-aVLigang He
-p258
-aVRamesh Raskar
-p259
-aS'Purnamrita Sarkar'
-p260
-aVYan Wang
-p261
-aS'Emily B. Fox'
-p262
-aS'David M. Blei'
-p263
-aVLu Bai
-p264
-aVXiang Xu
-p265
-aVKe Xu
-p266
-aVTat-Seng Chua
-p267
-aVBaining Guo
-p268
-aVMoncef Gabbouj
-p269
-aVRuud M. Bolle
-p270
-aVIain S. Duff
-p271
-aVGiulio Iannello
-p272
-aVLi Wang
-p273
-aVJun Yang
-p274
-aVJaime G. Carbonell
-p275
-aVXiaokang Yang
-p276
-aVShrikanth Narayanan
-p277
-aVGaurav Pandey
-p278
-aVKunio Kashino
-p279
-aVXin Huang
-p280
-aVJin Liu
-p281
-aVBernhard Pfahringer
-p282
-aVLi Ding
-p283
-aVWayne H. Wolf
-p284
-aVMarcus A. Magnor
-p285
-aVYan Xu
-p286
-aVLongbing Cao
-p287
-aVThorsten Joachims
-p288
-aVGeoffrey Holmes
-p289
-aVJun Gao
-p290
-aVInsup Lee
-p291
-aVHang Li
-p292
-aVXiang Li
-p293
-aVEfstratios Gavves
-p294
-aS'Nebojsa Stefanovic'
-p295
-aVJiannong Cao
-p296
-aVNitendra Rajput
-p297
-aVJoon-Young Lee
-p298
-aVYing Yang
-p299
-aVMinlie Huang
-p300
-aVAshok K. Goel
-p301
-aVHeinrich Niemann
-p302
-aVRichard D. Schlichting
-p303
-aVChristian Theobalt
-p304
-aVCharles Lee Isbell
-p305
-aVNing Zhang
-p306
-aVRui Zhang
-p307
-aVRongrong Ji
-p308
-aS'Xifeng Yan'
-p309
-aVYi Xu
-p310
-aVMing Zhang
-p311
-aVJing Yang
-p312
-aVBaihua Xiao
-p313
-aVXuemei Li
-p314
-aVJian Li
-p315
-aVChang Wen Chen
-p316
-aVBing-Yu Chen
-p317
-aVQingshan Liu
-p318
-aVDeepu Rajan
-p319
-aVLeonidas J. Guibas
-p320
-aVEdward J. Delp
-p321
-aVXiaowu Chen
-p322
-aS'Helen Pinto'
-p323
-aVRohini K. Srihari
-p324
-aVRachid Guerraoui
-p325
-aVXiyu Liu
-p326
-aVAli H. Sayed
-p327
-aVVeda C. Storey
-p328
-aVLei Zhu
-p329
-aVYi-Cheng Chen
-p330
-aVLin Zhang
-p331
-aVKatherine A. Yelick
-p332
-aVBrett Browning
-p333
-aVShengrui Wang
-p334
-aVDakshi Agrawal
-p335
-aVAggelos K. Katsaggelos
-p336
-aVJiajun Bu
-p337
-aS'Kevin Small'
-p338
-aVChunhong Pan
-p339
-aVBing Liu
-p340
-aVJianbing Shen
-p341
-aVYongliang Wang
-p342
-aVMaxime Devanne
-p343
-aVTat-Jen Cham
-p344
-aVAndrea Vedaldi
-p345
-aVTong Wang
-p346
-aVShuo Wang
-p347
-aVWei Xu
-p348
-aVJun Sun
-p349
-aVZhong Zhang
-p350
-aVHao Li
-p351
-aVBart Selman
-p352
-aVWei Chen
-p353
-aVXin Hong
-p354
-aVLei Zou
-p355
-aVDanping Zou
-p356
-aVYizhou Yu
-p357
-aVYuan Hong
-p358
-aVKai Liu
-p359
-aS'Hwanjo Yu'
-p360
-aVLuigi Cinque
-p361
-aVHeikki Kälviäinen
-p362
-aS'Yaqin Liao'
-p363
-aVShin'ichi Satoh
-p364
-aVHonggang Wang
-p365
-aVDanica Kragic
-p366
-aVYu Guo
-p367
-aVLi Fei-Fei
-p368
-aVSi Wang
-p369
-aVYong Sun
-p370
-aVKaiming He
-p371
-aVChao Chen
-p372
-aVFeiping Nie
-p373
-aVKun Li
-p374
-aVChris Clifton
-p375
-aVFabian M. Suchanek
-p376
-aVRoss Wilkinson
-p377
-aVJingrui He
-p378
-aS'Deepayan Chakrabarti'
-p379
-aS'Tommi Jaakkola'
-p380
-aVFang Liu
-p381
-aVMin Xu
-p382
-aVXiaodong Liu
-p383
-aS'Lei Li'
-p384
-aVYu-Wing Tai
-p385
-aVMark S. Nixon
-p386
-aVTarek F. Abdelzaher
-p387
-aVCharu C. Aggarwal
-p388
-aVYan Tang
-p389
-aVNikos Komodakis
-p390
-aVSang Hyuk Son
-p391
-aVWenxin Liang
-p392
-aVTsuhan Chen
-p393
-aVXing Liu
-p394
-aVJian Chen
-p395
-aVStefan Wrobel
-p396
-aVPhilip S. Yu
-p397
-aVSrinivasan Parthasarathy
-p398
-aVYing Huang
-p399
-aVJian Sun
-p400
-aVPatric Jensfelt
-p401
-aVIain A. Matthews
-p402
-aVPietro Perona
-p403
-aVSong Wang
-p404
-aVAlbert Y. Zomaya
-p405
-aS'Jure Leskovec'
-p406
-aVLi Cheng
-p407
-aVLi Yu
-p408
-aVRada Mihalcea
-p409
-aVWen Gao
-p410
-aVVictor R. Lesser
-p411
-aVMaode Ma
-p412
-aVNorman W. Paton
-p413
-aVKwan-Liu Ma
-p414
-aS'Yue Huang'
-p415
-aVTao Zhang
-p416
-aVRuihua Song
-p417
-aVJia Li
-p418
-aVZhiyong Peng
-p419
-aVKai Yu
-p420
-aVSteven C. H. Hoi
-p421
-aVJun Guo
-p422
-aVSilvio Savarese
-p423
-aVShuguo Han
-p424
-aVLior Wolf
-p425
-aVRajiv Gupta
-p426
-aVSeungyong Lee
-p427
-aVBo Hu
-p428
-aVPeng Zhang
-p429
-aVCharles X. Ling
-p430
-aVSeon Joo Kim
-p431
-aVRicardo A. Baeza-Yates
-p432
-aVHua Li
-p433
-aVYang Zhang
-p434
-aVYu Zhang
-p435
-aVYang Li
-p436
-aVStefano Ermon
-p437
-aVStéphane Marchand-Maillet
-p438
-aVRuigang Yang
-p439
-aVYao Wang
-p440
-aVZengqiang Chen
-p441
-aVXiang He
-p442
-aVYiyu Yao
-p443
-aVEnhong Chen
-p444
-aVYonghong Song
-p445
-aVXuemin Shen
-p446
-aVIn So Kweon
-p447
-aVMichel Verleysen
-p448
-aVStanley Osher
-p449
-aVCelso C. Ribeiro
-p450
-aVRin-ichiro Taniguchi
-p451
-aVNorihiro Hagita
-p452
-aVVladlen Koltun
-p453
-aVClement T. Yu
-p454
-aVOctavia I. Camps
-p455
-aVYücel Saygin
-p456
-aVPrithviraj Banerjee
-p457
-aVWee Keong Ng
-p458
-aVLing Chen
-p459
-aVYao Yao
-p460
-aVYonghong Tian
-p461
-aVLei Yang
-p462
-aVJianhua Tao
-p463
-aVGuoren Wang
-p464
-aS'Ben Blum'
-p465
-aVChao Li
-p466
-aVGeorge S. Avrunin
-p467
-aVAmr El Abbadi
-p468
-aVZhenfu Cao
-p469
-aVHongzhi Wang
-p470
-aVSimon Parsons
-p471
-aVMario Fritz
-p472
-aVBao-Liang Lu
-p473
-aVHui Peng
-p474
-aS'Mary McGlohon'
-p475
-aVGraham W. Taylor
-p476
-aS'Ming-Wei Chang'
-p477
-aVSunandan Chakraborty
-p478
-aVXu Zhang
-p479
-aVSalvatore Gaglio
-p480
-aVKen Kennedy
-p481
-aVVijay Kumar
-p482
-aVHua Wang
-p483
-aS'Shashank Pandit'
-p484
-aS'Jia-Yu Pan'
-p485
-aVQiang Cheng
-p486
-aS'Thomas Hofmann'
-p487
-aVYue Zhao
-p488
-aVQi He
-p489
-aVMike P. Papazoglou
-p490
-aVZhe Lin
-p491
-aS'Fan Guo'
-p492
-aS'Dav Zimak'
-p493
-aVShaoting Zhang
-p494
-aVYves Robert
-p495
-aVClarence A. Ellis
-p496
-aS'Zheng Shao'
-p497
-aVGui-Song Xia
-p498
-aVJue Wang
-p499
-aVChunyi Shi
-p500
-aVAzriel Rosenfeld
-p501
-aVXiaopeng Zhang
-p502
-aVQiang Yang
-p503
-aVBjorn Stenger
-p504
-aVNatalia V. Andrienko
-p505
-aVRonen Basri
-p506
-aVRong Jin
-p507
-aS'Benjamin Liebald'
-p508
-aS'Amynmohamed Rajan'
-p509
-aVMikhail J. Atallah
-p510
-aVAlexander M. Bronstein
-p511
-aVYang Shen
-p512
-aVShih-Fu Chang
-p513
-aVYongtian Wang
-p514
-aVSim Heng Ong
-p515
-aVLei Wang
-p516
-aS'Yee Whye Teh'
-p517
-aVJie Tao
-p518
-aVKai Ming Ting
-p519
-aVVictor Adrian Prisacariu
-p520
-aVMourad Ouzzani
-p521
-aVHua Chen
-p522
-aVGang Li
-p523
-aVQin Wang
-p524
-aVBin Li
-p525
-aVWeihua Zhuang
-p526
-aVTianbao Yang
-p527
-aVDaniel Cremers
-p528
-aVShuo Yang
-p529
-aVHyungJune Lee
-p530
-aVHui Huang
-p531
-aVAlexander J. Smola
-p532
-aS'King-Ip Lin'
-p533
-aVIan Gorton
-p534
-aVXiaohui Yuan
-p535
-aVShou-De Lin
-p536
-aVJingdong Wang
-p537
-aVYu Zhao
-p538
-aVGérard G. Medioni
-p539
-aVMohsen Guizani
-p540
-aVPascal Fua
-p541
-aVXun Chen
-p542
-aVMing-Syan Chen
-p543
-aVXinpeng Zhang
-p544
-aS'Vivek Srikumar'
-p545
-aVEngin Türetken
-p546
-aVFeng Zhang
-p547
-aVWei Guo
-p548
-aVEdmund Y. Lam
-p549
-aVXianchao Zhang
-p550
-aVDaniel A. Keim
-p551
-aVZheng Wang
-p552
-aVMatthew Turk
-p553
-aVGuy A. Dumont
-p554
-aVJie Huang
-p555
-aVHenk L. Muller
-p556
-aVLe Wang
-p557
-aVHeikki Mannila
-p558
-aVRené Vidal
-p559
-aS'Lev-Arie Ratinov'
-p560
-aVFengxia Li
-p561
-aS'Xin Li'
-p562
-aVMing Chen
-p563
-aVYang Wang
-p564
-aS'Wei Wang'
-p565
-aVYoshihiko Nakamura
-p566
-aVSlobodan Ilic
-p567
-aVYan Shi
-p568
-aVBing Wang
-p569
-aVFei Li
-p570
-aVJean-François Lalonde
-p571
-aVJin Chen
-p572
-aVJoel L. Wolf
-p573
-aVJian Hou
-p574
-aVYangang Wang
-p575
-aVJizhou Sun
-p576
-aVGeoffrey C. Fox
-p577
-aVChang Liu
-p578
-aVMichel Kieffer
-p579
-aVBo Li
-p580
-aVDavid W. Jacobs
-p581
-aVLiang Wang
-p582
-aS'Erik Riedel'
-p583
-aVSheng Zhong
-p584
-aVP. P. Chakrabarti
-p585
-aVAndrew B. Whinston
-p586
-aVBin Zhang
-p587
-aVDebra J. Richardson
-p588
-aVManhua Liu
-p589
-aVHao Liu
-p590
-aVSajal K. Das
-p591
-aVChao Wang
-p592
-aS'Lawrence K. Saul'
-p593
-aVElisa Bertino
-p594
-aVLatifur Khan
-p595
-aVLixia Zhang
-p596
-aVXiaofang Zhou
-p597
-aVJi Liu
-p598
-aVShigeru Takano
-p599
-aVPeng Xu
-p600
-aVMostafa H. Ammar
-p601
-aVWei Hu
-p602
-aVJulia Hockenmaier
-p603
-aVBernt Schiele
-p604
-aVAnthony Vetro
-p605
-aVFeng Yu
-p606
-aVXuanjing Shen
-p607
-aVSupratik Mukhopadhyay
-p608
-aVFang Wang
-p609
-aVMarc Pollefeys
-p610
-aVSheng Li
-p611
-aS'Gert R. G. Lanckriet'
-p612
-aVDavid Maier
-p613
-aS'Tong Lu'
-p614
-aVLuciana Arantes
-p615
-aVJie Li
-p616
-aVSidney Fels
-p617
-aVZhiping Cai
-p618
-aS'Yiping Zhan'
-p619
-aS'Vasin Punyakanok'
-p620
-aVTengjiao Wang
-p621
-aVTakafumi Hayashi
-p622
-aVNadia Magnenat-Thalmann
-p623
-aVXilin Chen
-p624
-aVLiping Wang
-p625
-aVMurat Kantarcioglu
-p626
-aVChunhua Shen
-p627
-aVAmbuj K. Singh
-p628
-aVSeung-won Hwang
-p629
-aVNing Li
-p630
-aS'Rodrigo de Salvo Braz'
-p631
-aVChao Liu
-p632
-aVYuncai Liu
-p633
-aVJie Zhang
-p634
-aVJayant R. Kalagnanam
-p635
-aS'Feida Zhu'
-p636
-aS'Jing Gao'
-p637
-aVOr Litany
-p638
-aVSartaj Sahni
-p639
-aVHui Zhang
-p640
-aVJie Wu
-p641
-aVPadhraic Smyth
-p642
-aVPeter Carr
-p643
-aVLeandros Tassiulas
-p644
-aS'Betty Xia'
-p645
-aVSankar K. Pal
-p646
-aVQiang Ji
-p647
-aVXianfeng Gu
-p648
-aVWenzhi Chen
-p649
-aVJitendra Malik
-p650
-aVYong Zhang
-p651
-aVJian Yao
-p652
-aVLin Wang
-p653
-aVMichael K. Ng
-p654
-aVArumugam Nallanathan
-p655
-aVGuang Yang
-p656
-aVJiangchuan Liu
-p657
-aVAlexander L. Wolf
-p658
-aVMing Yin
-p659
-aVYong-Zhen Huang
-p660
-aVJingyu Yang
-p661
-aS'Fei Sha'
-p662
-aVChabane Djeraba
-p663
-aVKeun Ho Ryu
-p664
-aVQi Li
-p665
-aVJinshu Su
-p666
-aVXudong Jiang
-p667
-aVMing Xu
-p668
-aVLuc J. Van Gool
-p669
-aVHuan Liu
-p670
-aVLiviu Iftode
-p671
-aVJuergen Gall
-p672
-aVMin Yao
-p673
-aVJian Huang
-p674
-aVMohamed S. Kamel
-p675
-aVYing Zhu
-p676
-aS'Yair Weiss'
-p677
-aVOlaf Kähler
-p678
-aS'Paul Morie'
-p679
-aVHady Wirawan Lauw
-p680
-aVLicheng Jiao
-p681
-aVAnil K. Jain
-p682
-aVShin\u2019ichi Satoh
-p683
-aVLi Wan
-p684
-aVHong Yu
-p685
-aVHai Jin
-p686
-aVBo Gao
-p687
-aVNiall M. Adams
-p688
-aVJian Yang
-p689
-aVXuan Liu
-p690
-aVYaser Sheikh
-p691
-aVJun Huang
-p692
-aVManfred Pinkal
-p693
-aVShiming Xiang
-p694
-aVLi Gao
-p695
-aS'Ashutosh Garg'
-p696
-aVLouis Wehenkel
-p697
-aVDavid Dagan Feng
-p698
-aVXi Chen
-p699
-aVEric Horvitz
-p700
-aVFrank van Harmelen
-p701
-aVAlberto L. Sangiovanni-Vincentelli
-p702
-aVBo Han
-p703
-aVYinan Yu
-p704
-aS'Sangkyum Kim'
-p705
-aVJie Song
-p706
-aVYang Xiang
-p707
-aVCarl Yuheng Ren
-p708
-aS'Xiaoxin Yin'
-p709
-aVKe Wang
-p710
-aVYanjun Zhang
-p711
-aVMartín Abadi
-p712
-aVJames Demmel
-p713
-aVHisao Ishibuchi
-p714
-aVBernardo A. Huberman
-p715
-aVJin Huang
-p716
-aVDimitrios Gunopulos
-p717
-aVSteven M. Seitz
-p718
-aVXinlei Wang
-p719
-aVTolga K. Çapin
-p720
-aS'Chen Chen'
-p721
-aVJun Liu
-p722
-aVSheng Chen
-p723
-aVQiang Chen
-p724
-aVNorman Y. Foo
-p725
-aVAnup Basu
-p726
-aS'Yongjian Fu'
-p727
-aVMoshe Y. Vardi
-p728
-aVVincent C. S. Lee
-p729
-aS'Lei Xu'
-p730
-aVMin Hu
-p731
-aVMao Ye
-p732
-aVYao Zheng
-p733
-aS'Milind R. Naphade'
-p734
-aS'Erik B. Sudderth'
-p735
-aVMukesh Singhal
-p736
-aVJunxiu Liu
-p737
-aVSonghwai Oh
-p738
-aVMichaël Rusinowitch
-p739
-aVThomas S. Huang
-p740
-aS'Wei Lu'
-p741
-aS'Yiwen Yin'
-p742
-aVHenri E. Bal
-p743
-aVJiaya Jia
-p744
-aVJie Wang
-p745
-aVSang-Wook Kim
-p746
-aVKeyun Qin
-p747
-aVGuihai Chen
-p748
-aVSylvain Paris
-p749
-aVStefan Kowalewski
-p750
-aVMing Zhou
-p751
-aVTieniu Tan
-p752
-aVWei Li
-p753
-aVNanning Zheng
-p754
-aVXiaodong Wang
-p755
-aVVittorio Ferrari
-p756
-aVFeng Li
-p757
-aVQiang Liu
-p758
-aVGang Chen
-p759
-aVDiane J. Cook
-p760
-aVYan Liu
-p761
-aVYueting Zhuang
-p762
-aVJianhua Yang
-p763
-aVKe Lu
-p764
-aVZhen Wang
-p765
-aVJian Han
-p766
-aVRae-Hong Park
-p767
-aVJie Sun
-p768
-aVRamesh Jain
-p769
-aVPatrick Valduriez
-p770
-aVHorst Bischof
-p771
-aVKe Li
-p772
-aVJun Wang
-p773
-aVXiao Li
-p774
-aVRalph Robert Martin
-p775
-aVGuang Jiang
-p776
-aVAlberto O. Mendelzon
-p777
-aVYu Liu
-p778
-aVMaya Ramanath
-p779
-aVQingshan Jiang
-p780
-aVLiping Ji
-p781
-aVLei Chen
-p782
-aVXin Gao
-p783
-aVLiwei Wang
-p784
-aS'Shivani Agarwal'
-p785
-aVRaymond E. Miller
-p786
-aS'Bolin Ding'
-p787
-aVXiangfeng Luo
-p788
-aVReda Alhajj
-p789
-aVJian Wang
-p790
-aS'Behzad Mortazavi-Asl'
-p791
-aVWei Jiang
-p792
-aVMartin Rumpf
-p793
-aVHaifeng Chen
-p794
-aVDebora Donato
-p795
-aVSchahram Dustdar
-p796
-aVYuni Xia
-p797
-aVGuillermo Sapiro
-p798
-aVReinhard Männer
-p799
-aVDonald F. Towsley
-p800
-aVIoannis Kompatsiaris
-p801
-aVMasashi Sugiyama
-p802
-aVXiao-Li Li
-p803
-aVZhibin Li
-p804
-aVXin Yao
-p805
-aVTongwei Ren
-p806
-aVJaegul Choo
-p807
-aVWen Chen
-p808
-aVShan Liu
-p809
-aVCarl Ebeling
-p810
-aVChunyan Wang
-p811
-aVHendrik Blockeel
-p812
-aVAlagan Anpalagan
-p813
-aVWilliam Gropp
-p814
-aS'Hua Zhu'
-p815
-aVJianzhong Li
-p816
-aVHarald C. Gall
-p817
-aVYi Chai
-p818
-aVJie Yang
-p819
-aVJiaheng Lu
-p820
-aVJosef Kittler
-p821
-aVYong Li
-p822
-aS'Jian Pei'
-p823
-aVChong Peng
-p824
-aVJun Zhou
-p825
-aVThomas Pock
-p826
-aVShamkant B. Navathe
-p827
-aVVictor C. M. Leung
-p828
-aVValerio Pascucci
-p829
-aVLi Xu
-p830
-aVFei Chen
-p831
-aVGordon V. Cormack
-p832
-aVXi Wang
-p833
-aVWei Feng
-p834
-aVHong Li
-p835
-aVYu Wang
-p836
-aVYan Zhang
-p837
-aVJianwei Niu
-p838
-aS'Hector Gonzalez'
-p839
-aVYan Fu
-p840
-aVXiao Yu
-p841
-aVXiang Zhang
-p842
-aVYangsheng Xu
-p843
-aVFeng Bao
-p844
-aVRuslan Salakhutdinov
-p845
-aVSethuraman Panchanathan
-p846
-aVYing Zhang
-p847
-aVVincent Lepetit
-p848
-aVZhigang Gao
-p849
-aVRui Huang
-p850
-aVYadong Mu
-p851
-aVMark Dredze
-p852
-aVStefano Berretti
-p853
-aS'Tianyi Wu'
-p854
-aVXin Zhang
-p855
-aVJeffrey Xu Yu
-p856
-aVZhaofeng Chen
-p857
-aVMichael N. Huhns
-p858
-aVYan Yang
-p859
-aVPing Zhang
-p860
-aS'Zoubin Ghahramani'
-p861
-aS'Spiros Papadimitriou'
-p862
-aS'Wan Gong'
-p863
-aS'Zhihua Zhang'
-p864
-aVBohyung Han
-p865
-aVMark S. Squillante
-p866
-aVClaudio Lucchese
-p867
-aVRon Kikinis
-p868
-aVLarry S. Davis
-p869
-aS'Ibrahim Kamel'
-p870
-aVMatti Pietikäinen
-p871
-aVKeith W. Ross
-p872
-aVWei Zhao
-p873
-aVPing Luo
-p874
-aVHaixun Wang
-p875
-aVXuming He
-p876
-aVXiaolu Li
-p877
-aS'Wen-tau Yih'
-p878
-aVCécile Paris
-p879
-aVSrikanta J. Bedathur
-p880
-aVLi Chen
-p881
-aVYangqiu Song
-p882
-aVJun Zhang
-p883
-aVYue Lu
-p884
-aVRichard Szeliski
-p885
-aVKarl Aberer
-p886
-aVXiao Wang
-p887
-aVSanguthevar Rajasekaran
-p888
-aVCarlos Joaquin Becker
-p889
-aVHui Liu
-p890
-aVBart Goethals
-p891
-aVHae-Gon Jeon
-p892
-aVLyle H. Ungar
-p893
-aVAristides Gionis
-p894
-aVHan-Chieh Chao
-p895
-aVLein Harn
-p896
-aVCong Wang
-p897
-aVDi Wu
-p898
-aVJunbin Gao
-p899
-aVJing Li
-p900
-aVNassir Navab
-p901
-aVGregory Dudek
-p902
-aVRobert M. Haralick
-p903
-aS'Percy Liang'
-p904
-aVMohamed-Slim Alouini
-p905
-aVJi-Rong Wen
-p906
-aVFeng Zhao
-p907
-aVXiangzhi Bai
-p908
-aS'Joyce M. W. Lam'
-p909
-aVRelja Arandjelovic
-p910
-aVMiao Wang
-p911
-aVRobert R. Bitmead
-p912
-aS'Chiranjib Bhattacharyya'
-p913
-aVHerbert Edelsbrunner
-p914
-aS'Dong Xin'
-p915
-aVNichola Abdo
-p916
-aVPierangela Samarati
-p917
-aVD. Menasce
-p918
-aVRémi Ronfard
-p919
-aVMarco Brambilla
-p920
-aVEdwin R. Hancock
-p921
-aVRobert L. Grossman
-p922
-aVJohn Nerbonne
-p923
-aVYan Chen
-p924
-aVMin Lu
-p925
-aVFeng Liu
-p926
-aVBin Wu
-p927
-aVYong Yu
-p928
-aVKush R. Varshney
-p929
-aVAlexandros G. Dimakis
-p930
-aVLuís Torgo
-p931
+p20
+aVJames H. Martin
+p21
+aVTao Wang
+p22
+aVChen Zhu
+p23
+aVKazuo Ohta
+p24
+aVSimeon J. Simoff
+p25
+aVJing Wang
+p26
+aVAda Wai-Chee Fu
+p27
+aVLiang Chen
+p28
+aVYang Liu
+p29
+aVKwanghoon Sohn
+p30
+aS'Jin Li'
+p31
+aVLarisa Shwartz
+p32
+aVRudy Lauwereins
+p33
+aVPascal Vincent
+p34
+aVJunhong Li
+p35
+aVAthanasios V. Vasilakos
+p36
+aVYan Huang
+p37
+aVYi Wang
+p38
+aVYuan Shi
+p39
+aVGautam Biswas
+p40
+aVZhen Chen
+p41
+aVTao Zhou
+p42
 aVIan D. Reid 0001
-p932
-aVBo Ai
-p933
-aVTong Zhang
-p934
-aVDaniel Cohen-Or
-p935
-aVJianmin Wang
-p936
-aS'Peixiang Zhao'
-p937
-aVRadu Timofte
-p938
-aVRoger Mohr
-p939
-aVChing-Hsien Hsu
-p940
-aVTaeyoung Kim
-p941
-aVEmilio L. Zapata
-p942
-aVChao Zhang
-p943
-aVMary Lou Soffa
-p944
-aVTinne Tuytelaars
-p945
-aVChen Cao
-p946
-aVHeng Tao Shen
-p947
-aVJianxin Wu
-p948
-aVHyunsoo Yoon
-p949
-aVLiyun Xu
-p950
+p43
+aVDavid J. DeWitt
+p44
+aVKap Luk Chan
+p45
+aVIoannis Kompatsiaris
+p46
+aVShuang Li
+p47
+aVBo Song
+p48
+aVBo Hu
+p49
+aVB. B. Chaudhuri
+p50
+aVMehryar Mohri
+p51
+aVShuqiang Jiang
+p52
+aVZhuo Chen
+p53
+aVBenjamin C. M. Fung
+p54
+aVMaria L. Gini
+p55
+aVMarc Plantevit
+p56
+aVSameep Mehta
+p57
+aS'Krzysztof Koperski'
+p58
+aVYongdong Zhang
+p59
+aVShaocheng Tong
+p60
+aVZhaohui Wu
+p61
+aVBo Wang
+p62
+aVSajal K. Das
+p63
+aVWei Zhang
+p64
+aVHao Chen
+p65
+aVChengqi Zhang
+p66
+aVKrishnaram Kenthapadi
+p67
+aS'Wen Jin'
+p68
+aVShojiro Nishio
+p69
+aVYang Yang
+p70
+aVChuangyin Dang
+p71
+aVCordelia Schmid
+p72
+aVBin Ma
+p73
+aVMing Yang
+p74
+aVGang Li
+p75
+aVJan Chomicki
+p76
+aVHillol Kargupta
+p77
+aVStephen P. Boyd
+p78
+aVLan Wang
+p79
+aVBo Yang
+p80
+aVAnthony Wirth
+p81
+aVKôiti Hasida
+p82
+aS'Dan Roth'
+p83
+aVHongxun Yao
+p84
+aVYuewei Dai
+p85
+aVThomas Seidl
+p86
+aS'Jiawei Han'
+p87
+aVEn Zhu
+p88
+aVWei Wu
+p89
+aVFang Liu
+p90
+aVJianping Zhang
+p91
+aS'Hong Cheng'
+p92
+aVLiang Liu
+p93
+aVYing Wang
+p94
+aVKeivan Kianmehr
+p95
+aVHorst Bischof
+p96
+aVXin Xu
+p97
+aVRyosuke Shibasaki
+p98
+aVLoe M. G. Feijs
+p99
+aVMohamed Medhat Gaber
+p100
+aVNorman I. Badler
+p101
+aVBin Fu
+p102
+aVPaul R. Cohen
+p103
+aVYang Xiao
+p104
+aVLéon Bottou
+p105
+aVLi Zhou
+p106
+aVBo Zhang
+p107
+aVBoualem Benatallah
+p108
+aS'Xin Jin'
+p109
+aVR. Bharat Rao
+p110
+aVAoying Zhou
+p111
+aVRobert R. Bitmead
+p112
+aVJunzhou Luo
+p113
+aVLorenzo Bruzzone
+p114
+aVJun Wu
+p115
+aVXinghuo Yu
+p116
 aVXiaoyong Du
-p951
-aVJean Ponce
-p952
-aVJames Tompkin
-p953
-aS'Dmitry Zelenko'
-p954
-aVJian Yin
-p955
-aVYi Wu
-p956
-aVHao Yin
-p957
-aVMartin Buss
-p958
-aVDimitris Samaras
-p959
-aVS. Sathiya Keerthi
-p960
-aVJianhui Wang
-p961
-aVXin Fu
-p962
-aVZhiqiang Xu
-p963
-aVXueqi Cheng
-p964
-aVVanja Josifovski
-p965
-aVJun Li
-p966
-aVZhihui Yang
-p967
-aVXin Lu
-p968
-aVGeoffrey I. Webb
-p969
-aVYu Yang
-p970
-aVYuan Gao
-p971
-aVBorko Furht
-p972
-aVYannis E. Ioannidis
-p973
-aVShiqi Yu
-p974
-aVQing Zhang
-p975
-aVDivyakant Agrawal
-p976
-aVPeng Liu
-p977
-aVBarbara Poblete
-p978
-aVGennady L. Andrienko
-p979
-aVDavid J. Evans
-p980
-aVYun Li
-p981
-aVFan Zhang
-p982
-aS'Sonny Han Seng Chee'
-p983
-aVRandy H. Katz
-p984
-aVLi Ma
-p985
-aVYun Wang
-p986
-aVJie Yin
-p987
-aVWei Liu
-p988
-aVZhiyuan Li
-p989
-aVGraham Cormode
-p990
-aVShenghuo Zhu
-p991
-aVLaks V. S. Lakshmanan
-p992
-aVShyamsundar Rajaram
-p993
-aVNizar Bouguila
-p994
-aVMingliang Xu
-p995
-aS'Jimeng Sun'
-p996
-aVKotagiri Ramamohanarao
-p997
-aVBin Yang
-p998
-aVYuan Li
-p999
-aVWei Yang
-p1000
-aVYu Chen
-p1001
-aS'Alice X. Zheng'
-p1002
-aVFeng Chen
-p1003
-aVXiaogang Wang
-p1004
-aVXindong Wu
-p1005
-aVTom M. Mitchell
-p1006
-aVHujun Bao
-p1007
-aVJing Zhang
-p1008
-aVPing Guo
-p1009
-aVYi Zhang
-p1010
-aVLin Ma
-p1011
-aVHazem Wannous
-p1012
-aVWeimin Ma
-p1013
-aVPeter Sanders
-p1014
-aVStéphane Ducasse
-p1015
-aVAntonino Mazzeo
-p1016
-aVJason J. Corso
-p1017
-aVHongwei Liu
-p1018
-aVXiaoyong Shen
-p1019
+p117
+aVXin Zhang
+p118
+aVSuh-Yin Lee
+p119
+aVJialie Shen
+p120
+aVBart Dhoedt
+p121
+aVIan F. Akyildiz
+p122
+aVPat Hanrahan
+p123
+aVKe Zhou
+p124
+aVHong Qiao
+p125
 aVYan Li
-p1020
-aVPartha Dasgupta
-p1021
-aVWei Fan
-p1022
-aVPeng Li
-p1023
-aVLinlin Shen
-p1024
-aVYi Liu
-p1025
-aVZejian Yuan
-p1026
-aVPeng Wang
-p1027
-aVRong Liu
-p1028
-aVDaniel G. Aliaga
-p1029
-aS'Runying Mao'
-p1030
-aVWei Lin
-p1031
-aVQian Yu
-p1032
-aVYi Li
-p1033
-aVMin Li
-p1034
-aVHao Jiang
-p1035
-aVDavid C. Hogg
-p1036
-aVFan Yang
-p1037
-aVNicholas R. Jennings
-p1038
-aVJianjun Shi
-p1039
-aVNeel Sundaresan
-p1040
-aVFatih Porikli
-p1041
-aVKwan-Yee Kenneth Wong
-p1042
-aS'Zhaohui Xie'
-p1043
-aVHui Yu
-p1044
-aVOlivier Marin
-p1045
-aVBo Liu
-p1046
-aVDacheng Tao
-p1047
-aVBastian Leibe
-p1048
-aVHui Wang
-p1049
-aVMohamed Cheriet
-p1050
-aVHongli Zhang
-p1051
-aS'Michael I. Jordan'
-p1052
-aVJie Chen
-p1053
-aVYing Liu
-p1054
-aVDunja Mladenic
-p1055
-aVGerhard Weikum
-p1056
-aVWei-Ying Ma
-p1057
-aVJie Xu
-p1058
-aVJieping Ye
-p1059
-aVLong Wang
-p1060
-aVQing Wang
-p1061
+p126
+aVDavid R. Kaeli
+p127
+aVLori A. Clarke
+p128
+aVHuaguang Zhang
+p129
+aVJohn Langford
+p130
+aVXiaoyan Zhu
+p131
+aS'Jean Hou'
+p132
+aVOlivier Stasse
+p133
+aVJitao Sun
+p134
+aVLuc De Raedt
+p135
+aVChao-Tung Yang
+p136
+aVGerhard Rigoll
+p137
+aVQiaozhu Mei
+p138
+aVS. V. N. Vishwanathan
+p139
+aVDerong Liu
+p140
+aVYoshua Bengio
+p141
 aVHoward J. Hamilton
-p1062
-aVDavid Zhang
-p1063
-aVIrene Cheng
-p1064
-aVJing Zhao
-p1065
-aVFrancesc Moreno-Noguer
-p1066
-aVMi Wen
-p1067
-aVEamonn J. Keogh
-p1068
-aVMatthias Hein
-p1069
-aVDavid A. Patterson
-p1070
-aVLingjiang Kong
-p1071
-aVTao Li
-p1072
-aVYonghuai Liu
-p1073
-aVCynthia Rudin
-p1074
-aS'Christos Faloutsos'
-p1075
-aVJing He
-p1076
-aVZongda Wu
-p1077
-aVSvetha Venkatesh
-p1078
-aVMunindar P. Singh
-p1079
-aVByoung-Tak Zhang
-p1080
-aS'Chad M. Cumby'
-p1081
-aVCherri M. Pancake
-p1082
-aVLi Zhang
-p1083
-aVSam Kwong
-p1084
-aVEinoshin Suzuki
-p1085
-aS'Neelay Shah'
-p1086
-aVSheng Huang
-p1087
-aVYuan Wang
-p1088
-aVHao Yang
-p1089
-aVStefan Roth
-p1090
-aVY. Li
-p1091
-aVFan Wang
-p1092
-aVLu Liu
-p1093
-aVRaghu Ramakrishnan
-p1094
-aS'Leejay Wu'
-p1095
-aVBo Chen
-p1096
-aVYan Qiu Chen
-p1097
-aVJaime Teevan
-p1098
-aVXinbing Wang
-p1099
-aVQinghua Hu
-p1100
-aS'Steve Hanneke'
-p1101
-aVWilson C. Hsieh
-p1102
-aVBarbara Caputo
-p1103
-aVHorst Bunke
-p1104
-aVYi-Dong Shen
-p1105
-aVKatsushi Ikeuchi
-p1106
-aVTruyen Tran 0001
-p1107
-aVWei Zeng
-p1108
-aVQian Zhang
-p1109
-aVJoão Gama
-p1110
-aVGao Cong
-p1111
-aVAshutosh Saxena
-p1112
-aVWandong Cai
-p1113
-aVWeimin Xiao
-p1114
-aVPeng Cheng
-p1115
-aVFeng Wang
-p1116
-aVMohamed Daoudi
-p1117
-aVRadu Horaud
-p1118
-aVWilliam Zhu
-p1119
-aVAta Kabán
-p1120
-aVMartin Jagersand
-p1121
-aVSimon Lucey
-p1122
-aVZhi-Hua Zhou
-p1123
-aVBin Liu
-p1124
-aVShan Huang
-p1125
-aVFei Liu
-p1126
-aVXu Sun
-p1127
-aS'Alexandre Klementiev'
-p1128
-aVLouis-Philippe Morency
-p1129
-aVQi Zhang
-p1130
-aS'Deng Cai'
-p1131
-aVChing Y. Suen
-p1132
-aVDuy-Dinh Le
-p1133
-aVXue Li
-p1134
-aVLei He
-p1135
-aVGaofeng Meng
-p1136
-aVJoaquin Vanschoren
-p1137
-aVAli Ghodsi
-p1138
-aVHayko Riemenschneider
-p1139
-aVIven Mareels
-p1140
-aVPietro Pala
-p1141
-aS'XuanLong Nguyen'
-p1142
-aVQiang Wu
-p1143
-aVHong Gao
-p1144
-aVLeandro Navarro
-p1145
-aVPong Chi Yuen
-p1146
-aVSongtao Guo
-p1147
-aVYu Zhou
-p1148
-aVPaolo Favaro
-p1149
-aVJian Zhang
-p1150
-aVXin Wang
-p1151
-aVLu Zhang
-p1152
-aVArnold W. M. Smeulders
-p1153
-aVLei Yu
-p1154
-aVRita Cucchiara
-p1155
-aVAurélien Bellet
-p1156
-aVJohannes Gehrke
-p1157
-aVFei Wang
-p1158
-aVJun-Jang Jeng
-p1159
-aVLei Zhang
-p1160
-aVHong Yan
-p1161
-aVLeon J. Osterweil
-p1162
-aVRui Cai
-p1163
-aVHong Liu
-p1164
-aVMin Yang
-p1165
-aVAidong Zhang
-p1166
-aVZhi Jin
-p1167
-aVWeiyao Lin
-p1168
-aVChen Feng
-p1169
-aVJun Luo
-p1170
-aS'Zhiqiang Bi'
-p1171
-aS'Ling Liu'
-p1172
-aVQiang Li
-p1173
-aVSteffen Staab
-p1174
-aVJing Xiao
-p1175
-aVArvind Krishnamurthy
-p1176
-aVXiaolong Jin
-p1177
-aVBo Wu
-p1178
-aVSen Wang
-p1179
-aS'Gabor Melli'
-p1180
-aVDavid C. Page
-p1181
-aVSeiji Yamada
-p1182
-aVLei Huang
-p1183
-aVRobert Sabourin
-p1184
-aVLei Xie
-p1185
-aVKihwan Kim
-p1186
-aVMichael Chau
-p1187
-aVWei Huang
-p1188
-aVPeng Xiao
-p1189
-aVArantza Illarramendi
-p1190
-aVPeng He
-p1191
-aVEvgueni N. Smirnov
-p1192
-aVZhao Kang
-p1193
-aVRui Yang
-p1194
-aVRonan Boulic
-p1195
-aVYong Xu
-p1196
-aVAnoop Jain
-p1197
-aVChen Wang
-p1198
-aVLin Chen
-p1199
-aVXiaofeng Wang
-p1200
-aVLi Shen
-p1201
-aVMatthias Jarke
-p1202
-aVShu Liu
-p1203
-aVQing Liu
-p1204
-aVOncel Tuzel
-p1205
-aVDavid D. Jensen
-p1206
-aVXiaoming Liu
-p1207
-aS'Michael Connor'
-p1208
-aVYuan Yuan
-p1209
-aVStephen Milliner
-p1210
-aVMichael J. Franklin
-p1211
-aVErhard Rahm
-p1212
-aVPanayiotis Tsaparas
-p1213
-aVRachid El-Azouzi
-p1214
-aVNicu Sebe
-p1215
-aVDinesh Manocha
-p1216
-aVVishal M. Patel
-p1217
+p142
+aVYi Sun
+p143
+aVWei Ding
+p144
+aVRakesh Agrawal
+p145
+aVRyen W. White
+p146
+aVCauligi S. Raghavendra
+p147
 aVPhilip H. S. Torr
-p1218
-aVLin Liu
-p1219
-aVEdmundo de Souza e Silva
-p1220
+p148
+aVRong Hu
+p149
+aVKristian Kersting
+p150
+aVMark A. Girolami
+p151
+aVX.R. Duan
+p152
+aVShihua Zhu
+p153
+aVMatthijs van Leeuwen
+p154
+aVPascal Frossard
+p155
+aVBoris Cule
+p156
+aVXiaochun Yun
+p157
+aVTing Liu
+p158
+aVMing Li
+p159
+aVNing Zhong
+p160
+aVHisashi Kashima
+p161
+aVXiaofeng Liao
+p162
+aVRéjean Ducharme
+p163
+aS'Marina Meila'
+p164
+aVYi Mu
+p165
+aVPing Chen
+p166
+aVZhendong Niu
+p167
+aVQiaoyan Wen
+p168
+aVJie Liu
+p169
+aVJizhong Zhao
+p170
+aVJianfeng Gao
+p171
+aVAntonino Mazzeo
+p172
+aVQi Tian
+p173
+aVSidney Fels
+p174
+aVGencai Chen
+p175
+aVWei Xiong
+p176
+aVLise Getoor
+p177
+aVSvetlana Lazebnik
+p178
+aVLong Quan
+p179
+aVYang Song
+p180
+aS'Zhihua Zhang'
+p181
+aS'Emily B. Fox'
+p182
+aS'David M. Blei'
+p183
+aVLidan Shou
+p184
+aVCorrado Loglisci
+p185
+aVLi Deng
+p186
+aVZhen Wang
+p187
+aVHong Zhao
+p188
+aVMoncef Gabbouj
+p189
+aVDennis Sylvester
+p190
+aVPascal Poncelet
+p191
+aVJun Yang
+p192
+aVXiongcai Cai
+p193
+aVBin Gao
+p194
+aVGaurav Pandey
+p195
+aVYu Qiao
+p196
+aVMarti A. Hearst
+p197
+aVLi Ding
+p198
+aVZhongfei Zhang
+p199
+aVLiu Yang
+p200
+aVHang Li
+p201
+aVXiang Li
+p202
+aVC. L. Philip Chen
+p203
+aVSiegfried Nijssen
+p204
+aVNitendra Rajput
+p205
+aVWeidong Yang
+p206
+aVRupak Majumdar
+p207
+aVFang Chen
+p208
+aVRobert E. Banfield
+p209
+aVXiaoyan Sun
+p210
+aVLixian Zhang
+p211
+aVLi Sun
+p212
+aVNing Zhang
+p213
+aVRui Zhang
+p214
+aVYi Xu
+p215
+aVMing Zhang
+p216
+aVYang Wang
+p217
+aVChang Liu
+p218
+aVLei Shi
+p219
+aVRobert Patro
+p220
+aVKarsten Steinhaeuser
+p221
+aVFarouk Toumani
+p222
+aS'Helen Pinto'
+p223
+aVKun Huang
+p224
+aVXianfeng Gu
+p225
+aVRachid Guerraoui
+p226
+aVAli H. Sayed
+p227
+aVYi-Cheng Chen
+p228
+aVNish Parikh
+p229
+aVGanesh Sundaramoorthi
+p230
+aVMing Luo
+p231
+aVJun Wei
+p232
+aVBao-Liang Lu
+p233
+aVDavid J. Crandall
+p234
+aVHaixun Wang
+p235
+aS'Kevin Small'
+p236
+aVNong Xiao
+p237
+aVDawei Yin
+p238
+aVFillia Makedon
+p239
+aVJoemon M. Jose
+p240
+aVNitin Agarwal
+p241
+aVJun Sun
+p242
+aVShazia Wasim Sadiq
+p243
+aVRichard Butterworth
+p244
+aVMing Gu
+p245
+aVKai Li
+p246
+aVPang-Ning Tan
+p247
+aVMarkus Hegland
+p248
+aVPing Yang
+p249
+aVKai Liu
+p250
+aVH. Vincent Poor
+p251
+aVZhenyuan Wang
+p252
+aVJan Vanthienen
+p253
+aVRui Yan
+p254
+aVTong Zhang
+p255
+aVFeiping Nie
+p256
+aVFabian M. Suchanek
+p257
+aVRoss Wilkinson
+p258
+aVPing Yu
+p259
+aS'Tommi Jaakkola'
+p260
+aVDong Guo
+p261
+aS'Lei Li'
+p262
+aVYangqiu Song
+p263
+aVTarek F. Abdelzaher
+p264
+aVWei Lin
+p265
+aVXiaoming Jin
+p266
+aVFabio Casati
+p267
+aVLong Wang
+p268
+aVJian Chen
+p269
+aVXiang Wang
+p270
+aVPhilip S. Yu
+p271
+aVRaghu Machiraju
+p272
+aVWei Chen
+p273
+aVYing Huang
+p274
+aVTingting Li
+p275
+aVDian Zhou
+p276
+aS'Jure Leskovec'
+p277
+aVLong Cheng
+p278
+aVDaniel W. C. Ho
+p279
+aVWen Gao
+p280
+aVYi Jiang
+p281
+aVKing Ngi Ngan
+p282
+aVYuefeng Li
+p283
+aVYi Tang
+p284
+aVYuanqing Xia
+p285
+aVTao Zhang
+p286
+aVAaron Hertzmann
+p287
+aVYaochu Jin
+p288
+aVMeng Wang
+p289
+aVTeresa Bernarda Ludermir
+p290
+aVM.N.S. Swamy
+p291
+aVPetia Radeva
+p292
+aVJitender S. Deogun
+p293
+aVLongin Jan Latecki
+p294
+aVPeng Zhang
+p295
+aVAnne Laurent
+p296
+aVJörn Kohlhammer
+p297
+aVHua Li
+p298
+aVShan Jiang
+p299
+aVYu Zhang
+p300
+aVHamid Reza Karimi
+p301
+aVHsiao-Dong Chiang
+p302
+aVKevin W. Bowyer
+p303
+aVZhi Ding
+p304
+aVYong Shi
+p305
+aVJohn Wadsworth-Drake
+p306
+aVMichel Verleysen
+p307
+aVZhiwu Li
+p308
+aVCelso C. Ribeiro
+p309
+aVJack Dongarra
+p310
+aVHui Liu
+p311
+aVFabio Roli
+p312
+aVJiebo Luo
+p313
+aVMasaru Kitsuregawa
+p314
+aVDavid Maier
+p315
+aVChin-Wan Chung
+p316
+aVKathleen M. Carley
+p317
+aVLiusheng Huang
+p318
+aVLing Chen
+p319
+aVYao Yao
+p320
+aVLei Yang
+p321
+aVXin Lu
+p322
+aVChristian S. Jensen
+p323
+aVJunyu Dong
+p324
+aVWen Yang
+p325
+aVShuai Wang
+p326
+aVYang Sok Kim
+p327
+aVKai Wang
+p328
+aVYun Zhang
+p329
+aVRong Zhang
+p330
+aVAnshul Gupta
+p331
+aVSalvatore Gaglio
+p332
+aVChris Volinsky
+p333
+aVHua Wang
+p334
+aS'Shashank Pandit'
+p335
+aVAnitha Kannan
+p336
+aVBin Yao
+p337
+aVQiang Cheng
+p338
+aS'Thomas Hofmann'
+p339
+aVTroy Raeder
+p340
+aVQuoc V. Le
+p341
+aVFeng Pan
+p342
+aVHonghai Liu
+p343
+aVJun Xu
+p344
+aVMing-Ting Sun
+p345
+aS'Dav Zimak'
+p346
+aVRui Chen
+p347
+aVClarence A. Ellis
+p348
+aVXiuwen Liu
+p349
+aVHuijun Gao
+p350
+aVJesse Read
+p351
+aVJue Wang
+p352
+aVLu Han
+p353
+aVMikhail J. Atallah
+p354
+aVNatalia V. Andrienko
+p355
+aVJong Hyuk Park
+p356
+aVYebin Liu
+p357
+aVRong Jin
+p358
+aS'Amynmohamed Rajan'
+p359
+aVAshesh Mahidadia
+p360
+aVHai Wang
+p361
+aVYi Chang
+p362
+aS'Zheng Shao'
+p363
+aVGuoliang Li
+p364
+aVHeng Ji
+p365
+aS'Yee Whye Teh'
+p366
+aVElke A. Rundensteiner
+p367
+aVIdo Guy
+p368
+aVMohamed S. Kamel
+p369
+aVAnHai Doan
+p370
+aVHua Chen
+p371
+aVQiang Qiu
+p372
+aVBin Li
+p373
+aVFrank van Harmelen
+p374
+aVLars Kulik
+p375
+aVQing Ling
+p376
+aVChenqiang Gao
+p377
+aVRamesh Jain
+p378
+aVXiao Wang
+p379
+aVRalph Robert Martin
+p380
+aVPascal Fua
+p381
+aVAshok Samal
+p382
+aVPhillip B. Gibbons
+p383
+aVJian-Qin Liu
+p384
+aVYan Fu
+p385
+aVXiang Zhang
+p386
+aVZheng Wang
+p387
+aVKeith C. C. Chan
+p388
+aVJie Huang
+p389
+aVXiaogang Jin
+p390
+aVLe Wang
+p391
+aS'Lev-Arie Ratinov'
+p392
+aVCostantino Grana
+p393
+aVHerbert Edelsbrunner
+p394
+aVNathalie Japkowicz
+p395
+aVYa Zhang
+p396
+aVChih Hua Tai
+p397
+aVHuzefa Rangwala
+p398
+aVNeel Sundaresan
+p399
+aVJun Ma
+p400
+aVBo Li
+p401
+aVDavid W. Jacobs
+p402
+aVReza Zafarani
+p403
+aVAndrew B. Whinston
+p404
+aVJohn M. Carroll
+p405
+aVBo-Wei Chen
+p406
+aVCyrus Shahabi
+p407
+aVJianjun Zhou
+p408
+aVShuai Liu
+p409
+aVDavid J. Hand
+p410
+aVWarren E. Dixon
+p411
+aVJunhui Zhao
+p412
+aVXiaofang Zhou
+p413
+aVTao Li
+p414
+aVHui Yang
+p415
+aVIckjai Lee
+p416
+aVDinggang Shen
+p417
+aVZheng Chen
+p418
+aVQiang Wu
+p419
+aVJia Xu
+p420
+aS'Tong Lu'
+p421
+aVXiao He
+p422
+aVJie Li
+p423
+aVWei Pan
+p424
+aS'Vasin Punyakanok'
+p425
+aVJohn Sobieski
+p426
+aVStephan Vogel
+p427
+aVJie Cheng
+p428
+aVMurat Kantarcioglu
+p429
+aVPatrizio Campisi
+p430
+aVChen Li
+p431
+aVSeung-won Hwang
+p432
+aVYang Xu
+p433
+aVEdwin R. Hancock
+p434
+aS'Rodrigo de Salvo Braz'
+p435
+aVChao Liu
+p436
+aVAmaury Habrard
+p437
+aVDonghua Zhou
+p438
+aVJie Zhang
+p439
+aVLance Sherry
+p440
+aS'Feida Zhu'
+p441
+aVMarcel Staroswiecki
+p442
+aVBernd Bischl
+p443
+aVSmruti R. Sarangi
+p444
+aVLeonidas J. Guibas
+p445
+aVXiao Wu
+p446
+aVVijay V. Raghavan
+p447
+aVCheng Wu
+p448
+aVLin Wang
+p449
+aVNicolas Chapados
+p450
+aVK. Meier
+p451
+aVXiaohua Hu
+p452
+aVVasant Honavar
+p453
+aVPanos J. Antsaklis
+p454
+aVVijay V. Vazirani
+p455
+aVChabane Djeraba
+p456
+aVGeorgios B. Giannakis
+p457
+aVAn Liu
+p458
+aVXudong Jiang
+p459
+aVJianhua Zhang
+p460
+aVHuan Liu
+p461
+aVYijing Wang
+p462
+aVQuan Z. Sheng
+p463
+aVMin Yao
+p464
+aVYan Xu
+p465
+aVMiguel A. Ferrer
+p466
+aS'Paul Morie'
+p467
+aVFakhri Karray
+p468
+aVAnil K. Jain
+p469
+aVChristine Klymko
+p470
+aVDong Yue
+p471
+aVNiall M. Adams
+p472
+aVJian Yang
+p473
+aVKiyoshi Tanaka
+p474
+aVJianwei Zhang
+p475
+aVJaideep Srivastava
+p476
+aVXiaofeng Wang
+p477
+aVBin Zhou
+p478
+aVRoger Mohr
+p479
+aVPasi Fränti
+p480
+aVAlberto Sillitti
+p481
+aVXiaojun Wu
+p482
+aVYannis E. Ioannidis
+p483
+aVKamin Whitehouse
+p484
+aS'Xiaoxin Yin'
+p485
+aVKe Wang
+p486
+aVLi Liu
+p487
+aVMartín Abadi
+p488
+aVVictoria Wang
+p489
+aVJane You
+p490
+aVK. Selçuk Candan
+p491
+aS'Chen Chen'
+p492
+aVJun Liu
+p493
+aVQi Zhou
+p494
+aVQiang Chen
+p495
+aVNorman Y. Foo
+p496
+aVLarry S. Davis
+p497
+aVGeoffrey J. Gordon
+p498
+aS'Yongjian Fu'
+p499
+aVMoshe Y. Vardi
+p500
+aVFrank L. Lewis
+p501
+aS'Lei Xu'
+p502
+aVZhongxuan Luo
+p503
+aVShipeng Yu
+p504
+aVPatricia L. Brantingham
+p505
+aS'Erik B. Sudderth'
+p506
+aVGiorgio Fumera
+p507
+aVThomas S. Huang
+p508
+aVHaibo Li
+p509
+aS'Yiwen Yin'
+p510
+aVZhong Li
+p511
+aVJie Wang
+p512
+aVTianqi Chen
+p513
+aVJiaguang Sun
+p514
+aVKamalakar Karlapalem
+p515
+aVStefan Kowalewski
+p516
+aVAlessandro Giua
+p517
+aVReda Alhajj
+p518
+aVWei Li
+p519
+aVNanning Zheng
+p520
+aVYiguang Hong
+p521
+aVAndrew Beng Jin Teoh
+p522
+aVGang Chen
+p523
+aVDiane J. Cook
+p524
+aVYan Liu
+p525
+aVMaria E. Orlowska
+p526
+aVOnno Zoeter
+p527
+aVPatrick Valduriez
+p528
+aVLawrence B. Holder
+p529
+aVAli R. Hurson
+p530
+aVYi Guo
+p531
+aVElena Simperl
+p532
+aVMaya Ramanath
+p533
+aVRaymond Chi Wing Wong
+p534
+aVLei Chen
+p535
+aVWei Wei
+p536
+aVLiwei Wang
+p537
+aS'Shivani Agarwal'
+p538
+aS'Bolin Ding'
+p539
+aVKjetil Nørvåg
+p540
+aVShi Wang
+p541
+aVFrancisco Herrera
+p542
+aVLing Shi
+p543
+aVWei Jiang
+p544
+aVLeo Mark
+p545
+aVXiaodong Liu
+p546
+aVLiang Sun
+p547
+aVEric P. Xing
+p548
+aVTianjiang Wang
+p549
+aVXing He
+p550
+aVGuillermo Sapiro
+p551
+aVMing-Syan Chen
+p552
+aVDan C. Marinescu
+p553
+aVXiaodong He
+p554
+aVMasashi Sugiyama
+p555
+aVXin Yao
+p556
+aVMichael Malisoff
+p557
+aVChao Xu
+p558
+aVChengfei Liu
+p559
+aVJaegul Choo
+p560
+aVCarl Ebeling
+p561
+aVWayne Wobcke
+p562
+aVGenady Grabarnik
+p563
+aVTao Hong
+p564
+aVAnkush Mittal
+p565
+aVBin Sheng
+p566
+aVDimitrios Kotzias
+p567
+aVJie Yang
+p568
+aVEsteban García-Cuesta
+p569
+aVJiaheng Lu
+p570
+aVJosef Kittler
+p571
+aS'Jian Pei'
+p572
+aVJin Young Choi
+p573
+aVJun Zhou
+p574
+aVDi Li
+p575
+aVMing Liu
+p576
+aVGang Wu
+p577
+aVElizabeth Chang
+p578
+aVRobert B. Allen
+p579
+aVHong Li
+p580
+aVTao Cheng
+p581
+aVThad Starner
+p582
+aVDragomir Yankov
+p583
+aS'Hector Gonzalez'
+p584
+aVPiotr Bródka
+p585
+aVDimos V. Dimarogonas
+p586
+aVFeng Bao
+p587
+aVGustavo E. A. P. A. Batista
+p588
+aVSethuraman Panchanathan
+p589
+aVYing Zhang
+p590
+aVVincent Lepetit
+p591
+aVMd. Saiful Islam
+p592
+aS'Tianyi Wu'
+p593
+aVGautam Das
+p594
+aVH. Ma
+p595
+aVBo Zhao
+p596
+aVMohammed Bennamoun
+p597
+aVJing Sun
+p598
+aVM. Omair Ahmad
+p599
+aVJeroen Hoebeke
+p600
+aVXiaolong Zhang
+p601
+aVPing Zhang
+p602
+aVAndrew W. Moore
+p603
+aVJie Gao
+p604
+aS'Wan Gong'
+p605
+aVZhoujun Li
+p606
+aVColin Fyfe
+p607
+aVJie Ma
+p608
+aVChang Xu
+p609
+aVZhiyong Chen
+p610
+aS'Ibrahim Kamel'
+p611
+aVDeepak S. Turaga
+p612
+aVFeiyue Huang
+p613
+aVPing Luo
+p614
+aVJiajun Bu
+p615
+aVKefei Chen
+p616
+aVNasser Kehtarnavaz
+p617
+aVTaneli Mielikäinen
+p618
+aVKang Liu
+p619
+aVJohn Lygeros
+p620
+aVJun Zhang
+p621
+aVZhiqiang Xu
+p622
+aVKang Li
+p623
+aVDavid Tse
+p624
+aVYang Zhang
+p625
+aVHongbo Shi
+p626
+aVYang Yu
+p627
+aVJun Li
+p628
+aVJianping Yin
+p629
+aVAleksandra Mojsilovic
+p630
+aVGuojie Luo
+p631
+aVLein Harn
+p632
+aVCong Wang
+p633
+aVJohannes Schemmel
+p634
+aVJing Li
+p635
+aVZheng Yan
+p636
+aVRobert M. Haralick
+p637
+aS'Percy Liang'
+p638
+aVMourad Ouzzani
+p639
+aVPramod K. Varshney
+p640
+aVFeng Zhao
+p641
+aVJianliang Xu
+p642
+aVPo-Chyi Su
+p643
+aVAl Lee
+p644
+aS'Chiranjib Bhattacharyya'
+p645
+aVAli Inan
+p646
+aS'Dong Xin'
+p647
+aVQiang Fu
+p648
+aVMarek R. Ogiela
+p649
+aVWeidong Zhao
+p650
+aVD. Menasce
+p651
+aVGuy Shani
+p652
+aVJechang Jeong
+p653
+aVDivesh Srivastava
+p654
+aVJohn Shawe-Taylor
+p655
+aVYvan Saeys
+p656
+aVFeng Liu
+p657
+aVYijun Wang
+p658
+aVWei Zeng
+p659
+aVKush R. Varshney
+p660
+aVTova Milo
+p661
+aVXiaofan Wang
+p662
+aVFeng Lin
+p663
+aVLuís Torgo
+p664
+aVArno Siebes
+p665
+aVMong Li Lee
+p666
+aVYiu-ming Cheung
+p667
+aVKa Fai Cedric Yiu
+p668
+aVJianmin Wang
+p669
+aS'Peixiang Zhao'
+p670
+aVCheng-Lin Liu
+p671
+aVRichard H. Middleton
+p672
+aVMary Lou Soffa
+p673
+aVTinne Tuytelaars
+p674
+aVVasileios Megalooikonomou
+p675
+aVHasan Davulcu
+p676
+aVBin Luo
+p677
+aVDidier Dubois
+p678
+aVBarbara Poblete
+p679
+aS'Dmitry Zelenko'
+p680
+aVLawrence Carin
+p681
+aVClaudio Lucchese
+p682
+aVGennady L. Andrienko
+p683
+aVJiannong Cao
+p684
+aVXueqi Cheng
+p685
+aVVanja Josifovski
+p686
+aVLyle H. Ungar
+p687
+aVYu Cheng
+p688
+aVHesham H. Ali
+p689
+aVDaniele Nardi
+p690
+aVTong Heng Lee
+p691
+aVJean Ponce
+p692
+aVYan Wang
+p693
+aVXiaolin Li
+p694
+aVGeet Duggal
+p695
+aVWenbin Li
+p696
+aVYun Li
+p697
+aS'Sonny Han Seng Chee'
+p698
+aVRandy H. Katz
+p699
+aVLi Ma
+p700
+aVJosiah Poon
+p701
+aVJie Yin
+p702
+aVMehrdad Farajtabar
+p703
+aVHai Dong
+p704
+aVShun Li
+p705
+aVShenghuo Zhu
+p706
+aVAidong Lu
+p707
+aVMichael R. Lyu
+p708
+aVBin Yang
+p709
+aVNitesh V. Chawla
+p710
+aVLei Tang
+p711
+aVKai Tang
+p712
+aVEli Upfal
+p713
+aVFeng Chen
+p714
+aVXindong Wu
+p715
+aVRaymond Y. K. Lau
+p716
+aVJing Zhang
+p717
+aVPing Guo
+p718
+aVRyad Benosman
+p719
+aVChangyin Sun
+p720
+aVNirwan Ansari
+p721
+aVYueh-Min Huang
+p722
+aVDeLiang Wang
+p723
+aVNikos Mitsou
+p724
+aVJames Demmel
+p725
+aVShuiguang Deng
+p726
+aVPeng Li
+p727
 aVEduard H. Hovy
-p1221
-aVBamshad Mobasher
-p1222
-aVJinhui Tang
-p1223
-aVChang-Tien Lu
-p1224
-aS'John Duchi'
-p1225
-aVA. El Abbadi
-p1226
-aS'Martin J. Wainwright'
-p1227
-aVHui Li
-p1228
-aVYue Liu
-p1229
-aVJiping Liu
-p1230
+p728
+aVBo Sun
+p729
+aS'Runying Mao'
+p730
+aVHuayu Wu
+p731
+aVDjemel Ziou
+p732
+aVMiao Zhang
+p733
+aVKotagiri Ramamohanarao
+p734
+aVJorge Lobo
+p735
+aS'Zhijun Yin'
+p736
+aVGraham Cormode
+p737
+aVXiuzhen Zhang
+p738
+aVBo Liu
+p739
+aVQing Yang
+p740
+aVHui Wang
+p741
+aVAshish Kapoor
+p742
+aVKoby Crammer
+p743
+aVIrene Macaluso
+p744
+aVYing Liu
+p745
+aVTias Guns
+p746
+aVChangchun Hua
+p747
+aVHao Wang
+p748
+aVJames Bailey
+p749
+aVQing Wang
+p750
+aVWitold Pedrycz
+p751
+aVDavid Zhang
+p752
+aVDavid Windridge
+p753
+aVSiyuan Liu
+p754
+aVBo Xu
+p755
+aVJacob Goldberger
+p756
+aVSamuel Martin
+p757
+aVJaime G. Carbonell
+p758
+aVXinbo Gao
+p759
+aVSvetha Venkatesh
+p760
+aVByoung-Tak Zhang
+p761
+aVRaghu Ramakrishnan
+p762
+aVSam Kwong
+p763
+aVXue Li
+p764
+aS'Neelay Shah'
+p765
+aVWei Xu
+p766
+aVYuan Wang
+p767
+aVShengyuan Xu
+p768
+aVMichalis Vazirgiannis
+p769
+aVY. Li
+p770
+aVLu Liu
+p771
+aS'Leejay Wu'
+p772
+aVVassilios S. Verykios
+p773
+aVQinghua Hu
+p774
+aVNing Han
+p775
+aVAntti Ukkonen
+p776
+aVWilson C. Hsieh
+p777
+aVBarbara Caputo
+p778
+aVYao Wang
+p779
+aVYi-Dong Shen
+p780
+aS'Ben Blum'
+p781
+aVHongwei Zhang
+p782
+aVJoost N. Kok
+p783
+aVManfred Tscheligi
+p784
+aVYing Ding
+p785
+aVXiaoying Wang
+p786
+aVFeng Wang
+p787
+aVSachin S. Sapatnekar
+p788
+aVIoannis Pitas
+p789
+aVJie Zhou
+p790
+aVAta Kabán
+p791
+aVMassoud Pedram
+p792
+aVWeihua Gui
+p793
+aVGuy A. Dumont
+p794
+aVHeikki Mannila
+p795
+aVGuo-Jun Qi
+p796
+aVWei Cheng
+p797
+aVZhaonian Zou
+p798
+aS'Deng Cai'
+p799
+aVMykola Pechenizkiy
+p800
+aVHiroshi Nakamura
+p801
+aVHelmut E. Graeb
+p802
+aVSchahram Dustdar
+p803
+aVZhongyuan Wang
+p804
+aVMichael Bain
+p805
+aVWei Jin
+p806
+aVGuanrong Chen
+p807
+aS'XuanLong Nguyen'
+p808
+aS'Gert R. G. Lanckriet'
+p809
+aVXiaobo Sharon Hu
+p810
+aVPong Chi Yuen
+p811
+aVJavid Taheri
+p812
+aVLin Ma
+p813
+aVCheng Wang
+p814
+aVWenbin Liu
+p815
+aVZhijun Li
+p816
+aVZhiqiang Ma
+p817
+aVJohannes Gehrke
+p818
+aVYong Zeng
+p819
+aVLei Zhang
+p820
+aVHongbo Liu
+p821
+aVChuang Lin
+p822
+aVAidong Zhang
+p823
+aVMin Zhang
+p824
+aVChun-Hao Chen
+p825
+aVQiang Zhao
+p826
+aVXin Wang
+p827
+aVTheodoros Lappas
+p828
+aS'Ling Liu'
+p829
+aVQiang Li
+p830
+aVHai-Miao Hu
+p831
+aVMin Tan
+p832
+aVSteffen Staab
+p833
+aS'Wen-tau Yih'
+p834
+aVRoss Sparks
+p835
+aS'Gabor Melli'
+p836
+aVBorko Furht
+p837
+aVJean-Jacques E. Slotine
+p838
+aVWeili Wu
+p839
+aVMarco Maggini
+p840
+aVCraig S. Schwartz
+p841
+aVSilviu-Iulian Niculescu
+p842
+aVWei Huang
+p843
+aVEvgueni N. Smirnov
+p844
+aVZhanshan Wang
+p845
+aVDavid J. Evans
+p846
+aVRobert H. Aseltine
+p847
+aVJosé Nelson Amaral
+p848
+aVMin Wu
+p849
+aVChaomei Chen
+p850
+aVCraig A. Knoblock
+p851
+aVLihong Li
+p852
+aVHiroyuki Kitagawa
+p853
+aVRicardo A. Baeza-Yates
+p854
+aVRoberto Hirata
+p855
+aVWei Su
+p856
+aVDan A. Simovici
+p857
+aVJörg Denzinger
+p858
+aVLionel M. Ni
+p859
+aVPengfei Xu
+p860
+aVNing Xi
+p861
+aVWeiping Wang
+p862
+aVHao Huang
+p863
+aVHao Xu
+p864
+aVJosep Lladós
+p865
+aVCarlotta Domeniconi
+p866
+aVAndreas Kaltenbrunner
+p867
+aVShenghua Bao
+p868
+aVJeffrey Xu Yu
+p869
+aS'Erik Riedel'
+p870
+aVLigang Liu
+p871
+aVAlbert Ali Salah
+p872
 aVNing Xu
-p1231
+p873
 aVQingming Huang
+p874
+aVAparna S. Varde
+p875
+aVZhang Yi
+p876
+aVMengjie Zhang
+p877
+aVYang Sun Lee
+p878
+aVHaiping Du
+p879
+aVHan Wang
+p880
+aVDaniel Jurafsky
+p881
+aVCéline Robardet
+p882
+aVXiaotie Deng
+p883
+aVChunheng Wang
+p884
+aVJohan Karlsson
+p885
+aVMing Chen
+p886
+aVLin Li
+p887
+aVJulien Epps
+p888
+aVYike Guo
+p889
+aVYanan Li
+p890
+aVGeorge Karypis
+p891
+aVChen Xu
+p892
+aVIngmar Weber
+p893
+aVYing Lu
+p894
+aVXiaohui Liu
+p895
+aVLi Li
+p896
+aVYi Yang
+p897
+aVBin Zhao
+p898
+aVYing Chen
+p899
+aVHanan Samet
+p900
+aVJa-Ling Wu
+p901
+aVChristopher A. Meek
+p902
+aVRong Yan
+p903
+aVEinoshin Suzuki
+p904
+aVXuan Wang
+p905
+aVAlberto Del Bimbo
+p906
+aVYijun Yu
+p907
+aVXinyu Guo
+p908
+aS'Ming-Hsuan Yang'
+p909
+aVYun Zou
+p910
+aVYing Li
+p911
+aVYo-Sung Ho
+p912
+aVYu Zhou
+p913
+aVGonzalo Navarro
+p914
+aVKun Li
+p915
+aVHongyuan Zha
+p916
+aVYe Yuan
+p917
+aVJianhui Li
+p918
+aVYongqiang Wang
+p919
+aVNick Cercone
+p920
+aVHai Zhuge
+p921
+aVRui Liu
+p922
+aVHeng Huang
+p923
+aVXinping Guan
+p924
+aVRandal E. Bryant
+p925
+aVKai Puolamäki
+p926
+aVChandrika Kamath
+p927
+aVMadhav V. Marathe
+p928
+aVShankar Sastry
+p929
+aVQing He
+p930
+aVWen Wu
+p931
+aVLeendert W. N. van der Torre
+p932
+aVYang Zhao
+p933
+aVQiguang Miao
+p934
+aVZhiqiang Zuo
+p935
+aVKai Zhang
+p936
+aVMubarak Shah
+p937
+aVShaojun Wang
+p938
+aVLei Liu
+p939
+aVIngrid Moerman
+p940
+aVJing Bai
+p941
+aVFeng Ding
+p942
+aVSartaj Sahni
+p943
+aVGagan Agrawal
+p944
+aVHaesun Park
+p945
+aVBaocai Yin
+p946
+aVYanchun Zhang
+p947
+aVYong Ge
+p948
+aVMichael F. Bardaro
+p949
+aVJian Tang
+p950
+aVTimos K. Sellis
+p951
+aVYin Zhang
+p952
+aVYe Zhang
+p953
+aVPedro Larrañaga
+p954
+aVSimin Yu
+p955
+aVFei Xie
+p956
+aVTimothy K. Shih
+p957
+aVXuming He
+p958
+aVDan He
+p959
+aVBodo Rosenhahn
+p960
+aVChang-Tien Lu
+p961
+aVMichael K. Ng
+p962
+aVChristopher Leckie
+p963
+aVBeng Chin Ooi
+p964
+aVChun Chen
+p965
+aVHaizhou Li
+p966
+aVXiaokang Yang
+p967
+aS'Behzad Mortazavi-Asl'
+p968
+aS'Michal Rosen-Zvi'
+p969
+aVDavid A. Cieslak
+p970
+aVMaleq Khan
+p971
+aVJosé M. Bernabéu-Aubán
+p972
+aS'Yizhou Sun'
+p973
+aVDieter W. Fellner
+p974
+aVLiang Zhang
+p975
+aVFabrício Benevenuto
+p976
+aVXiaoming Li
+p977
+aVMihai Surdeanu
+p978
+aVJian Liu
+p979
+aVHongjiu Yang
+p980
+aVJose C. Principe
+p981
+aVAlberto O. Mendelzon
+p982
+aVMohamed G. Gouda
+p983
+aVYu Dai
+p984
+aVClaudia Bauzer Medeiros
+p985
+aVDechang Chen
+p986
+aS'Wenmin Li'
+p987
+aVSrikanta J. Bedathur
+p988
+aVIsmail Hakki Toroslu
+p989
+aVSourav S. Bhowmick
+p990
+aVJie Chen
+p991
+aVDing Wang
+p992
+aVXiaoling Wang
+p993
+aVTakashi Sato
+p994
+aVQi Liu
+p995
+aVYi Shen
+p996
+aS'Yijun Lu'
+p997
+aVJesús Labarta
+p998
+aVJing Liu
+p999
+aVAlessandro Flammini
+p1000
+aVBin Wang
+p1001
+aVHong Zhang
+p1002
+aVZhao Li
+p1003
+aVFeng Gao
+p1004
+aVDong Wang
+p1005
+aVFred B. Schneider
+p1006
+aVYi Zhang
+p1007
+aS'Martin J. Wainwright'
+p1008
+aVXinzhi Liu
+p1009
+aVFred Glover
+p1010
+aVMark Johnson
+p1011
+aVLawrence O. Hall
+p1012
+aVAlexander L. Wolf
+p1013
+aVFilippo Menczer
+p1014
+aVSheng Ma
+p1015
+aVVipin Kumar
+p1016
+aS'Francis Bach'
+p1017
+aVJames F. Peters
+p1018
+aVXin Chen
+p1019
+aVChin-Chen Chang
+p1020
+aVYing Zhou
+p1021
+aS'Leman Akoglu'
+p1022
+aVSeong-Bae Park
+p1023
+aVNaren Ramakrishnan
+p1024
+aVLi Sheng
+p1025
+aVChristoph F. Eick
+p1026
+aVJin Wang
+p1027
+aVXu Wang
+p1028
+aVQionghai Dai
+p1029
+aVMuhammad Khurram Khan
+p1030
+aS'Byoung-Kee Yi'
+p1031
+aVJiang Li
+p1032
+aVHaijun Zhang
+p1033
+aVJun Yan
+p1034
+aVW.P. Kegelmeyer
+p1035
+aVJulián Luengo
+p1036
+aVAdith Swaminathan
+p1037
+aVAssaf Schuster
+p1038
+aS'Ming-Wei Chang'
+p1039
+aVShan Wang
+p1040
+aVZhi-Hong Deng
+p1041
+aVYong Zhou
+p1042
+aS'Anthony K. H. Tung'
+p1043
+aVJinhu Lu
+p1044
+aVZhi Liu
+p1045
+aVAnupam Chattopadhyay
+p1046
+aS'Flip Korn'
+p1047
+aVMehdi Baradaran Tahoori
+p1048
+aVWenyuan Wang
+p1049
+aVIan Davidson
+p1050
+aVBhavani M. Thuraisingham
+p1051
+aVJian Wu
+p1052
+aVDirk Wollherr
+p1053
+aS'Hanghang Tong'
+p1054
+aVVincent S. Tseng
+p1055
+aVYing Yang
+p1056
+aVQi Wang
+p1057
+aS'Purnamrita Sarkar'
+p1058
+aVPu Wang
+p1059
+aVDavid Bull
+p1060
+aVI. V. Ramakrishnan
+p1061
+aVIra Assent
+p1062
+aVJun Zhu
+p1063
+aVDharma P. Agrawal
+p1064
+aVPeng Shi
+p1065
+aVDriss Aboutajdine
+p1066
+aVEamonn J. Keogh
+p1067
+aVKe Xu
+p1068
+aVBaining Guo
+p1069
+aVXiaohua Xia
+p1070
+aVRuud M. Bolle
+p1071
+aVManish Mehta
+p1072
+aVDaniela Rus
+p1073
+aVKen Kennedy
+p1074
+aVIain S. Duff
+p1075
+aVMing Zhou
+p1076
+aVLi Wang
+p1077
+aVLiang Zhao
+p1078
+aVShrikanth Narayanan
+p1079
+aVLi Chen
+p1080
+aVJin Liu
+p1081
+aVPeng Chen
+p1082
+aVFoto N. Afrati
+p1083
+aVAndreas Kunz
+p1084
+aVLongbing Cao
+p1085
+aVWynne Hsu
+p1086
+aVAlvaro A. A. Fernandes
+p1087
+aVInsup Lee
+p1088
+aVShixia Liu
+p1089
+aS'Nebojsa Stefanovic'
+p1090
+aVDaren Yu
+p1091
+aVRajiv Gupta
+p1092
+aVLu Su
+p1093
+aVXin Sun
+p1094
+aVMinlie Huang
+p1095
+aVTat-Seng Chua
+p1096
+aVEric Bruno
+p1097
+aVJin Tang
+p1098
+aS'Xifeng Yan'
+p1099
+aVChiara Renso
+p1100
+aVJing Yang
+p1101
+aVBaihua Xiao
+p1102
+aVXiaonan Luo
+p1103
+aVChang Wen Chen
+p1104
+aVSteven C. H. Hoi
+p1105
+aVTongwen Chen
+p1106
+aVEdward J. Delp
+p1107
+aVYu Zheng
+p1108
+aVKirsten Hildrum
+p1109
+aVEnhua Wu
+p1110
+aVYin Wang
+p1111
+aVHsuan-Tien Lin
+p1112
+aVLei Zhu
+p1113
+aVLin Zhang
+p1114
+aVKatherine A. Yelick
+p1115
+aVMark Hasegawa-Johnson
+p1116
+aVHyunjin Yoon
+p1117
+aVJing Xu
+p1118
+aVPeng Yang
+p1119
+aVAlexandra Poulovassilis
+p1120
+aS'Milind R. Naphade'
+p1121
+aVBing Liu
+p1122
+aVGiulio Iannello
+p1123
+aVDapeng Tao
+p1124
+aVJie Tang
+p1125
+aVRui Wang
+p1126
+aVAlexander Pretschner
+p1127
+aVRui Ding
+p1128
+aVJun Shen
+p1129
+aVYan Zhang
+p1130
+aVFrédéric Mazenc
+p1131
+aVLei Zou
+p1132
+aVMichèle Sebag
+p1133
+aVHiroshi Motoda
+p1134
+aVEvangelos E. Milios
+p1135
+aVT. Nakano
+p1136
+aS'Hwanjo Yu'
+p1137
+aVSimon X. Yang
+p1138
+aVLuc J. Van Gool
+p1139
+aVQiang Ma
+p1140
+aVYulan Guo
+p1141
+aVRichard Szeliski
+p1142
+aVHai Zhao
+p1143
+aVBin Wu
+p1144
+aVAndrea Cavallaro
+p1145
+aVChris Clifton
+p1146
+aVTianyou Chai
+p1147
+aVChun-Yi Su
+p1148
+aVGrigorios Tsoumakas
+p1149
+aVJingrui He
+p1150
+aVLayne T. Watson
+p1151
+aVDinh Q. Phung
+p1152
+aVXiao Tan
+p1153
+aVQiang Wang
+p1154
+aVSurajit Chaudhuri
+p1155
+aVRong Liu
+p1156
+aVPrzemys\u0142aw Kazienko
+p1157
+aVPeter Tino
+p1158
+aVXiaowei Xu
+p1159
+aVQiang Yang
+p1160
+aVDouglas Thain
+p1161
+aVTim Kraska
+p1162
+aVSrinivasan Parthasarathy
+p1163
+aVShen Yin
+p1164
+aVRüdiger Dillmann
+p1165
+aVPietro Perona
+p1166
+aVKok Lay Teo
+p1167
+aVAlbert Y. Zomaya
+p1168
+aVHong Gao
+p1169
+aVDarya Filippova
+p1170
+aVShamkant B. Navathe
+p1171
+aVVictor R. Lesser
+p1172
+aVMagnus Egerstedt
+p1173
+aVPang Ning Tan
+p1174
+aVEe-Peng Lim
+p1175
+aVKwan-Liu Ma
+p1176
+aS'Yue Huang'
+p1177
+aVCheng Chang
+p1178
+aVLi Yan
+p1179
+aVAnastasios Tefas
+p1180
+aVZhiyong Peng
+p1181
+aVStan Matwin
+p1182
+aVMiroslav Krstic
+p1183
+aVPeng Cui
+p1184
+aVBruno Crémilleux
+p1185
+aVLin Chen
+p1186
+aVFrancesco Bonchi
+p1187
+aVChunnian Liu
+p1188
+aVJunjie Yang
+p1189
+aVDaniel Lowd
+p1190
+aVYang Li
+p1191
+aVStéphane Marchand-Maillet
+p1192
+aVAllen D. Malony
+p1193
+aVEric C. C. Tsang
+p1194
+aVAmitabha Bagchi
+p1195
+aVYiyu Yao
+p1196
+aVEnhong Chen
+p1197
+aVYao Yu
+p1198
+aVIn So Kweon
+p1199
+aVStanley Osher
+p1200
+aVYuan-Xin Li
+p1201
+aVTamer Basar
+p1202
+aVStephen J. Maybank
+p1203
+aVClement T. Yu
+p1204
+aVXiaoping Liu
+p1205
+aVFerdous Ahmed Sohel
+p1206
+aVWee Keong Ng
+p1207
+aVShuigeng Zhou
+p1208
+aVLaxmi N. Bhuyan
+p1209
+aVJun Guo
+p1210
+aVDan Zhang
+p1211
+aVZhe Wang
+p1212
+aVStephen Chi-fai Chan
+p1213
+aVGuoren Wang
+p1214
+aVMurat Dundar
+p1215
+aVGeorge S. Avrunin
+p1216
+aVAmr El Abbadi
+p1217
+aVHong Mei
+p1218
+aVYue Xu
+p1219
+aVLili Wang
+p1220
+aVYun Chen
+p1221
+aVShengrui Wang
+p1222
+aVHong Chen
+p1223
+aS'Mary McGlohon'
+p1224
+aVMohand-Said Hacid
+p1225
+aVXining Li
+p1226
+aVZhihui Wei
+p1227
+aS'Deepayan Chakrabarti'
+p1228
+aVXu Zhang
+p1229
+aVFrancesco Mondada
+p1230
+aVVijay Kumar
+p1231
+aVMou Chen
 p1232
-aVDiane J. Litman
+aVDragomir R. Radev
 p1233
-atp1234
-Rp1235
+aVUi-Gum Kang
+p1234
+aS'Jia-Yu Pan'
+p1235
+aVYue Zhao
+p1236
+aVMateu Sbert
+p1237
+aVGillian Dobbie
+p1238
+aVAnne H. H. Ngu
+p1239
+aVSong Han
+p1240
+aS'Fan Guo'
+p1241
+aVYves Robert
+p1242
+aVJiye Liang
+p1243
+aVSheng Gao
+p1244
+aVQuansen Sun
+p1245
+aVJérémy Besson
+p1246
+aVAzriel Rosenfeld
+p1247
+aVLiu Wenyin
+p1248
+aVMan-Kwan Shan
+p1249
+aVAlessandro Sordoni
+p1250
+aVXiaoqian Wang
+p1251
+aS'Benjamin Liebald'
+p1252
+aVMaguelonne Teisseire
+p1253
+aVClaire Cardie
+p1254
+aVCharles Lee Isbell
+p1255
+aVRuoming Jin
+p1256
+aVEitan Altman
+p1257
+aVLei Wang
+p1258
+aVPeter J. F. Lucas
+p1259
+aVChang-shing Perng
+p1260
+aVJie Tao
+p1261
+aVWensheng Zhang
+p1262
+aVXuan Liu
+p1263
+aVZiyan Wu
+p1264
+aVTianbao Yang
+p1265
+aVMingli Song
+p1266
+aVEmre Kiciman
+p1267
+aVTingwen Huang
+p1268
+aVTieshan Li
+p1269
+aVAlexander J. Smola
+p1270
+aS'King-Ip Lin'
+p1271
+aVJon Borchardt
+p1272
+aVNectarios Koziris
+p1273
+aVTieniu Tan
+p1274
+aVShou-De Lin
+p1275
+aVJian Wang
+p1276
+aVGuang-Hong Yang
+p1277
+aVXinpeng Zhang
+p1278
+aS'Vivek Srikumar'
+p1279
+aVChristopher C. Yang
+p1280
+aVFeng Zhang
+p1281
+aVYu Wang
+p1282
+aVAlessandro Moschitti
+p1283
+aVDaniel A. Keim
+p1284
+aVYuhong Zhang
+p1285
+aVCristina Nita-Rotaru
+p1286
+aVZhi-Hua Zhou
+p1287
+aVNan Du
+p1288
+aVYannis Manolopoulos
+p1289
+aVYoshihiro Watanabe
+p1290
+aVSanguthevar Rajasekaran
+p1291
+aVCarl Kingsford
+p1292
+aS'Xin Li'
+p1293
+aVChao Li
+p1294
+aS'Wei Wang'
+p1295
+aVSteven Skiena
+p1296
+aVLaurence T. Yang
+p1297
+aVJun Zhao
+p1298
+aVBruno Siciliano
+p1299
+aVGerhard Weikum
+p1300
+aVHong Wang
+p1301
+aVGeoffrey C. Fox
+p1302
+aVMaria Prandini
+p1303
+aVYoann Pitarch
+p1304
+aVJianping Fan
+p1305
+aVLiang Wang
+p1306
+aVWei Yang
+p1307
+aVJianxin Liao
+p1308
+aVTruong Q. Nguyen
+p1309
+aVBin Zhang
+p1310
+aVWenjie Li
+p1311
+aVDimitrios Gunopulos
+p1312
+aVWei He
+p1313
+aVChao Wang
+p1314
+aS'Lawrence K. Saul'
+p1315
+aVChih-Jen Lin
+p1316
+aVHui Xiong
+p1317
+aS'Alexandre Klementiev'
+p1318
+aVPeng Xu
+p1319
+aVMostafa H. Ammar
+p1320
+aVWei Hu
+p1321
+aVAnthony Vetro
+p1322
+aVChao Yang
+p1323
+aVFang Wang
+p1324
+aVHaibo Hu
+p1325
+aVLe Song
+p1326
+aVLingqiao Liu
+p1327
+aVZhiping Cai
+p1328
+aS'Yiping Zhan'
+p1329
+aVHuiji Gao
+p1330
+aVNadia Magnenat-Thalmann
+p1331
+aVDonghong Ji
+p1332
+aVFang Li
+p1333
+aVChunhua Shen
+p1334
+aVAmbuj K. Singh
+p1335
+aVDongwon Lee
+p1336
+aVBernd Becker
+p1337
+aVNing Li
+p1338
+aVShichao Zhang
+p1339
+aVYuncai Liu
+p1340
+aVLin Cai
+p1341
+aVLei Yu
+p1342
+aVJayant R. Kalagnanam
+p1343
+aS'Jing Gao'
+p1344
+aVZhi Li
+p1345
+aVArnaud Soulet
+p1346
+aVHui Zhang
+p1347
+aVJie Wu
+p1348
+aVDaniel Thalmann
+p1349
+aS'Betty Xia'
+p1350
+aVQiang Ji
+p1351
+aVJohn M. Abowd
+p1352
+aVYong Zhang
+p1353
+aVJun Lin
+p1354
+aVSeok-Hee Hong
+p1355
+aVLuciano Baresi
+p1356
+aVJian Li
+p1357
+aVDaniel Rueckert
+p1358
+aVJiangchuan Liu
+p1359
+aVTak-Lam Wong
+p1360
+aVPanos M. Pardalos
+p1361
+aVJingyu Yang
+p1362
+aS'Fei Sha'
+p1363
+aVWen-Chih Peng
+p1364
+aVDieter Fensel
+p1365
+aVQi Li
+p1366
+aVJianwei Liu
+p1367
+aVGang Wang
+p1368
+aVJohn R. Talburt
+p1369
+aVQi Ge
+p1370
+aVYukiko Kawai
+p1371
+aVMao Ye
+p1372
+aVHongxing Li
+p1373
+aVYing Zhu
+p1374
+aS'Yair Weiss'
+p1375
+aVAlexander T. Ihler
+p1376
+aVLicheng Jiao
+p1377
+aVEvimaria Terzi
+p1378
+aVJian Zhang
+p1379
+aVNina S. T. Hirata
+p1380
+aVHong Yu
+p1381
+aVNan Zhang
+p1382
+aVTzung-Pei Hong
+p1383
+aVLeon J. Osterweil
+p1384
+aVDong Li
+p1385
+aVNitin Jindal
+p1386
+aVChengXiang Zhai
+p1387
+aVYue Wang
+p1388
+aVMartin Becker
+p1389
+aVYixin Chen
+p1390
+aVJohn C. S. Lui
+p1391
+aS'Ashutosh Garg'
+p1392
+aVHenri Prade
+p1393
+aVLouis Wehenkel
+p1394
+aVXi Chen
+p1395
+aVBernhard Mitschang
+p1396
+aVEric Horvitz
+p1397
+aVYunhong Gu
+p1398
+aVGuang Jin
+p1399
+aVAlberto L. Sangiovanni-Vincentelli
+p1400
+aVShuzhi Sam Ge
+p1401
+aS'Sangkyum Kim'
+p1402
+aVYuval Shavitt
+p1403
+aVYuhong Guo
+p1404
+aVYang Xiang
+p1405
+aVDmitry B. Goldgof
+p1406
+aS'Wei Lu'
+p1407
+aVAlexandros Kalousis
+p1408
+aVMarco Dorigo
+p1409
+aVHao Liu
+p1410
+aVHongyan Liu
+p1411
+aVJian-Guang Lou
+p1412
+aVYifan Hu
+p1413
+aVSuresh Venkatasubramanian
+p1414
+aVTimothy Baldwin
+p1415
+aVJian Huang
+p1416
+aVWei Zou
+p1417
+aVCristopher Moore
+p1418
+aVYao Zheng
+p1419
+aVChunhong Pan
+p1420
+aVMarimuthu Palaniswami
+p1421
+aVHenri E. Bal
+p1422
+aVPhilip Brisk
+p1423
+aVYao Sun
+p1424
+aVRoss Maciejewski
+p1425
+aVLu Zhang
+p1426
+aVSang-Wook Kim
+p1427
+aVZhigang Zeng
+p1428
+aVDavid B. Marx
+p1429
+aVHo-fung Leung
+p1430
+aVHai Lin
+p1431
+aVCharles Dugas
+p1432
+aVDyng Au
+p1433
+aVQiang Liu
+p1434
+aVRita Cucchiara
+p1435
+aVHuamin Qu
+p1436
+aVKe Lu
+p1437
+aVSang Hyuk Son
+p1438
+aVRae-Hong Park
+p1439
+aVKar-Ann Toh
+p1440
+aVCailian Chen
+p1441
+aVIl Hong Suh
+p1442
+aVAuroop R. Ganguly
+p1443
+aVMengChu Zhou
+p1444
+aVJun Wang
+p1445
+aVJerry Scripps
+p1446
+aVTharam S. Dillon
+p1447
+aVYu Liu
+p1448
+aVRobert L. Grossman
+p1449
+aVYong Yu
+p1450
+aVXin Gao
+p1451
+aVJames Lam
+p1452
+aVXing Zhang
+p1453
+aVIndre \u017dliobaite
+p1454
+aVDan Meng
+p1455
+aVDebora Donato
+p1456
+aVWilliam W. Cohen
+p1457
+aVYan Song
+p1458
+aVRichi Nayak
+p1459
+aVReinhard Männer
+p1460
+aVHao Jin
+p1461
+aVAnna Cinzia Squicciarini
+p1462
+aVParag Singla
+p1463
+aVJean Gao
+p1464
+aVFei Song
+p1465
+aVBaoyong Zhang
+p1466
+aVXiaodong Wang
+p1467
+aVBrian D. O. Anderson
+p1468
+aVJoão Gama
+p1469
+aVWilliam Gropp
+p1470
+aS'Hua Zhu'
+p1471
+aVJianzhong Li
+p1472
+aVJun Chen
+p1473
+aVRichard S. Zemel
+p1474
+aVFeng Li
+p1475
+aVAlok N. Choudhary
+p1476
+aVLian Duan
+p1477
+aVDeyi Li
+p1478
+aVHao Jiang
+p1479
+aVLi Xu
+p1480
+aVFei Chen
+p1481
+aVXun Gong
+p1482
+aVZhi Jin
+p1483
+aVJunfeng Wu
+p1484
+aVNicola Fanizzi
+p1485
+aVYueting Zhuang
+p1486
+aVZidong Wang
+p1487
+aVXiao Yu
+p1488
+aVChong Long
+p1489
+aVJing Wu
+p1490
+aVZhengqiang Zhang
+p1491
+aVSanghoon Lee
+p1492
+aVShiqiang Yang
+p1493
+aVAnthony G. Cohn
+p1494
+aVDavid C. Hogg
+p1495
+aVShi-Min Hu
+p1496
+aVG. F. Xu
+p1497
+aVTong Wang
+p1498
+aVGiancarlo Succi
+p1499
+aVEdward Omiecinski
+p1500
+aVMichael N. Huhns
+p1501
+aVWee Sun Lee
+p1502
+aVYan Yang
+p1503
+aS'Zoubin Ghahramani'
+p1504
+aVSanjay Ranka
+p1505
+aS'Spiros Papadimitriou'
+p1506
+aVPaul Compton
+p1507
+aVThomas Stützle
+p1508
+aVIoannis Partalas
+p1509
+aVOsmar R. Zaïane
+p1510
+aVWei Peng
+p1511
+aVMichihiro Shintani
+p1512
+aVHyo-Sung Ahn
+p1513
+aVAntonio Ortega
+p1514
+aVFeifei Li
+p1515
+aVYuan Hong
+p1516
+aVJane Yung-jen Hsu
+p1517
+aVJiming Liu
+p1518
+aVWei Zhao
+p1519
+aVTian Xia
+p1520
+aVJi Wang
+p1521
+aVMarco Gori
+p1522
+aVYong Wang
+p1523
+aVMirek Riedewald
+p1524
+aVCécile Paris
+p1525
+aVCheng Chen
+p1526
+aVTing Zhang
+p1527
+aVRicardo da Silva Torres
+p1528
+aVFei-Yue Wang
+p1529
+aVDianhui Wang
+p1530
+aVRui Fang
+p1531
+aVBianca Zadrozny
+p1532
+aVBart Goethals
+p1533
+aVMengyin Fu
+p1534
+aVWei Xie
+p1535
+aVMark Haring
+p1536
+aVAristides Gionis
+p1537
+aVMarcos André Gonçalves
+p1538
+aVDi Wu
+p1539
+aVRajeev Motwani
+p1540
+aVWei Sun
+p1541
+aVNassir Navab
+p1542
+aVJi-Rong Wen
+p1543
+aVHai Jin
+p1544
+aS'Joyce M. W. Lam'
+p1545
+aVMiao Wang
+p1546
+aVHuosheng Hu
+p1547
+aVPourang Irani
+p1548
+aVDebra J. Richardson
+p1549
+aVT. Hayat
+p1550
+aVMarco Brambilla
+p1551
+aVPing Wang
+p1552
+aVQingshan Jiang
+p1553
+aVJohn Nerbonne
+p1554
+aVYan Chen
+p1555
+aVAsok Ray
+p1556
+aVShiping Wang
+p1557
+aVTing Wang
+p1558
+aVJinlong Wang
+p1559
+aVHao Zhang
+p1560
+aVShashi Shekhar
+p1561
+aVXuemin Lin
+p1562
+aVAlexandros G. Dimakis
+p1563
+aVCarlos Guestrin
+p1564
+aVJianchang Mao
+p1565
+aVBo Han
+p1566
+aVJinde Cao
+p1567
+aVJohannes Schneider
+p1568
+aVAntonis Papachristodoulou
+p1569
+aVJianmin Jiang
+p1570
+aVDanilo Ardagna
+p1571
+aVAlekh Agarwal
+p1572
+aVMuhammad Imran
+p1573
+aVRaymond E. Miller
+p1574
+aVChao Zhang
+p1575
+aVCorinna Cortes
+p1576
+aVCevdet Aykanat
+p1577
+aVMing Hua
+p1578
+aVHyunsoo Yoon
+p1579
+aVJian Guo
+p1580
+aVStefano Leonardi
+p1581
+aVZhiwei He
+p1582
+aVChris Manzie
+p1583
+aVDavid Lo
+p1584
+aVYongming Li
+p1585
+aVXin Fu
+p1586
+aVRui Li
+p1587
+aVKarl Aberer
+p1588
+aVAntoine Bordes
+p1589
+aVShuo Zhang
+p1590
+aVGeoffrey I. Webb
+p1591
+aVRussell H. Taylor
+p1592
+aVJeffrey F. Naughton
+p1593
+aVM. Shahriar Hossain
+p1594
+aVQing Zhang
+p1595
+aVKarl Henrik Johansson
+p1596
+aVPeng Liu
+p1597
+aVChang-Yin Sun
+p1598
+aVIl-Yeol Song
+p1599
+aVJianbo Su
+p1600
+aVQingling Zhang
+p1601
+aVFan Zhang
+p1602
+aVSteven X. Ding
+p1603
+aVYun Wang
+p1604
+aVTore Risch
+p1605
+aVWei Liu
+p1606
+aVGregory F. Cooper
+p1607
+aVShuming Gao
+p1608
+aVHomer H. Chen
+p1609
+aVLaks V. S. Lakshmanan
+p1610
+aVBrendan Kitts
+p1611
+aVNizar Bouguila
+p1612
+aS'Jimeng Sun'
+p1613
+aVQingshan Liu
+p1614
+aVXiaohong Jiang
+p1615
+aVRui Yang
+p1616
+aVYu Chen
+p1617
+aVXiaojun Wan
+p1618
+aS'Alice X. Zheng'
+p1619
+aVQian Zhang
+p1620
+aVPeter Brusilovsky
+p1621
+aVYao Lu
+p1622
+aVDan Wang
+p1623
+aVJim Jing-Yan Wang
+p1624
+aVTom M. Mitchell
+p1625
+aVJohan Bollen
+p1626
+aVKai Ming Ting
+p1627
+aVDonato Malerba
+p1628
+aVYuxiang Yang
+p1629
+aVFei Wang
+p1630
+aVWeimin Ma
+p1631
+aVQing Li
+p1632
+aVBiao Qin
+p1633
+aVRuofei Zhang
+p1634
+aVDabo Xu
+p1635
+aVAmin Saberi
+p1636
+aVLi Guo
+p1637
+aVLihua Yang
+p1638
+aVPartha Dasgupta
+p1639
+aVWei Fan
+p1640
+aVYi Liu
+p1641
+aVPeng Wang
+p1642
+aVAlfred Krzywicki
+p1643
+aVJun Cheng
+p1644
+aVOkyay Kaynak
+p1645
+aVCharu C. Aggarwal
+p1646
+aVMin Li
+p1647
+aVTommy W. S. Chow
+p1648
+aVXiaoyi Jiang
+p1649
+aVMatthias Jarke
+p1650
+aVDonald F. Towsley
+p1651
+aVWagner Meira
+p1652
+aS'Zhaohui Xie'
+p1653
+aVHui Yu
+p1654
+aVDacheng Tao
+p1655
+aVMohamed Cheriet
+p1656
+aS'Michael I. Jordan'
+p1657
+aVDjamal Benslimane
+p1658
+aVJohn F. Roddick
+p1659
+aVWenji Mao
+p1660
+aVSawin Lee
+p1661
+aVJie Xu
+p1662
+aVTakahiro Hara
+p1663
+aVChunli Wang
+p1664
+aVJie Luo
+p1665
+aVAbhishek Gupta
+p1666
+aVFrancesc Moreno-Noguer
+p1667
+aVLek-Heng Lim
+p1668
+aVHongyi Li
+p1669
+aVShiwei Tang
+p1670
+aVLihui Wang
+p1671
+aVYuan Lin
+p1672
+aVWenhui Li
+p1673
+aS'Christos Faloutsos'
+p1674
+aVJing He
+p1675
+aVKeith W. Ross
+p1676
+aVChi Wang
+p1677
+aVMasatoshi Ishikawa
+p1678
+aVWenliang Du
+p1679
+aS'Chad M. Cumby'
+p1680
+aVCherri M. Pancake
+p1681
+aVLi Zhang
+p1682
+aVRobin J. Evans
+p1683
+aVJianhong Wu
+p1684
+aVXiaoming Hu
+p1685
+aVZongda Wu
+p1686
+aVHao Yang
+p1687
+aS'Yaqin Liao'
+p1688
+aVFan Wang
+p1689
+aVYilong Yin
+p1690
+aVDiego Calvanese
+p1691
+aVHuifang Sun
+p1692
+aVRuofeng Tong
+p1693
+aVJaime Teevan
+p1694
+aVXinbing Wang
+p1695
+aVJian Sun
+p1696
+aVAlan Burns
+p1697
+aVAlessandro Panconesi
+p1698
+aVLoo Hay Lee
+p1699
+aS'Steve Hanneke'
+p1700
+aVJohn T. Stasko
+p1701
+aVHorst Bunke
+p1702
+aVZhe-Ming Lu
+p1703
+aVXuelong Li
+p1704
+aVCécile Low-Kam
+p1705
+aVAdam Jatowt
+p1706
+aVGao Cong
+p1707
+aVLoong Fah Cheong
+p1708
+aVPeng Cheng
+p1709
+aVChew Lim Tan
+p1710
+aVLihua Xie
+p1711
+aVWilliam Zhu
+p1712
+aVGang Liu
+p1713
+aVNick G. Duffield
+p1714
+aVSean McLaughlin
+p1715
+aVBin Liu
+p1716
+aVFei Liu
+p1717
+aVJia Wu
+p1718
+aVBin Fang
+p1719
+aVJun He
+p1720
+aVQi Zhang
+p1721
+aVAnanthram Swami
+p1722
+aVChing Y. Suen
+p1723
+aVLijie Wang
+p1724
+aVWeiming Hu
+p1725
+aVMin Wang
+p1726
+aVJianfeng Ma
+p1727
+aVC. Lee Giles
+p1728
+aVMing Syan Chen
+p1729
+aVEdmundo de Souza e Silva
+p1730
+aVJingyuan Zhang
+p1731
+aVJun Rekimoto
+p1732
+aVEduard Ayguadé
+p1733
+aVBehzad Golshan
+p1734
+aVHong Yan
+p1735
+aVJean-François Boulicaut
+p1736
+aVHao Yan
+p1737
+aVJing Chen
+p1738
+aVJ. Wenny Rahayu
+p1739
+aVKeun Ho Ryu
+p1740
+aVJun Luo
+p1741
+aS'Zhiqiang Bi'
+p1742
+aVMartin L. Kersten
+p1743
+aVJiuyong Li
+p1744
+aVBo Wu
+p1745
+aVKokichi Futatsugi
+p1746
+aVSeiji Yamada
+p1747
+aVRobert Sabourin
+p1748
+aVNorman W. Paton
+p1749
+aVMasayoshi Tomizuka
+p1750
+aVAlexander Tuzhilin
+p1751
+aVNing Wang
+p1752
+aVYuan Zhang
+p1753
+aVSreenivas Gollapudi
+p1754
+aVArantza Illarramendi
+p1755
+aVXiangji Huang
+p1756
+aVGang George Yin
+p1757
+aVCarlos Castillo
+p1758
+aVC.L. Giles
+p1759
+aVChen Wang
+p1760
+aVJosé Antonio Lozano
+p1761
+aVSalvador García
+p1762
+aVJiming Chen
+p1763
+aVBart Baesens
+p1764
+aVK. C. Ho
+p1765
+aVQing Liu
+p1766
+aVLimsoon Wong
+p1767
+aVXiang Chen
+p1768
+aVDavid D. Jensen
+p1769
+aS'Michael Connor'
+p1770
+aVYuan Yuan
+p1771
+aVZhibo Chen
+p1772
+aVIoana Stanoi
+p1773
+aVHui Li
+p1774
+aVBerkant Barla Cambazoglu
+p1775
+aVErhard Rahm
+p1776
+aVMohammad S. Obaidat
+p1777
+aVPanayiotis Tsaparas
+p1778
+aVChanghyun Lee
+p1779
+aVDing Zhou
+p1780
+aVFeng Tian
+p1781
+aVZiv Bar-Yossef
+p1782
+aVLin Liu
+p1783
+aVAkihiro Inokuchi
+p1784
+aVJinhui Tang
+p1785
+aS'John Duchi'
+p1786
+aVShaofu Yang
+p1787
+aVErnesto Damiani
+p1788
+aVKun Liu
+p1789
+aVNaohiro Ishii
+p1790
+aVHui Zhu
+p1791
+atp1792
+Rp1793
 .
