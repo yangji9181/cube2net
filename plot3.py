@@ -68,7 +68,7 @@ class Graph(object):
 		self.dangling = set([node for node in self.neighbors_baseline if not bool(self.neighbors_baseline[node])])
 		self.connected = set([node for node in self.neighbors_rl if bool(self.neighbors_rl[node] & self.dangling)]) | self.dangling
 
-	def graph(self):
+	def graph1(self):
 		edges = []
 		for node in self.connected:
 			neighbors = self.neighbors_rl[node] & self.connected
@@ -77,12 +77,37 @@ class Graph(object):
 					edges.append((node, neighbor))
 		return list(self.connected), edges
 
+	def graph2(self):
+		nodes, edges = set(), set()
+		colored = set(self.neighbors_baseline.keys())
+		for node, neighbors in self.neighbors_rl.items():
+			if node not in self.neighbors_baseline and bool(neighbors & colored):
+				nodes.add(node)
+				for neighbor in neighbors:
+					if neighbor in self.neighbors_baseline:
+						nodes.add(neighbor)
+		for node, neighbors in self.neighbors_rl.items():
+			if node in nodes and node in self.neighbors_baseline:
+				intersection = neighbors & nodes
+				for neighbor in intersection:
+					edges.add((node, neighbor))
+
+		baseline_nodes = nodes & colored
+		baseline_edges = set()
+		for node, neighbors in self.neighbors_baseline.items():
+			if node in baseline_nodes:
+				intersection = neighbors & baseline_nodes
+				for neighbor in intersection:
+					baseline_edges.add((node, neighbor))
+
+		return list(nodes), list(edges), list(baseline_nodes), list(baseline_edges)
 
 
 if __name__ == '__main__':
 	cwd = 'data/'
 	test_authors = read_test()
 	graph = Graph()
-	authors, links = graph.graph()
-	plot(graph.dangling, [], test_authors, 'baseline')
+	authors, links, baseline_authors, baseline_links = graph.graph2()
+	# plot(graph.dangling, [], test_authors, 'baseline')
+	plot(baseline_authors, baseline_links, test_authors, 'baseline')
 	plot(authors, links, test_authors, 'rl')
