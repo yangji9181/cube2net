@@ -17,13 +17,21 @@ def plot(nodes, edges, group, suffix):
 	G.add_edges_from(edges)
 	pos = nx.spring_layout(G)
 
-	nx.draw_networkx_nodes(G, pos, nodelist=[node for node in nodes if node not in group], node_color='w', node_size=10)
+	nx.draw_networkx_nodes(G, pos, nodelist=[node for node in nodes if node not in group], node_color='w', node_size=80)
 	for g_id, color in colors:
 		nx.draw_networkx_nodes(G, pos, nodelist=[node for node in nodes if node in group and group[node] == g_id],
-		                       node_color=color, node_size=10)
-	nx.draw_networkx_edges(G, pos, width=0.2)
-	nx.draw_networkx_labels(G, pos, font_size=5)
-	plt.savefig(cwd + suffix + '.png', dpi=1000)
+		                       node_color=color, node_size=400)
+	nx.draw_networkx_edges(G, pos,
+	                       edgelist=[edge for edge in edges if edge[0] in graph.author_labels and edge[1] in graph.author_labels], width=2.0)
+	nx.draw_networkx_edges(G, pos,
+	                       edgelist=[edge for edge in edges if edge[0] not in graph.author_labels or edge[1] not in graph.author_labels], width=0.2)
+	nx.draw_networkx_labels(G, pos, labels={node: node for node in nodes if node in graph.author_labels}, font_size=10)
+	nx.draw_networkx_labels(G, pos, labels={node: node for node in nodes if node not in graph.author_labels}, font_size=5)
+	plt.tight_layout()
+	axis = plt.gca()
+	axis.axes.get_xaxis().set_visible(False)
+	axis.axes.get_yaxis().set_visible(False)
+	plt.savefig(cwd + suffix + '.png', dpi=200)
 
 
 
@@ -110,34 +118,45 @@ class Network(object):
 
 	def rl1(self, baseline_nodes, baseline_edges):
 		colored = self.colored()
-		nodes = set(baseline_nodes)
-		edges = set(baseline_edges)
-		for (n1, n2) in itertools.combinations(nodes, 2):
+		nodes = set()
+		edges = set()
+		for (n1, n2) in itertools.combinations(baseline_nodes, 2):
 			if self.author_labels[n1] == self.author_labels[n2] and n2 not in self.neighbors_baseline[n1]:
 				intersect = self.neighbors_rl[n1] & self.neighbors_rl[n2]
+				if bool(intersect):
+					nodes.add(n1)
+					nodes.add(n2)
 				for nb in intersect:
 					if nb not in colored:
 						nodes.add(nb)
 						self.add_edge(edges, n1, nb)
 						self.add_edge(edges, n2, nb)
+		for edge in baseline_edges:
+			if self.author_labels[edge[0]] == self.author_labels[edge[1]]:
+				edges.add(edge)
 		return list(nodes), list(edges)
 
 	def rl2(self, baseline_nodes, baseline_edges):
 		colored = self.colored()
-		nodes = set(baseline_nodes)
-		edges = set(baseline_edges)
+		nodes = set()
+		edges = set()
 		for edge in baseline_edges:
 			if self.author_labels[edge[0]] != self.author_labels[edge[1]]:
-				for nb1 in self.neighbors_rl[edge[0]]:
-					if nb1 not in colored:
-						if random.uniform(0, 1) > 0.8:
-							nodes.add(nb1)
-							self.add_edge(edges, edge[0], nb1)
-				for nb2 in self.neighbors_rl[edge[1]]:
-					if nb2 not in colored:
-						if random.uniform(0, 1) > 0.8:
-							nodes.add(nb2)
-							self.add_edge(edges, edge[1], nb2)
+				nodes.add(edge[0])
+				nodes.add(edge[1])
+				edges.add(edge)
+				nbs1 = self.neighbors_rl[edge[0]] - colored
+				nbs2 = self.neighbors_rl[edge[1]] - colored
+				for nb1 in nbs1:
+					ratio = 0.8 if len(nbs1) > len(nbs2) else 0.6
+					if random.uniform(0, 1) > ratio:
+						nodes.add(nb1)
+						self.add_edge(edges, edge[0], nb1)
+				for nb2 in nbs2:
+					ratio = 0.8 if len(nbs1) < len(nbs2) else 0.6
+					if random.uniform(0, 1) > ratio:
+						nodes.add(nb2)
+						self.add_edge(edges, edge[1], nb2)
 		return list(nodes), list(edges)
 
 	def rl3(self, baseline_nodes, baseline_edges):
@@ -149,7 +168,7 @@ if __name__ == '__main__':
 	graph = Network()
 	baseline_authors, baseline_links = graph.baseline()
 	# plot(baseline_authors, baseline_links, graph.author_labels, 'baseline')
-	# authors1, links1 = graph.rl1(baseline_authors, baseline_links)
-	# plot(authors1, links1, graph.author_labels, 'rl1')
-	authors2, links2 = graph.rl2(baseline_authors, baseline_links)
-	plot(authors2, links2, graph.author_labels, 'rl2')
+	authors1, links1 = graph.rl1(baseline_authors, baseline_links)
+	plot(authors1, links1, graph.author_labels, 'rl1')
+	# authors2, links2 = graph.rl2(baseline_authors, baseline_links)
+	# plot(authors2, links2, graph.author_labels, 'rl2')
