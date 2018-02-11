@@ -1,18 +1,13 @@
+import itertools
 import pickle
-import time
-import os
-import networkx as nx
+
 import matplotlib
+import networkx as nx
+
 matplotlib.use('agg')
 import matplotlib.pyplot as plt
 from collections import defaultdict
-from cube.utils import DblpEval
 from config import *
-from Environment import *
-from PPO import *
-from cube.cube_construction import DblpCube
-from Cube import Cube
-
 
 
 def plot(nodes, edges, group, suffix):
@@ -27,8 +22,8 @@ def plot(nodes, edges, group, suffix):
 		nx.draw_networkx_nodes(G, pos, nodelist=[node for node in nodes if node in group and group[node] == g_id],
 		                       node_color=color, node_size=20)
 	nx.draw_networkx_edges(G, pos, width=0.5)
-	# nx.draw_networkx_labels(G, pos, font_size=8)
-	plt.savefig(cwd + suffix + '3.png')
+	nx.draw_networkx_labels(G, pos, font_size=6)
+	plt.savefig(cwd + suffix + '3.png', dpi=400)
 
 
 
@@ -53,6 +48,7 @@ class Graph(object):
 	def __init__(self):
 		nodes_baseline, edges_baseline = read_graph('baseline')
 		nodes_rl, edges_rl = read_graph('rl')
+		self.author_labels = read_test()
 
 		self.neighbors_baseline = {node: set() for node in nodes_baseline}
 		self.neighbors_rl = {node: set() for node in nodes_rl}
@@ -68,6 +64,9 @@ class Graph(object):
 		self.dangling = set([node for node in self.neighbors_baseline if not bool(self.neighbors_baseline[node])])
 		self.connected = set([node for node in self.neighbors_rl if bool(self.neighbors_rl[node] & self.dangling)]) | self.dangling
 
+	def colored(self):
+		return set(self.neighbors_baseline.keys())
+
 	def graph1(self):
 		edges = []
 		for node in self.connected:
@@ -79,7 +78,7 @@ class Graph(object):
 
 	def graph2(self):
 		nodes, edges = set(), set()
-		colored = set(self.neighbors_baseline.keys())
+		colored = self.colored()
 		for node, neighbors in self.neighbors_rl.items():
 			if node not in self.neighbors_baseline and bool(neighbors & colored):
 				nodes.add(node)
@@ -102,12 +101,46 @@ class Graph(object):
 
 		return list(nodes), list(edges), list(baseline_nodes), list(baseline_edges)
 
+	def one(self):
+		nodes = set()
+		baseline_nodes = set()
+		colored = self.colored()
+		for node, neighbors in self.neighbors_rl.items():
+			if node not in self.neighbors_baseline:
+				intersect = neighbors & colored
+				if len(intersect) > 1:
+					should_add = False
+					for pair in itertools.combinations(intersect, 2):
+						if pair[1] not in self.neighbors_baseline[pair[0]] \
+								and self.author_labels[pair[0]] != self.author_labels[pair[1]]:
+							should_add = True
+							nodes.add(pair[0])
+							nodes.add(pair[1])
+							baseline_nodes.add(pair[0])
+							baseline_nodes.add(pair[1])
+					if should_add:
+						nodes.add(node)
+		nodes = set(list(nodes)[:60])
+		baseline_nodes = set(list(baseline_nodes)[:40])
+		edges = self.edges(nodes)
+		baseline_edges = self.edges(baseline_nodes)
+		return list(nodes), list(edges), list(baseline_nodes), list(baseline_edges)
+
+	def edges(self, nodes):
+		edges = set()
+		for node, neighbors in self.neighbors_rl.items():
+			if node in nodes:
+				intersect = neighbors & nodes
+				if bool(intersect):
+					for neighbor in intersect:
+						if node in self.author_labels or neighbor in self.author_labels:
+							edges.add((node, neighbor))
+		return edges
+
 
 if __name__ == '__main__':
 	cwd = 'data/'
-	test_authors = read_test()
 	graph = Graph()
-	authors, links, baseline_authors, baseline_links = graph.graph2()
-	# plot(graph.dangling, [], test_authors, 'baseline')
-	plot(baseline_authors, baseline_links, test_authors, 'baseline')
-	plot(authors, links, test_authors, 'rl')
+	authors, links, baseline_authors, baseline_links = graph.one()
+	plot(baseline_authors, baseline_links, graph.author_labels, 'baseline')
+	plot(authors, links, graph.author_labels, 'rl')
