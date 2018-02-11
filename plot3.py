@@ -1,7 +1,8 @@
 import itertools
 import pickle
-
+import random
 import matplotlib
+import operator
 import networkx as nx
 
 matplotlib.use('agg')
@@ -17,13 +18,13 @@ def plot(nodes, edges, group, suffix):
 	G.add_edges_from(edges)
 	pos = nx.spring_layout(G)
 
-	nx.draw_networkx_nodes(G, pos, nodelist=[node for node in nodes if node not in group], node_color='w', node_size=20)
+	nx.draw_networkx_nodes(G, pos, nodelist=[node for node in nodes if node not in group], node_color='w', node_size=10)
 	for g_id, color in colors:
 		nx.draw_networkx_nodes(G, pos, nodelist=[node for node in nodes if node in group and group[node] == g_id],
-		                       node_color=color, node_size=20)
-	nx.draw_networkx_edges(G, pos, width=0.5)
-	nx.draw_networkx_labels(G, pos, font_size=6)
-	plt.savefig(cwd + suffix + '3.png', dpi=400)
+		                       node_color=color, node_size=10)
+	nx.draw_networkx_edges(G, pos, width=0.2)
+	nx.draw_networkx_labels(G, pos, font_size=5)
+	plt.savefig(cwd + suffix + '3.png', dpi=1000)
 
 
 
@@ -101,6 +102,13 @@ class Graph(object):
 
 		return list(nodes), list(edges), list(baseline_nodes), list(baseline_edges)
 
+	def major_color(self, nodes):
+		color_count = defaultdict(int)
+		for neighbor in nodes:
+			if neighbor in self.author_labels:
+				color_count[self.author_labels[neighbor]] += 1
+		return max(color_count.items(), key=operator.itemgetter(1))[0]
+
 	def one(self):
 		nodes = set()
 		baseline_nodes = set()
@@ -110,9 +118,11 @@ class Graph(object):
 				intersect = neighbors & colored
 				if len(intersect) > 1:
 					should_add = False
+					max_color = self.major_color(intersect)
 					for pair in itertools.combinations(intersect, 2):
 						if pair[1] not in self.neighbors_baseline[pair[0]] \
-								and self.author_labels[pair[0]] != self.author_labels[pair[1]]:
+								and self.author_labels[pair[0]] == max_color \
+								and self.author_labels[pair[1]] == max_color:
 							should_add = True
 							nodes.add(pair[0])
 							nodes.add(pair[1])
@@ -120,8 +130,6 @@ class Graph(object):
 							baseline_nodes.add(pair[1])
 					if should_add:
 						nodes.add(node)
-		nodes = set(list(nodes)[:60])
-		baseline_nodes = set(list(baseline_nodes)[:40])
 		edges = self.edges(nodes)
 		baseline_edges = self.edges(baseline_nodes)
 		return list(nodes), list(edges), list(baseline_nodes), list(baseline_edges)
@@ -132,9 +140,17 @@ class Graph(object):
 			if node in nodes:
 				intersect = neighbors & nodes
 				if bool(intersect):
+					if node not in self.author_labels:
+						max_color = self.major_color(intersect)
 					for neighbor in intersect:
 						if node in self.author_labels or neighbor in self.author_labels:
-							edges.add((node, neighbor))
+							if node not in self.author_labels:
+								if self.author_labels[neighbor] == max_color:
+									edges.add((node, neighbor))
+							else:
+								if neighbor in self.author_labels:
+									if random.uniform(0, 1) > 0.8:
+										edges.add((node, neighbor))
 		return edges
 
 
