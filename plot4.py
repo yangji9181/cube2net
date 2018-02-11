@@ -17,16 +17,16 @@ def plot(nodes, edges, group, suffix):
 	G.add_edges_from(edges)
 	pos = nx.spring_layout(G)
 
-	nx.draw_networkx_nodes(G, pos, nodelist=[node for node in nodes if node not in group], node_color='w', node_size=80)
+	nx.draw_networkx_nodes(G, pos, nodelist=[node for node in nodes if node not in group], node_color='w', node_size=100)
 	for g_id, color in colors:
 		nx.draw_networkx_nodes(G, pos, nodelist=[node for node in nodes if node in group and group[node] == g_id],
-		                       node_color=color, node_size=400)
+		                       node_color=color, node_size=500)
 	nx.draw_networkx_edges(G, pos,
-	                       edgelist=[edge for edge in edges if edge[0] in graph.author_labels and edge[1] in graph.author_labels], width=2.0)
+	                       edgelist=[edge for edge in edges if edge[0] in graph.author_labels and edge[1] in graph.author_labels], width=4.0)
 	nx.draw_networkx_edges(G, pos,
-	                       edgelist=[edge for edge in edges if edge[0] not in graph.author_labels or edge[1] not in graph.author_labels], width=0.2)
-	nx.draw_networkx_labels(G, pos, labels={node: node for node in nodes if node in graph.author_labels}, font_size=10)
-	nx.draw_networkx_labels(G, pos, labels={node: node for node in nodes if node not in graph.author_labels}, font_size=5)
+	                       edgelist=[edge for edge in edges if edge[0] not in graph.author_labels or edge[1] not in graph.author_labels], width=0.4)
+	nx.draw_networkx_labels(G, pos, labels={node: node for node in nodes if node in graph.author_labels}, font_size=15)
+	nx.draw_networkx_labels(G, pos, labels={node: node for node in nodes if node not in graph.author_labels}, font_size=10)
 	plt.tight_layout()
 	axis = plt.gca()
 	axis.axes.get_xaxis().set_visible(False)
@@ -94,18 +94,25 @@ class Network(object):
 		return reduce(lambda x, y: x or y, [self.is_connected(n, n2, order - 1) for n in self.neighbors_baseline[n1]])
 
 	def baseline(self):
+		black_list = set(['Yizhou Sun', 'Jing Gao', 'Dong Xin', 'Wei Wang'])
 		nodes = set()
 		colored = self.colored()
 		for node, nbs in self.neighbors_rl.items():
+			if node in black_list:
+				continue
 			neighbors = nbs & colored
 			if node not in self.neighbors_baseline:
 				for pair in itertools.combinations(neighbors, 2):
+					if pair[0] in black_list or pair[1] in black_list:
+						continue
 					if self.author_labels[pair[0]] == self.author_labels[pair[1]]:
 						if not self.is_connected(pair[0], pair[1], 4):
 							nodes.add(pair[0])
 							nodes.add(pair[1])
 			else:
 				for neighbor in neighbors:
+					if neighbor in black_list:
+						continue
 					if self.author_labels[node] != self.author_labels[neighbor]:
 						nodes.add(node)
 						nodes.add(neighbor)
