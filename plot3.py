@@ -13,7 +13,7 @@ from config import *
 
 def plot(nodes, edges, group, suffix):
 	colors = [(0, 'w'), (1, 'r'), (2, 'g'), (3, 'b'), (4, 'y')]
-	G = nx.Graph()
+	G = nx.MultiGraph()
 	G.add_nodes_from(nodes)
 	G.add_edges_from(edges)
 	pos = nx.spring_layout(G)
@@ -149,14 +149,66 @@ class Graph(object):
 									edges.add((node, neighbor))
 							else:
 								if neighbor in self.author_labels:
-									if random.uniform(0, 1) > 0.8:
-										edges.add((node, neighbor))
+									edges.add((node, neighbor))
 		return edges
+
+	def is_connected(self, n1, n2, order=0):
+		if order == 0:
+			return n1 == n2
+		if len(self.neighbors_baseline[n1]) == 0:
+			return False
+		return reduce(lambda x, y: x or y, [self.is_connected(n, n2, order - 1) for n in self.neighbors_baseline[n1]])
+
+
+	def two(self):
+		nodes, edges = set(), set()
+		colored = self.colored()
+		baseline_nodes, baseline_edges = set(), set()
+		for node, neighbors in self.neighbors_rl.items():
+			if node not in self.neighbors_baseline:
+				neighbors &= colored
+				for pair in itertools.combinations(neighbors, 2):
+					assert pair[0] != pair[1]
+					if self.author_labels[pair[0]] == self.author_labels[pair[1]]:
+						if not self.is_connected(pair[0], pair[1], 5):
+							nodes.add(node)
+							nodes.add(pair[0])
+							nodes.add(pair[1])
+							baseline_nodes.add(pair[0])
+							baseline_nodes.add(pair[1])
+							edges.add((node, pair[0]))
+							edges.add((node, pair[1]))
+		return list(nodes), list(edges), list(baseline_nodes), list(baseline_edges)
+
+	def three(self):
+		nodes, edges = set(), set()
+		baseline_nodes, baseline_edges = set(), set()
+		colored = self.colored()
+		for n1, c1 in self.author_labels.items():
+			for n2, c2 in self.author_labels.items():
+				if c1 != c2 and n2 in self.neighbors_baseline[n1]:
+					neighbors1 = self.neighbors_rl[n1] - colored
+					neighbors2 = self.neighbors_rl[n2] - colored
+					if len(neighbors1) > 3 and len(neighbors2) > 3:
+						nodes.add(n1)
+						nodes.add(n2)
+						baseline_nodes.add(n1)
+						baseline_nodes.add(n2)
+						edges.add((n1, n2))
+						baseline_edges.add((n1, n2))
+						for nb1 in neighbors1:
+							nodes.add(nb1)
+							edges.add((n1, nb1))
+						for nb2 in neighbors2:
+							nodes.add(nb2)
+							edges.add((n2, nb2))
+		return list(nodes), list(edges), list(baseline_nodes), list(baseline_edges)
+
 
 
 if __name__ == '__main__':
 	cwd = 'data/'
 	graph = Graph()
-	authors, links, baseline_authors, baseline_links = graph.one()
+	authors, links, baseline_authors, baseline_links = graph.two()
 	plot(baseline_authors, baseline_links, graph.author_labels, 'baseline')
 	plot(authors, links, graph.author_labels, 'rl')
