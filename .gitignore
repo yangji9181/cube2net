@@ -10,3 +10,4 @@
 /node2vec/emb/karate.emd
 /node2vec/graph/karate.edgelist
 /node2vec/embeddings_out.txt
+/plot/

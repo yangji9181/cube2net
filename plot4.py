@@ -17,21 +17,22 @@ def plot(nodes, edges, group, suffix):
 	G.add_edges_from(edges)
 	pos = nx.spring_layout(G)
 
-	nx.draw_networkx_nodes(G, pos, nodelist=[node for node in nodes if node not in group], node_color='w', node_size=100)
+	nx.draw_networkx_nodes(G, pos, nodelist=[node for node in nodes if node not in group], node_color='w', node_size=120)
 	for g_id, color in colors:
 		nx.draw_networkx_nodes(G, pos, nodelist=[node for node in nodes if node in group and group[node] == g_id],
-		                       node_color=color, node_size=500)
+		                       node_color=color, node_size=600)
 	nx.draw_networkx_edges(G, pos,
 	                       edgelist=[edge for edge in edges if edge[0] in graph.author_labels and edge[1] in graph.author_labels], width=4.0)
 	nx.draw_networkx_edges(G, pos,
-	                       edgelist=[edge for edge in edges if edge[0] not in graph.author_labels or edge[1] not in graph.author_labels], width=0.4)
-	nx.draw_networkx_labels(G, pos, labels={node: node for node in nodes if node in graph.author_labels}, font_size=15)
-	nx.draw_networkx_labels(G, pos, labels={node: node for node in nodes if node not in graph.author_labels}, font_size=10)
+	                       edgelist=[edge for edge in edges if edge[0] not in graph.author_labels or edge[1] not in graph.author_labels], width=1.0)
+	nx.draw_networkx_labels(G, pos, labels={node: node for node in nodes if node in graph.author_labels}, font_size=20)
+	nx.draw_networkx_labels(G, pos, labels={node: node for node in nodes if node not in graph.author_labels}, font_size=12)
 	plt.tight_layout()
 	axis = plt.gca()
 	axis.axes.get_xaxis().set_visible(False)
 	axis.axes.get_yaxis().set_visible(False)
-	plt.savefig(cwd + suffix + '.png', dpi=200)
+	plt.savefig(output_directory + suffix + '.png', dpi=200)
+	plt.close()
 
 
 
@@ -173,10 +174,12 @@ class Network(object):
 
 if __name__ == '__main__':
 	cwd = 'data/'
+	output_directory = 'plot/'
 	graph = Network()
 	baseline_authors, baseline_links = graph.baseline()
-	# plot(baseline_authors, baseline_links, graph.author_labels, 'baseline')
+	# plot(baseline_authors, baseline_links, graph.author_labels, args.plot_path)
 	authors1, links1 = graph.rl1(baseline_authors, baseline_links)
-	plot(authors1, links1, graph.author_labels, 'rl1')
-	# authors2, links2 = graph.rl2(baseline_authors, baseline_links)
-	# plot(authors2, links2, graph.author_labels, 'rl2')
+	authors2, links2 = graph.rl2(baseline_authors, baseline_links)
+	for i in range(50):
+		plot(authors1, links1, graph.author_labels, 'rl1.' + str(i))
+		# plot(authors2, links2, graph.author_labels, 'rl2.' + str(i))
