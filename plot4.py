@@ -94,7 +94,8 @@ class Network(object):
 		return reduce(lambda x, y: x or y, [self.is_connected(n, n2, order - 1) for n in self.neighbors_baseline[n1]])
 
 	def baseline(self):
-		black_list = set(['Yizhou Sun', 'Jing Gao', 'Dong Xin', 'Wei Wang'])
+		# black_list = set()
+		black_list = set(['Yizhou Sun', 'Jing Gao', 'Dong Xin', 'Wei Wang', 'Wei Lu', 'Manish Gupta', 'Hong Cheng', 'Wenmin Li'])
 		nodes = set()
 		colored = self.colored()
 		for node, nbs in self.neighbors_rl.items():
@@ -155,13 +156,13 @@ class Network(object):
 				nbs1 = self.neighbors_rl[edge[0]] - colored
 				nbs2 = self.neighbors_rl[edge[1]] - colored
 				for nb1 in nbs1:
-					ratio = 0.8 if len(nbs1) > len(nbs2) else 0.6
-					if random.uniform(0, 1) > ratio:
+					ratio = 4.0 / len(nbs1)
+					if random.uniform(0, 1) < ratio:
 						nodes.add(nb1)
 						self.add_edge(edges, edge[0], nb1)
 				for nb2 in nbs2:
-					ratio = 0.8 if len(nbs1) < len(nbs2) else 0.6
-					if random.uniform(0, 1) > ratio:
+					ratio = 4.0 / len(nbs2)
+					if random.uniform(0, 1) < ratio:
 						nodes.add(nb2)
 						self.add_edge(edges, edge[1], nb2)
 		return list(nodes), list(edges)
