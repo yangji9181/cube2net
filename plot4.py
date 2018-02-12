@@ -95,7 +95,7 @@ class Network(object):
 
 	def baseline(self):
 		# black_list = set()
-		black_list = set(['Yizhou Sun', 'Jing Gao', 'Dong Xin', 'Wei Wang', 'Wei Lu', 'Manish Gupta', 'Hong Cheng', 'Wenmin Li'])
+		black_list = set(['Yizhou Sun', 'Jing Gao', 'Dong Xin', 'Wei Wang', 'Wei Lu', 'Manish Gupta', 'Hong Cheng', 'Wenmin Li', 'Chen Chen'])
 		nodes = set()
 		colored = self.colored()
 		for node, nbs in self.neighbors_rl.items():
