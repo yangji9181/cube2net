@@ -1,3 +1,17 @@
+#Implementation of `cube2net: Efficient Quality Network Construction with Data Cube Organization` by Carl Yang, Mengxiong Liu, Frank He, Jian Peng, Jiawei Han. ICDM 2019 PhD Forum.
+
+Please cite the following work if you find the code useful.
+
+'''
+@inproceedings{yang2019cube2net,
+	Author = {Yang, Carl and Liu, Mengxiong and He, Frank and Peng, Jian and Han, Jiawei},
+	Booktitle = {ICDM},
+	Title = {cube2net: efficient quality network construction with data cube organization},
+	Year = {2019}
+}
+'''
+  
+
 step 1: cell network construction (mengxiong)
 based on current cell construction code, construct three networks, assume single hiararchy for each of them for now.
 1. venue network based on venue names (in case venues are too many, do clustering first, it will also be useful when we later consider hiararchical cells)
