@@ -10,6 +10,7 @@ Please cite the following work if you find the code useful.
 	Year = {2019}
 }
 ```
+Contact: Carl Yang (yangji9181@gmail.com)
   
 
 step 1: cell network construction (mengxiong)
