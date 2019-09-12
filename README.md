@@ -5,7 +5,7 @@ Please cite the following work if you find the code useful.
 ```
 @inproceedings{yang2019cube2net,
 	Author = {Yang, Carl and Liu, Mengxiong and He, Frank and Peng, Jian and Han, Jiawei},
-	Booktitle = {ICDM},
+	Booktitle = {ICDM PhD Forum},
 	Title = {cube2net: efficient quality network construction with data cube organization},
 	Year = {2019}
 }
