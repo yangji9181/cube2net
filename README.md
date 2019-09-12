@@ -1,15 +1,15 @@
-#Implementation of `cube2net: Efficient Quality Network Construction with Data Cube Organization` by Carl Yang, Mengxiong Liu, Frank He, Jian Peng, Jiawei Han. ICDM 2019 PhD Forum.
+## Implementation of **cube2net: Efficient Quality Network Construction with Data Cube Organization** by Carl Yang, Mengxiong Liu, Frank He, Jian Peng, Jiawei Han. ICDM 2019 PhD Forum.
 
 Please cite the following work if you find the code useful.
 
-'''
+'
 @inproceedings{yang2019cube2net,
 	Author = {Yang, Carl and Liu, Mengxiong and He, Frank and Peng, Jian and Han, Jiawei},
 	Booktitle = {ICDM},
 	Title = {cube2net: efficient quality network construction with data cube organization},
 	Year = {2019}
 }
-'''
+'
   
 
 step 1: cell network construction (mengxiong)
