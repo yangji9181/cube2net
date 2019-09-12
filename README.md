@@ -24,9 +24,8 @@ follow nips 2017 graph dqn work ([1])
 1. implement the embedding of each dimension based on Eq 3 in [1], combine three dimensions and implement the value function based on Eq 4 in [1].
 
 step 3: reinforcement learning algorithm (shibi)
-1. design actions: add new cells: choose a dimension and a hiararchy to extend (how to explore efficiently?)
+1. design actions: add new cells: choose a dimension and a hiararchy to extend
 2. trade-off between exploit and exploration
-3. algorithm: what kind of q-learning is more appropriate and why?
 
 step 4; reward and evaluation (mengxiong)
 use author clustering as the task for now, based on dblp labeled authors on the server
